@@ -1,0 +1,31 @@
+{
+  "name": "goalapi/symfony-sdk-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony SDK for GoalAPI football data service",
+  "keywords": [
+    "football",
+    "soccer",
+    "live score"
+  ],
+  "homepage": "https://github.com/goalapi/symfony-sdk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Murat Erkenov",
+      "email": "murat@11bits.net"
+    },
+    {
+      "name": "11bits, Ltd.",
+      "homepage": "http://11bits.net"
+    }
+  ],
+  "require": {
+    "php": "^5.3.3|^7.0",
+    "symfony/framework-bundle": "~2.2|~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GoalAPI\\SDKBundle\\": ""
+    }
+  }
+}
