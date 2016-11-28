@@ -9,6 +9,11 @@ namespace GoalAPI\SDKBundle;
 
 use GoalAPI\SDKBundle\Core\CallPerformerInterface;
 
+/**
+ * Class GoalAPISDK
+ *
+ * @method Model\Subscription getSubscription
+ */
 class GoalAPISDK extends Core\SDK
 {
 
