@@ -3,8 +3,10 @@ namespace GoalAPI\SDKBundle\GoalAPISDK;
 
 use GoalAPI\SDKBundle\Core;
 
-abstract class CallPerformer implements Core\CallPerformerInterface
+abstract class CallPerformer implements Core\CallPerformerInterface, Core\APIClient\APIClientAwareInterface
 {
+
+    use Core\APIClient\APIClientAwareTrait;
 
     /**
      * @inheritdoc
