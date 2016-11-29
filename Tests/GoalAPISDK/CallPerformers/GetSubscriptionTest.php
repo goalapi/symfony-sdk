@@ -16,7 +16,10 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
     function testGetSubscriptionCallPerformer()
     {
         $dataObject = $this->createDataObject();
-        $callPerformer = $this->createCallPerformer($dataObject);
+        $apiClient = $this->createAPIClient($dataObject);
+
+        $callPerformer = new GoalAPISDK\CallPerformers\GetSubscription();
+        $callPerformer->setApiClient($apiClient);
 
         /** @var Model\Subscription $subscription */
         $subscription = $callPerformer->performCall([]);
@@ -53,9 +56,9 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @param $dataObject
-     * @return GoalAPISDK\CallPerformers\GetSubscription
+     * @return GoalAPISDK\APIClient\Guzzle\Client
      */
-    private function createCallPerformer($dataObject)
+    private function createAPIClient($dataObject)
     {
         $apiClient = $this->createPartialMock(
             GoalAPISDK\APIClient\Guzzle\Client::class,
@@ -76,18 +79,17 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
             $response
         );
 
-        $callPerformer = new GoalAPISDK\CallPerformers\GetSubscription();
-        $callPerformer->setApiClient($apiClient);
-
-        return $callPerformer;
+        return $apiClient;
     }
 
     function testGetSubscriptionSDKMethod()
     {
         $dataObject = $this->createDataObject();
-        $callPerformer = $this->createCallPerformer($dataObject);
+        $apiClient = $this->createAPIClient($dataObject);
+
         $sdk = new GoalAPISDK();
-        $sdk->addCallPerformer('getSubscription', $callPerformer);
+        $sdk->setApiClient($apiClient);
+        $sdk->addCallPerformer('getSubscription', new GoalAPISDK\CallPerformers\GetSubscription());
 
         $subscription = $sdk->getSubscription();
         $this->assertInstanceOf(Model\Subscription::class, $subscription);
