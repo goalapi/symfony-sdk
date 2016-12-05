@@ -16,11 +16,9 @@ abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\AP
     {
         if (call_user_func_array([$this, 'mustRefresh'], $arguments)) {
             $dataFromProvider = call_user_func_array([$this, 'loadDataFromProvider'], $arguments);
-            $dataToSave = $arguments;
-            $dataToSave[] = $dataFromProvider;
-            call_user_func_array([$this, 'saveDataToLocalStorage'], $dataToSave);
-            call_user_func_array([$this, 'updateNextRefreshTime'], $dataToSave);
-            $dataToReturn = call_user_func_array([$this, 'deserializeData'], [$dataFromProvider]);
+            $dataToReturn = call_user_func([$this, 'deserializeData'], $dataFromProvider);
+            call_user_func_array([$this, 'saveDataToLocalStorage'], [$dataToReturn]);
+            call_user_func_array([$this, 'updateNextRefreshTime'], [$arguments, $dataToReturn]);
         } else {
             $dataToReturn = call_user_func_array([$this, 'fetchDataFromLocalStorage'], $arguments);
         }
