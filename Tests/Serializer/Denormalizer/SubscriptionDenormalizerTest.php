@@ -9,6 +9,7 @@ namespace GoalAPI\SDKBundle\Tests\Serializer\Denormalizer;
 
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class SubscriptionDenormalizerTest extends \PHPUnit_Framework_TestCase
 {
@@ -19,21 +20,32 @@ class SubscriptionDenormalizerTest extends \PHPUnit_Framework_TestCase
             'expirationTime' => (object)[
                 'date_time' => '2017-08-01T22:49:08+00:00',
             ],
+            'allowedTournaments' => [
+                (object)[
+                    'id' => 'rus_pl',
+                    'name' => 'Russia - Premier League',
+                ],
+            ],
         ];
 
+        $serializer = new Serializer(
+            [
+                new Denormalizer\SubscriptionDenormalizer(),
+                new Denormalizer\TournamentDenormalizer(),
+            ]
+        );
 
-        $denormalizer = new Denormalizer\SubscriptionDenormalizer();
 
-        $this->assertFalse($denormalizer->supportsDenormalization($data, \stdClass::class));
-        $this->assertFalse($denormalizer->supportsDenormalization([], Model\Subscription::class));
+        $this->assertFalse($serializer->supportsDenormalization($data, \stdClass::class));
+        $this->assertFalse($serializer->supportsDenormalization([], Model\Subscription::class));
         $this->assertFalse(
-            $denormalizer->supportsDenormalization(
+            $serializer->supportsDenormalization(
                 new \stdClass(),
                 Model\Subscription::class
             )
         );
         $this->assertFalse(
-            $denormalizer->supportsDenormalization(
+            $serializer->supportsDenormalization(
                 (object)[
                     'status' => 'ok',
                 ],
@@ -41,12 +53,22 @@ class SubscriptionDenormalizerTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $this->assertTrue($denormalizer->supportsDenormalization($data, Model\Subscription::class));
+        $this->assertTrue($serializer->supportsDenormalization($data, Model\Subscription::class));
 
         $expectedSubscription = new Model\Subscription();
         $expectedSubscription->setStatus($data->status);
         $expectedSubscription->setExpirationTime(new \DateTime($data->expirationTime->date_time));
 
-        $this->assertEquals($expectedSubscription, $denormalizer->denormalize($data, Model\Subscription::class));
+        $expectedTournament = new Model\Tournament();
+        $expectedTournament->setId($data->allowedTournaments[0]->id);
+        $expectedTournament->setName($data->allowedTournaments[0]->name);
+
+        $expectedSubscription->setTournaments(
+            [
+                $expectedTournament,
+            ]
+        );
+
+        $this->assertEquals($expectedSubscription, $serializer->denormalize($data, Model\Subscription::class));
     }
 }
