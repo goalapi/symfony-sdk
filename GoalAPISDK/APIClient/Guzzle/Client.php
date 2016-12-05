@@ -7,49 +7,11 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
 
-use GoalAPI\SDKBundle\APIClient\APIClientInterface;
+use GoalAPI\SDKBundle\GoalAPISDK\APIClient;
 use GuzzleHttp;
 
-class Client implements APIClientInterface
+class Client extends APIClient\APIClient
 {
-
-    /**
-     * @var string
-     */
-    private $baseUri;
-
-    /**
-     * @var string
-     */
-    private $apikey;
-
-    /**
-     * APIClient constructor.
-     * @param string $baseUri
-     * @param string $apikey
-     */
-    function __construct($baseUri, $apikey)
-    {
-        $this->setBaseUri($baseUri);
-        $this->setApikey($apikey);
-    }
-
-    /**
-     * @param string $baseUri
-     */
-    public function setBaseUri($baseUri)
-    {
-        $this->baseUri = $baseUri;
-    }
-
-    /**
-     * @param string $apikey
-     */
-    public function setApikey($apikey)
-    {
-        $this->apikey = $apikey;
-    }
-
     /**
      * @inheritdoc
      */
@@ -62,7 +24,7 @@ class Client implements APIClientInterface
         }
         $path .= '?'.GuzzleHttp\Psr7\build_query($queryParameters);
         $guzzleResponse = $client->request($method, $path, $requestOptions);
-        $response = new Response($guzzleResponse);
+        $response = new APIClient\APIResponse($guzzleResponse);
 
         return $response;
     }
@@ -74,14 +36,13 @@ class Client implements APIClientInterface
     {
         $client = new GuzzleHttp\Client(
             [
-                'base_uri' => $this->baseUri,
+                'base_uri' => $this->getBaseUri(),
                 'allow_redirects' => true,
                 'headers' => [
-                    'X-AUTH-APIKEY' => $this->apikey,
+                    'X-AUTH-APIKEY' => $this->getApikey(),
                 ],
             ]
         );
-
         return $client;
     }
 }

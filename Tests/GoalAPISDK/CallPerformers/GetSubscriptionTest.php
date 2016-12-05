@@ -67,13 +67,13 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
             ]
         );
         $response = $this->createPartialMock(
-            GoalAPISDK\APIClient\Guzzle\Response::class,
+            GoalAPISDK\APIClient\APIResponse::class,
             [
-                'getData',
+                'getBody',
             ]
         );
-        $response->method('getData')->willReturn(
-            $dataObject
+        $response->method('getBody')->willReturn(
+            json_encode($dataObject)
         );
         $apiClient->method('makeAPICall')->willReturn(
             $response

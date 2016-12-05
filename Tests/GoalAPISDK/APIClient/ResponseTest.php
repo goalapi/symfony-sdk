@@ -7,7 +7,7 @@
 
 namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\APIClient;
 
-use GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle\Response;
+use GoalAPI\SDKBundle\GoalAPISDK\APIClient\APIResponse;
 use GuzzleHttp\Psr7;
 
 class ResponseTest extends \PHPUnit_Framework_TestCase
@@ -38,9 +38,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
             )
         );
 
-        $apiResponse = new Response($guzzleResponse);
-        $this->assertEquals($body, $apiResponse->getData());
-        $this->assertEquals(json_encode($body), $apiResponse->getData(true));
+        $apiResponse = new APIResponse($guzzleResponse);
+        $this->assertEquals($body, json_decode($apiResponse->getBody()));
     }
 
 
@@ -59,7 +58,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         $guzzleResponse->method('getReasonPhrase')->willReturn(
             'OK'
         );
-        $apiResponse = new Response($guzzleResponse);
+        $apiResponse = new APIResponse($guzzleResponse);
         $this->assertEquals(200, $apiResponse->getStatusCode());
         $this->assertEquals('OK', $apiResponse->getStatusMessage());
     }

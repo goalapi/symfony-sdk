@@ -7,7 +7,7 @@
 
 namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\APIClient;
 
-use GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
+use GoalAPI\SDKBundle\GoalAPISDK\APIClient\APIResponse;
 use GuzzleHttp\Psr7\Response;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
@@ -19,7 +19,7 @@ class ResponseHeadersTest extends \PHPUnit_Framework_TestCase
         $headers = $this->getHeaderFields();
         /** @var Response $guzzleResponse */
         $guzzleResponse = $this->createGuzzleResponseMock($headers);
-        $apiResponse = new Guzzle\Response($guzzleResponse);
+        $apiResponse = new APIResponse($guzzleResponse);
         $this->assertEquals(
             new ParameterBag($headers),
             $apiResponse->getHeaders()
@@ -71,7 +71,7 @@ class ResponseHeadersTest extends \PHPUnit_Framework_TestCase
         $headers = $this->getHeaderFields();
         /** @var Response $guzzleResponse */
         $guzzleResponse = $this->createGuzzleResponseMock($headers);
-        $apiResponse = new Guzzle\Response($guzzleResponse);
+        $apiResponse = new APIResponse($guzzleResponse);
         $headerName = 'X-Total-Count';
         $this->assertEquals(
             $headers[$headerName],
@@ -84,7 +84,7 @@ class ResponseHeadersTest extends \PHPUnit_Framework_TestCase
         $headers = $this->getHeaderFields();
         /** @var Response $guzzleResponse */
         $guzzleResponse = $this->createGuzzleResponseMock($headers);
-        $apiResponse = new Guzzle\Response($guzzleResponse);
+        $apiResponse = new APIResponse($guzzleResponse);
         $links = $apiResponse->getLinks();
         $this->assertEquals(
             2,
@@ -102,7 +102,7 @@ class ResponseHeadersTest extends \PHPUnit_Framework_TestCase
         $headers = $this->getHeaderFields();
         /** @var Response $guzzleResponse */
         $guzzleResponse = $this->createGuzzleResponseMock($headers);
-        $apiResponse = new Guzzle\Response($guzzleResponse);
+        $apiResponse = new APIResponse($guzzleResponse);
         $this->assertArrayHasKey('path', parse_url($apiResponse->getLink('next')));
     }
 }

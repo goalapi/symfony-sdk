@@ -44,7 +44,7 @@ class APIClientTest extends \PHPUnit_Framework_TestCase
         $response = $apiClient->makeAPICall('example/call', ['param' => 'one']);
 
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertTrue(is_array($response->getData()));
+        $this->assertTrue(null != $response->getBody()->__toString());
         $this->assertArrayHasKey('path', parse_url($response->getLink('prev')));
     }
 }

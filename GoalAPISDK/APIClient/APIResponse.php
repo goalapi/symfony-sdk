@@ -5,20 +5,15 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
+namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient;
 
 use GoalAPI\SDKBundle\APIClient\Response\ResponseInterface;
 use GuzzleHttp;
 use Psr\Http\Message;
 use Symfony\Component\HttpFoundation;
 
-class Response implements ResponseInterface
+class APIResponse implements ResponseInterface
 {
-
-    /**
-     * @var Message\ResponseInterface
-     */
-    private $guzzleResponse;
 
     /**
      * @var HttpFoundation\ParameterBag
@@ -29,6 +24,10 @@ class Response implements ResponseInterface
      * @var HttpFoundation\ParameterBag
      */
     private $links;
+    /**
+     * @var Message\ResponseInterface
+     */
+    private $response;
 
     /**
      * Response constructor.
@@ -36,21 +35,15 @@ class Response implements ResponseInterface
      */
     function __construct(Message\ResponseInterface $response)
     {
-        $this->guzzleResponse = $response;
+        $this->setResponse($response);
     }
 
     /**
-     * @param bool $rawFormat
-     * @return array|object|string
+     * @inheritdoc
      */
-    public function getData($rawFormat = false)
+    public function getBody()
     {
-        $data = $this->guzzleResponse->getBody()->__toString();
-        if (!$rawFormat) {
-            $data = json_decode($data);
-        }
-
-        return $data;
+        return $this->response->getBody();
     }
 
     /**
@@ -58,7 +51,7 @@ class Response implements ResponseInterface
      */
     public function getStatusCode()
     {
-        return $this->guzzleResponse->getStatusCode();
+        return $this->response->getStatusCode();
     }
 
     /**
@@ -66,7 +59,7 @@ class Response implements ResponseInterface
      */
     public function getStatusMessage()
     {
-        return $this->guzzleResponse->getReasonPhrase();
+        return $this->response->getReasonPhrase();
     }
 
     /**
@@ -111,7 +104,7 @@ class Response implements ResponseInterface
     {
         if (!$this->headers) {
             $this->headers = new HttpFoundation\ParameterBag();
-            foreach ($this->guzzleResponse->getHeaders() as $headerName => $header) {
+            foreach ($this->response->getHeaders() as $headerName => $header) {
                 $this->headers->set($headerName, implode(', ', $header));
             }
         }
@@ -144,5 +137,21 @@ class Response implements ResponseInterface
         }
 
         return $parsedLinks;
+    }
+
+    /**
+     * @return Message\ResponseInterface
+     */
+    public function getResponse()
+    {
+        return $this->response;
+    }
+
+    /**
+     * @param Message\ResponseInterface $response
+     */
+    public function setResponse(Message\ResponseInterface $response)
+    {
+        $this->response = $response;
     }
 }

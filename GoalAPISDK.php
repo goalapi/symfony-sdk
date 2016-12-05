@@ -22,11 +22,6 @@ class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface
     use APIClient\APIClientAwareTrait;
 
     /**
-     * @var Serializer
-     */
-    private $serializer;
-
-    /**
      * @param string $callName
      * @param CallPerformerInterface $callPerformer
      */

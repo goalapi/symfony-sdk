@@ -17,11 +17,12 @@ class GetSubscription extends CallPerformer
         $apiClient = $this->getApiClient();
         $response = $apiClient->makeAPICall('');
 
-        return $response->getData();
+        return $response->getBody();
     }
 
     public function deserializeData($data)
     {
+        $data = json_decode($data);
         $subscription = new Model\Subscription();
         $subscription->setStatus($data->status);
         $subscription->setExpirationTime(new \DateTime($data->expirationTime->date_time));

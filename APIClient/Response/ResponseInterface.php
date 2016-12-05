@@ -12,10 +12,9 @@ use Symfony\Component\HttpFoundation;
 interface ResponseInterface
 {
     /**
-     * @param bool $rawFormat
-     * @return array|object|string
+     * @return string
      */
-    public function getData($rawFormat = false);
+    public function getBody();
 
     /**
      * @return HttpFoundation\ParameterBag
