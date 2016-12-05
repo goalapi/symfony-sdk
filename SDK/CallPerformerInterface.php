@@ -5,7 +5,7 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Core;
+namespace GoalAPI\SDKBundle\SDK;
 
 interface CallPerformerInterface
 {

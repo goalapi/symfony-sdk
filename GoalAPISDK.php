@@ -7,17 +7,24 @@
 
 namespace GoalAPI\SDKBundle;
 
-use GoalAPI\SDKBundle\Core\APIClient;
-use GoalAPI\SDKBundle\Core\CallPerformerInterface;
+use GoalAPI\SDKBundle\APIClient;
+use GoalAPI\SDKBundle\SDK\CallPerformerInterface;
+use GoalAPI\SDKBundle\SDK\SDK;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Class GoalAPISDK
  *
  * @method Model\Subscription getSubscription
  */
-class GoalAPISDK extends Core\SDK implements APIClient\APIClientAwareInterface
+class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface
 {
     use APIClient\APIClientAwareTrait;
+
+    /**
+     * @var Serializer
+     */
+    private $serializer;
 
     /**
      * @param string $callName
@@ -39,6 +46,14 @@ class GoalAPISDK extends Core\SDK implements APIClient\APIClientAwareInterface
             $receiver->setAPIClient($apiClient);
         } catch (\RuntimeException $x) {
         }
+    }
+
+    /**
+     * @param Serializer $serializer
+     */
+    public function setSerializer(Serializer $serializer)
+    {
+        $this->serializer = $serializer;
     }
 
 }

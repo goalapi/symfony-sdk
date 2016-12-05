@@ -5,7 +5,7 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Core\APIClient\Response;
+namespace GoalAPI\SDKBundle\APIClient\Response;
 
 use Symfony\Component\HttpFoundation;
 

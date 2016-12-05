@@ -5,7 +5,7 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Core\APIClient;
+namespace GoalAPI\SDKBundle\APIClient;
 
 interface APIClientAwareInterface
 {

@@ -7,7 +7,7 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
 
-use GoalAPI\SDKBundle\Core\APIClient\Response\ResponseInterface;
+use GoalAPI\SDKBundle\APIClient\Response\ResponseInterface;
 use GuzzleHttp;
 use Psr\Http\Message;
 use Symfony\Component\HttpFoundation;
@@ -125,8 +125,7 @@ class Response implements ResponseInterface
      */
     public function getHeader($headerName)
     {
-        $headers = &$this->getHeaders();
-
+        $headers = $this->getHeaders();
         return $headers->get($headerName);
     }
 

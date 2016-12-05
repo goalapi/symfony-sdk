@@ -8,7 +8,7 @@
 
 namespace GoalAPI\SDKBundle\Tests\CallPerformer;
 
-use GoalAPI\SDKBundle\Core\CallPerformerInterface;
+use GoalAPI\SDKBundle\SDK\CallPerformerInterface;
 
 class GenericCallPerformer implements CallPerformerInterface
 {

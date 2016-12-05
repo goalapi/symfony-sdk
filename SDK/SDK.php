@@ -6,7 +6,7 @@
  * Time: 3:24 PM
  */
 
-namespace GoalAPI\SDKBundle\Core;
+namespace GoalAPI\SDKBundle\SDK;
 
 class SDK
 {

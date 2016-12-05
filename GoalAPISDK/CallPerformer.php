@@ -1,12 +1,13 @@
 <?php
 namespace GoalAPI\SDKBundle\GoalAPISDK;
 
-use GoalAPI\SDKBundle\Core;
+use GoalAPI\SDKBundle\APIClient;
+use GoalAPI\SDKBundle\SDK;
 
-abstract class CallPerformer implements Core\CallPerformerInterface, Core\APIClient\APIClientAwareInterface
+abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\APIClientAwareInterface
 {
 
-    use Core\APIClient\APIClientAwareTrait;
+    use APIClient\APIClientAwareTrait;
 
     /**
      * @inheritdoc

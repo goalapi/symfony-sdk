@@ -7,7 +7,7 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
 
-use GoalAPI\SDKBundle\Core\APIClient\APIClientInterface;
+use GoalAPI\SDKBundle\APIClient\APIClientInterface;
 use GuzzleHttp;
 
 class Client implements APIClientInterface
