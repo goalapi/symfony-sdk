@@ -3,11 +3,13 @@ namespace GoalAPI\SDKBundle\GoalAPISDK;
 
 use GoalAPI\SDKBundle\APIClient;
 use GoalAPI\SDKBundle\SDK;
+use Symfony\Component\Serializer;
 
-abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\APIClientAwareInterface
+abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
 {
 
     use APIClient\APIClientAwareTrait;
+    use Serializer\SerializerAwareTrait;
 
     /**
      * @inheritdoc

@@ -9,6 +9,8 @@ namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\CallPerformers;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\Model;
+use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use Symfony\Component\Serializer;
 
 class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,10 +18,13 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
     function testGetSubscriptionCallPerformer()
     {
         $dataObject = $this->createDataObject();
-        $apiClient = $this->createAPIClient($dataObject);
-
         $callPerformer = new GoalAPISDK\CallPerformers\GetSubscription();
+
+        $apiClient = $this->createAPIClient($dataObject);
         $callPerformer->setApiClient($apiClient);
+
+        $serializer = $this->createSerializer();
+        $callPerformer->setSerializer($serializer);
 
         /** @var Model\Subscription $subscription */
         $subscription = $callPerformer->performCall([]);
@@ -82,13 +87,36 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
         return $apiClient;
     }
 
+    /**
+     * @return Serializer\Serializer
+     */
+    private function createSerializer()
+    {
+        $serializer = new Serializer\Serializer(
+            [
+                new Denormalizer\SubscriptionDenormalizer(),
+                new Denormalizer\TournamentDenormalizer(),
+            ],
+            [
+                new Serializer\Encoder\JsonDecode(),
+            ]
+        );
+
+        return $serializer;
+    }
+
     function testGetSubscriptionSDKMethod()
     {
         $dataObject = $this->createDataObject();
-        $apiClient = $this->createAPIClient($dataObject);
 
         $sdk = new GoalAPISDK();
+
+        $apiClient = $this->createAPIClient($dataObject);
         $sdk->setApiClient($apiClient);
+
+        $serializer = $this->createSerializer();
+        $sdk->setSerializer($serializer);
+
         $sdk->addCallPerformer('getSubscription', new GoalAPISDK\CallPerformers\GetSubscription());
 
         $subscription = $sdk->getSubscription();

@@ -20,24 +20,14 @@ class GetSubscription extends CallPerformer
         return $response->getBody();
     }
 
+    /**
+     * @param $data
+     * @return Model\Subscription
+     */
     public function deserializeData($data)
     {
-        $data = json_decode($data);
-        $subscription = new Model\Subscription();
-        $subscription->setStatus($data->status);
-        $subscription->setExpirationTime(new \DateTime($data->expirationTime->date_time));
-
-        if (isset($data->allowedTournaments)) {
-            $tournamentObjects = [];
-            foreach ($data->allowedTournaments as $tournamentItem) {
-                $tournamentObject = new Model\Tournament();
-                $tournamentObject->setId($tournamentItem->id);
-                $tournamentObject->setName($tournamentItem->name);
-                $tournamentObjects[] = $tournamentObject;
-            }
-            $subscription->setTournaments($tournamentObjects);
-        }
-
+        /** @var Model\Subscription $subscription */
+        $subscription = $this->serializer->deserialize($data, Model\Subscription::class, 'json');
         return $subscription;
     }
 
