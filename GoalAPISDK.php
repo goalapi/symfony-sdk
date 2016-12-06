@@ -16,6 +16,7 @@ use Symfony\Component\Serializer;
  * Class GoalAPISDK
  *
  * @method Model\Subscription getSubscription
+ * @method Model\Subscription getTournaments
  */
 class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
 {
@@ -52,4 +53,3 @@ class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Seria
         }
     }
 }
-
