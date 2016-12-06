@@ -16,8 +16,9 @@ class TournamentDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($data, $type, $format = null)
+    protected function checkObject($data, $type, $format = null)
     {
+
         if ($type != Model\Tournament::class) {
             return false;
         }
@@ -30,19 +31,18 @@ class TournamentDenormalizer extends Denormalizer
         if (!isset($data->name)) {
             return false;
         }
-
         return true;
     }
 
     /**
-     * @inheritdoc
+     * @param $data
+     * @return Model\Tournament
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    protected function processObject($data, $class, $format = null, array $context = array())
     {
         $tournament = new Model\Tournament();
         $tournament->setId($data->id);
         $tournament->setName($data->name);
-
         return $tournament;
     }
 }

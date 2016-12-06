@@ -16,7 +16,7 @@ class SubscriptionDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($data, $type, $format = null)
+    protected function checkObject($data, $type, $format = null)
     {
         if ($type != Model\Subscription::class) {
             return false;
@@ -37,26 +37,21 @@ class SubscriptionDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    protected function processObject($data, $class, $format = null, array $context = array())
     {
         $subscription = new Model\Subscription();
         $subscription->setStatus($data->status);
         $subscription->setExpirationTime(new \DateTime($data->expirationTime->date_time));
 
         if (isset($data->allowedTournaments)) {
-            $tournamentObjects = [];
-            foreach ($data->allowedTournaments as $tournamentItem) {
-                $tournamentObject = $this->denormalizer->denormalize(
-                    $tournamentItem,
-                    Model\Tournament::class,
-                    $format,
-                    $context
-                );
-                $tournamentObjects[] = $tournamentObject;
-            }
+            $tournamentObjects = $this->denormalizer->denormalize(
+                $data->allowedTournaments,
+                Model\Tournament::class,
+                $format,
+                $context
+            );
             $subscription->setTournaments($tournamentObjects);
         }
-
         return $subscription;
     }
 }
