@@ -40,9 +40,8 @@ class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Seria
 
     private function injectAPIClient(APIClient\APIClientAwareInterface $receiver)
     {
-        try {
+        if ($this->apiClient) {
             $receiver->setAPIClient($this->apiClient);
-        } catch (\RuntimeException $x) {
         }
     }
 

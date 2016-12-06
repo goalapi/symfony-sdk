@@ -13,19 +13,7 @@ trait APIClientAwareTrait
     /**
      * @var APIClientInterface
      */
-    private $apiClient;
-
-    /**
-     * @return APIClientInterface
-     */
-    public function getApiClient()
-    {
-        if (!$this->apiClient) {
-            throw new \RuntimeException('API Client not set for class '.static::class);
-        }
-
-        return $this->apiClient;
-    }
+    protected $apiClient;
 
     /**
      * @param APIClientInterface $client
