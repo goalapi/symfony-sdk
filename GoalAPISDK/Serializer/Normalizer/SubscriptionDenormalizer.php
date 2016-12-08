@@ -5,7 +5,7 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Serializer\Denormalizer;
+namespace GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer;
@@ -16,37 +16,38 @@ class SubscriptionDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    protected function checkObject($data, $type, $format = null)
+    public function supportsDenormalization($object, $type, $format = null)
     {
         if ($type != Model\Subscription::class) {
             return false;
         }
-        if (!is_object($data)) {
+        if (!is_object($object)) {
             return false;
         }
-        if (!isset($data->status)) {
+        if (!isset($object->status)) {
             return false;
         }
-        if (!isset($data->expirationTime->date_time)) {
+        if (!isset($object->expirationTime->date_time)) {
             return false;
         }
-
         return true;
     }
 
     /**
      * @inheritdoc
+     * @return Model\Subscription
      */
-    protected function processObject($data, $class, $format = null, array $context = array())
+    public function denormalize($object, $class, $format = null, array $context = array())
     {
         $subscription = new Model\Subscription();
-        $subscription->setStatus($data->status);
-        $subscription->setExpirationTime(new \DateTime($data->expirationTime->date_time));
+        $subscription->setStatus($object->status);
+        $subscription->setExpirationTime(new \DateTime($object->expirationTime->date_time));
 
-        if (isset($data->allowedTournaments)) {
+        if (isset($object->allowedTournaments)) {
+            /** @var Model\Tournament[] $tournamentObjects */
             $tournamentObjects = $this->denormalizer->denormalize(
-                $data->allowedTournaments,
-                Model\Tournament::class,
+                $object->allowedTournaments,
+                Model\Tournament::class.'[]',
                 $format,
                 $context
             );

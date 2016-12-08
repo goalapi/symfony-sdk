@@ -29,7 +29,7 @@ class GetTournaments extends CallPerformer
     public function deserializeData($data)
     {
         /** @var Model\Tournament $tournaments */
-        $tournaments = $this->serializer->deserialize($data, Model\Tournament::class, 'json');
+        $tournaments = $this->serializer->deserialize($data, Model\Tournament::class.'[]', 'json');
 
         return $tournaments;
     }

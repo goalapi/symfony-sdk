@@ -8,8 +8,9 @@
 namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\CallPerformers;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
+use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
-use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer;
 
 class GetTournamentsTest extends \PHPUnit_Framework_TestCase
@@ -104,7 +105,8 @@ class GetTournamentsTest extends \PHPUnit_Framework_TestCase
     {
         $serializer = new Serializer\Serializer(
             [
-                new Denormalizer\TournamentDenormalizer(),
+                new Normalizer\TournamentDenormalizer(),
+                new ArrayDenormalizer(),
             ],
             [
                 new Serializer\Encoder\JsonDecode(),

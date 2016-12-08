@@ -5,10 +5,11 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Tests\Serializer\Denormalizer;
+namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\Serializer\Denormalizer;
 
+use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
-use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Serializer;
 
 class SubscriptionDenormalizerTest extends \PHPUnit_Framework_TestCase
@@ -30,8 +31,9 @@ class SubscriptionDenormalizerTest extends \PHPUnit_Framework_TestCase
 
         $serializer = new Serializer(
             [
-                new Denormalizer\SubscriptionDenormalizer(),
-                new Denormalizer\TournamentDenormalizer(),
+                new Normalizer\SubscriptionDenormalizer(),
+                new Normalizer\TournamentDenormalizer(),
+                new ArrayDenormalizer(),
             ]
         );
 

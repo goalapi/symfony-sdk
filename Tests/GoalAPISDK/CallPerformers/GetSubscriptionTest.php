@@ -8,8 +8,9 @@
 namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\CallPerformers;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
+use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
-use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer;
 
 class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
@@ -31,6 +32,25 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Model\Subscription::class, $subscription);
         $this->assertEquals(new \DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
 
+    }
+
+    function testGetSubscriptionSDKMethod()
+    {
+        $dataObject = $this->createDataObject();
+
+        $sdk = new GoalAPISDK();
+
+        $apiClient = $this->createAPIClient($dataObject);
+        $sdk->setApiClient($apiClient);
+
+        $serializer = $this->createSerializer();
+        $sdk->setSerializer($serializer);
+
+        $sdk->addCallPerformer('getSubscription', new GoalAPISDK\CallPerformers\GetSubscription());
+
+        $subscription = $sdk->getSubscription();
+        $this->assertInstanceOf(Model\Subscription::class, $subscription);
+        $this->assertEquals(new \DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
     }
 
     /**
@@ -61,7 +81,7 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @param $dataObject
-     * @return GoalAPISDK\APIClient\Guzzle\Client
+     * @return GoalAPISDK\APIClient\APIClient
      */
     private function createAPIClient($dataObject)
     {
@@ -84,6 +104,9 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
             $response
         );
 
+        /**
+         * @var GoalAPISDK\APIClient\APIClient $apiClient
+         */
         return $apiClient;
     }
 
@@ -94,8 +117,9 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
     {
         $serializer = new Serializer\Serializer(
             [
-                new Denormalizer\SubscriptionDenormalizer(),
-                new Denormalizer\TournamentDenormalizer(),
+                new Normalizer\SubscriptionDenormalizer(),
+                new Normalizer\TournamentDenormalizer(),
+                new ArrayDenormalizer(),
             ],
             [
                 new Serializer\Encoder\JsonDecode(),
@@ -103,24 +127,5 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
         );
 
         return $serializer;
-    }
-
-    function testGetSubscriptionSDKMethod()
-    {
-        $dataObject = $this->createDataObject();
-
-        $sdk = new GoalAPISDK();
-
-        $apiClient = $this->createAPIClient($dataObject);
-        $sdk->setApiClient($apiClient);
-
-        $serializer = $this->createSerializer();
-        $sdk->setSerializer($serializer);
-
-        $sdk->addCallPerformer('getSubscription', new GoalAPISDK\CallPerformers\GetSubscription());
-
-        $subscription = $sdk->getSubscription();
-        $this->assertInstanceOf(Model\Subscription::class, $subscription);
-        $this->assertEquals(new \DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
     }
 }

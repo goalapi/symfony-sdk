@@ -5,10 +5,10 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Tests\Serializer\Denormalizer;
+namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\Serializer\Denormalizer;
 
+use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
-use GoalAPI\SDKBundle\Serializer\Denormalizer;
 
 class TournamentDenormalizerTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,7 +20,7 @@ class TournamentDenormalizerTest extends \PHPUnit_Framework_TestCase
             'name' => 'Russian - Premier League',
         ];
 
-        $denormalizer = new Denormalizer\TournamentDenormalizer();
+        $denormalizer = new Normalizer\TournamentDenormalizer();
 
         $this->assertFalse($denormalizer->supportsDenormalization($data, \stdClass::class));
         $this->assertFalse($denormalizer->supportsDenormalization([], Model\Tournament::class));
@@ -45,32 +45,5 @@ class TournamentDenormalizerTest extends \PHPUnit_Framework_TestCase
         $expectedTournament->setId($data->id);
         $expectedTournament->setName($data->name);
         $this->assertEquals($expectedTournament, $denormalizer->denormalize($data, Model\Tournament::class));
-    }
-
-    public function testDenormalizeArray()
-    {
-        $data = [
-            (object)[
-                'id' => 'rus_pl',
-                'name' => 'Russian - Premier League',
-            ],
-            (object)[
-                'id' => 'eng_pl',
-                'name' => 'England - Premier League',
-            ],
-        ];
-        $denormalizer = new Denormalizer\TournamentDenormalizer();
-        $this->assertFalse($denormalizer->supportsDenormalization($data, \stdClass::class));
-        $this->assertTrue($denormalizer->supportsDenormalization($data, Model\Tournament::class));
-
-        $expectedTournaments = [];
-        foreach ($data as $item) {
-            $expectedTournament = new Model\Tournament();
-            $expectedTournament->setId($item->id);
-            $expectedTournament->setName($item->name);
-            $expectedTournaments[] = $expectedTournament;
-        }
-        $this->assertEquals($expectedTournaments, $denormalizer->denormalize($data, Model\Tournament::class));
-
     }
 }
