@@ -46,3 +46,8 @@ class GoalAPICallPerformerTest extends \PHPUnit_Framework_TestCase
         $callPerformer->performCall([]);
     }
 }
+
+class GoalAPICallPerformer extends CallPerformer
+{
+
+}
