@@ -59,6 +59,17 @@ class SeasonDenormalizer extends Denormalizer
             );
         }
 
+        if (isset($object->stages) && is_array($object->stages)) {
+            /** @var Model\Stage[] $stages */
+            $stages = $this->denormalizer->denormalize(
+                $object->stages,
+                Model\Stage::class.'[]',
+                $format,
+                $context
+            );
+            $season->setStages($stages);
+        }
+
         return $season;
     }
 }

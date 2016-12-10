@@ -27,7 +27,6 @@ class GetSeasonTest extends GoalAPISDKTestCase
         $this->assertEquals($expectedObject, $callPerformer->deserializeData($json));
     }
 
-
     public function testSDKCall()
     {
         $json = $this->getJson();
@@ -94,7 +93,6 @@ class GetSeasonTest extends GoalAPISDKTestCase
     ]
 }
         ';
-
         return $json;
     }
 
@@ -118,10 +116,26 @@ class GetSeasonTest extends GoalAPISDKTestCase
         $tournament->setName($dataObject->tournament->name);
         $tournament->setCoverage($tournamentCoverage);
 
+        /** @var Model\Stage[] $stages */
+        $stages = [];
+        foreach ($dataObject->stages as $stageObject) {
+            $stageLink = $stageObject->_links->self->href;
+            $stageLink = trim($stageLink, '/');
+            $stageLink = explode('/', $stageLink);
+            $stageId = $stageLink[1].'.'.$stageLink[3].'.'.$stageLink[5];
+
+            $stage = new Model\Stage();
+            $stage->setId($stageId);
+            $stage->setName($stageObject->name);
+
+            $stages[] = $stage;
+        }
+
         $expectedObject = new Model\Season();
         $expectedObject->setId($seasonId);
         $expectedObject->setName($dataObject->name);
         $expectedObject->setTournament($tournament);
+        $expectedObject->setStages($stages);
 
         return $expectedObject;
     }
