@@ -14,7 +14,7 @@ use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
 class GetTournamentTest extends GoalAPISDKTestCase
 {
 
-    public function testGetTournamentCallPerformer()
+    public function testCallPerformer()
     {
         $json = $this->getJson();
         $dataObject = json_decode($json);
@@ -30,6 +30,22 @@ class GetTournamentTest extends GoalAPISDKTestCase
         $tournament = $callPerformer->performCall([$dataObject->id]);
         $expectedTournament = $this->getExpectedTournament($dataObject);
         $this->assertEquals($expectedTournament, $tournament);
+    }
+
+    public function testSDKCall()
+    {
+        $json = $this->getJson();
+        $dataObject = json_decode($json);
+
+        $sdk = new GoalAPISDK();
+        $sdk->setApiClient($this->createAPIClient($json));
+        $sdk->setSerializer($this->createSerializer());
+        $sdk->addCallPerformer('getTournament', new GoalAPISDK\CallPerformers\GetTournament());
+
+        $this->assertEquals(
+            $this->getExpectedTournament($dataObject),
+            $sdk->getTournament($dataObject->id)
+        );
     }
 
     /**
