@@ -55,6 +55,7 @@ abstract class GoalAPISDKTestCase extends \PHPUnit_Framework_TestCase
                 new GoalAPISDK\Serializer\Normalizer\TournamentDenormalizer(),
                 new GoalAPISDK\Serializer\Normalizer\SeasonDenormalizer(),
                 new GoalAPISDK\Serializer\Normalizer\TerritoryDenormalizer(),
+                new GoalAPISDK\Serializer\Normalizer\StageDenormalizer(),
                 new ArrayDenormalizer(),
             ], [
                 new Serializer\Encoder\JsonDecode(),
