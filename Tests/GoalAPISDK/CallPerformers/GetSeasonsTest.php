@@ -8,11 +8,8 @@
 namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\CallPerformers;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
-use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
-use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
 use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
-use Symfony\Component\Serializer;
 
 class GetSeasonsTest extends GoalAPISDKTestCase
 {
@@ -67,25 +64,5 @@ class GetSeasonsTest extends GoalAPISDKTestCase
 ]            
             ';
         return $json;
-    }
-
-    /**
-     * @return Serializer\Serializer
-     */
-    private function createSerializer()
-    {
-        $serializer = new Serializer\Serializer(
-            [
-                new Normalizer\SubscriptionDenormalizer(),
-                new Normalizer\TournamentDenormalizer(),
-                new Normalizer\SeasonDenormalizer(),
-                new ArrayDenormalizer(),
-            ],
-            [
-                new Serializer\Encoder\JsonDecode(),
-            ]
-        );
-
-        return $serializer;
     }
 }

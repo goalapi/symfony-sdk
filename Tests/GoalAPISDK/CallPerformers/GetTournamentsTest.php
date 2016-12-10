@@ -8,11 +8,8 @@
 namespace GoalAPI\SDKBundle\Tests\GoalAPISDK\CallPerformers;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
-use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
-use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
 use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
-use Symfony\Component\Serializer;
 
 class GetTournamentsTest extends GoalAPISDKTestCase
 {
@@ -29,7 +26,6 @@ class GetTournamentsTest extends GoalAPISDKTestCase
         $tournaments = $callPerformer->performCall([]);
         $this->assertInstanceOf(Model\Tournament::class, $tournaments[0]);
     }
-
 
     public function testGetTournamentsSDKMethod()
     {
@@ -61,23 +57,5 @@ class GetTournamentsTest extends GoalAPISDKTestCase
         ]';
 
         return $json;
-    }
-
-    /**
-     * @return Serializer\Serializer
-     */
-    private function createSerializer()
-    {
-        $serializer = new Serializer\Serializer(
-            [
-                new Normalizer\TournamentDenormalizer(),
-                new ArrayDenormalizer(),
-            ],
-            [
-                new Serializer\Encoder\JsonDecode(),
-            ]
-        );
-
-        return $serializer;
     }
 }
