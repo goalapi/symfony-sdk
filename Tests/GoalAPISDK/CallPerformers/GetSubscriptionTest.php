@@ -11,17 +11,19 @@ use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
+use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
 use Symfony\Component\Serializer;
 
-class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
+class GetSubscriptionTest extends GoalAPISDKTestCase
 {
 
     function testGetSubscriptionCallPerformer()
     {
-        $dataObject = $this->createDataObject();
+        $json = $this->getJson();
+        $dataObject = json_decode($json);
         $callPerformer = new GoalAPISDK\CallPerformers\GetSubscription();
 
-        $apiClient = $this->createAPIClient($dataObject);
+        $apiClient = $this->createAPIClient($json);
         $callPerformer->setApiClient($apiClient);
 
         $serializer = $this->createSerializer();
@@ -36,11 +38,11 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
 
     function testGetSubscriptionSDKMethod()
     {
-        $dataObject = $this->createDataObject();
-
+        $json = $this->getJson();
+        $dataObject = json_decode($json);
         $sdk = new GoalAPISDK();
 
-        $apiClient = $this->createAPIClient($dataObject);
+        $apiClient = $this->createAPIClient($json);
         $sdk->setApiClient($apiClient);
 
         $serializer = $this->createSerializer();
@@ -54,60 +56,28 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return object
+     * @return String
      */
-    private function createDataObject()
+    private function getJson()
     {
-        $dataObject = (object)[
-            'status' => 'ok',
-            'allowedTournaments' => [
-                (object)[
-                    'id' => 'rus_pl',
-                    'name' => 'Russia - Premier League',
-                ],
-                (object)[
-                    'id' => 'eng_pl',
-                    'name' => 'England - Premier League',
-                ],
+        $json = '{
+            "status": "ok",
+            "allowedTournaments": [
+                {
+                    "id": "rus_pl",
+                    "name": "Russia - Premier League"
+                }, {
+                    "id": "eng_pl",
+                    "name": "England - Premier League"
+                }
             ],
-            'expirationTime' => (object)[
-                'date_time' => '2017-08-01T22:49:08+00:00',
-                'timestamp' => 1501627748,
-            ],
-        ];
+            "expirationTime": {
+                "date_time": "2017-08-01T22:49:08+00:00",
+                "timestamp": 1501627748
+            }
+        }';
 
-        return $dataObject;
-    }
-
-    /**
-     * @param $dataObject
-     * @return GoalAPISDK\APIClient\APIClient
-     */
-    private function createAPIClient($dataObject)
-    {
-        $apiClient = $this->createPartialMock(
-            GoalAPISDK\APIClient\Guzzle\Client::class,
-            [
-                'makeAPICall',
-            ]
-        );
-        $response = $this->createPartialMock(
-            GoalAPISDK\APIClient\APIResponse::class,
-            [
-                'getBody',
-            ]
-        );
-        $response->method('getBody')->willReturn(
-            json_encode($dataObject)
-        );
-        $apiClient->method('makeAPICall')->willReturn(
-            $response
-        );
-
-        /**
-         * @var GoalAPISDK\APIClient\APIClient $apiClient
-         */
-        return $apiClient;
+        return $json;
     }
 
     /**

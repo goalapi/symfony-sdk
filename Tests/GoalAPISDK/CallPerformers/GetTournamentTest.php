@@ -11,17 +11,19 @@ use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
+use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
 use Symfony\Component\Serializer;
 
-class GetTournamentTest extends \PHPUnit_Framework_TestCase
+class GetTournamentTest extends GoalAPISDKTestCase
 {
 
     public function testGetTournamentCallPerformer()
     {
-        $dataObject = $this->createDataObject();
+        $json = $this->getJson();
+        $dataObject = json_decode($json);
 
         $callPerformer = new GoalAPISDK\CallPerformers\GetTournament();
-        $apiClient = $this->createAPIClient($dataObject);
+        $apiClient = $this->createAPIClient($json);
         $callPerformer->setApiClient($apiClient);
 
         $serializer = $this->createSerializer();
@@ -34,58 +36,29 @@ class GetTournamentTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return object
+     * @return String
      */
-    private function createDataObject()
+    private function getJson()
     {
-        $dataObject = (object)[
-            'id' => 'rus_pl',
-            'name' => 'Russia - Premier League',
-            'coverage' => (object)[
-                'id' => "rus",
-                'name' => "Russia",
-            ],
-            'season' => (object)[
-                'name' => "Premier League 2016/2017",
-                '_links' => (object)[
-                    'self' => (object)[
-                        'href' => "/tournaments/rus_pl/seasons/20162017",
-                    ],
-                ],
-            ],
-            'teams_type' => "club",
-        ];
+        $json = '{
+            "id": "rus_pl",
+            "name": "Russia - Premier League",
+            "coverage": {
+                "id": "rus",
+                "name": "Russia"            
+            },
+            "season": {
+                "name": "Premier League 2016/2017",
+                "_links": {
+                    "self": {
+                        "href": "/tournaments/rus_pl/seasons/20162017"
+                    }
+                } 
+            },
+            "teams_type": "club"
+        }';
 
-        return $dataObject;
-    }
-
-    /**
-     * @param $dataObject
-     * @return GoalAPISDK\APIClient\APIClient
-     */
-    private function createAPIClient($dataObject)
-    {
-        $apiClient = $this->createPartialMock(
-            GoalAPISDK\APIClient\Guzzle\Client::class,
-            [
-                'makeAPICall',
-            ]
-        );
-        $response = $this->createPartialMock(
-            GoalAPISDK\APIClient\APIResponse::class,
-            [
-                'getBody',
-            ]
-        );
-        $response->method('getBody')->willReturn(
-            json_encode($dataObject)
-        );
-        $apiClient->method('makeAPICall')->willReturn(
-            $response
-        );
-
-        /** @var GoalAPISDK\APIClient\APIClient $apiClient */
-        return $apiClient;
+        return $json;
     }
 
     /**
@@ -133,7 +106,6 @@ class GetTournamentTest extends \PHPUnit_Framework_TestCase
         $seasonLink = $seasonLink[1].'.'.$seasonLink[3];
         $expectedSeason->setId($seasonLink);
         $expectedTournament->setActiveSeason($expectedSeason);
-
         return $expectedTournament;
     }
 }

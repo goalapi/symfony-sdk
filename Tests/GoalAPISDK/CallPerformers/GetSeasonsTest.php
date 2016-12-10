@@ -11,14 +11,15 @@ use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
+use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
 use Symfony\Component\Serializer;
 
-class GetSeasonsTest extends \PHPUnit_Framework_TestCase
+class GetSeasonsTest extends GoalAPISDKTestCase
 {
     public function testGetSeasonsCallPerformer()
     {
         $json = $this->getJson();
-        $dataObjects = $this->getDataObjects($json);
+        $dataObjects = json_decode($json);
 
         $callPerformer = new GoalAPISDK\CallPerformers\GetSeasons();
         $callPerformer->setApiClient($this->createAPIClient($json));
@@ -65,38 +66,8 @@ class GetSeasonsTest extends \PHPUnit_Framework_TestCase
     }
 ]            
             ';
-
         return $json;
     }
-
-    /**
-     * @param $json
-     * @return mixed
-     */
-    private function getDataObjects($json)
-    {
-        $dataObjects = json_decode($json);
-
-        return $dataObjects;
-    }
-
-    /**
-     * @param $json
-     * @return GoalAPISDK\APIClient\APIClient
-     */
-    private function createAPIClient($json)
-    {
-        $apiClient = $this->createPartialMock(GoalAPISDK\APIClient\Guzzle\Client::class, ['makeAPICall']);
-        $response = $this->createPartialMock(GoalAPISDK\APIClient\APIResponse::class, ['getBody']);
-        $response->method('getBody')->willReturn($json);
-        $apiClient->method('makeAPICall')->willReturn($response);
-
-        /**
-         * @var GoalAPISDK\APIClient\APIClient $apiClient
-         */
-        return $apiClient;
-    }
-
 
     /**
      * @return Serializer\Serializer
@@ -117,5 +88,4 @@ class GetSeasonsTest extends \PHPUnit_Framework_TestCase
 
         return $serializer;
     }
-
 }
