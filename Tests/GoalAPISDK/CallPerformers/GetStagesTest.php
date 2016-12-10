@@ -28,6 +28,22 @@ class GetStagesTest extends GoalAPISDKTestCase
         );
     }
 
+    public function testSDKCall()
+    {
+        $json = $this->getJson();
+        $dataObjects = json_decode($json);
+
+        $sdk = new GoalAPISDK();
+        $sdk->setApiClient($this->createAPIClient($json));
+        $sdk->setSerializer($this->createSerializer());
+        $sdk->addCallPerformer('getStages', new GoalAPISDK\CallPerformers\GetStages());
+
+        $this->assertEquals(
+            $this->getExpectedData($dataObjects),
+            $sdk->getStages(new Model\Tournament(), new Model\Season())
+        );
+    }
+
     /**
      * @return string
      */
@@ -85,7 +101,6 @@ class GetStagesTest extends GoalAPISDKTestCase
     }
 ]
             ';
-
         return $json;
     }
 
