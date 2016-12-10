@@ -125,7 +125,6 @@ class GetSubscriptionTest extends \PHPUnit_Framework_TestCase
                 new Serializer\Encoder\JsonDecode(),
             ]
         );
-
         return $serializer;
     }
 }

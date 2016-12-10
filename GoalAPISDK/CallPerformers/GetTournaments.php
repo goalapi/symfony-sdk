@@ -18,19 +18,17 @@ class GetTournaments extends CallPerformer
     public function loadDataFromProvider()
     {
         $response = $this->apiClient->makeAPICall('/tournaments/');
-
         return $response->getBody();
     }
 
     /**
      * @param $data
-     * @return Model\Tournament
+     * @return Model\Tournament[]
      */
     public function deserializeData($data)
     {
-        /** @var Model\Tournament $tournaments */
+        /** @var Model\Tournament[] $tournaments */
         $tournaments = $this->serializer->deserialize($data, Model\Tournament::class.'[]', 'json');
-
         return $tournaments;
     }
 
