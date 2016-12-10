@@ -109,9 +109,19 @@ class GetSeasonTest extends GoalAPISDKTestCase
         $seasonLink = explode('/', $seasonLink);
         $seasonId = $seasonLink[1].'.'.$seasonLink[3];
 
+        $tournamentCoverage = new Model\Territory();
+        $tournamentCoverage->setId($dataObject->tournament->coverage->id);
+        $tournamentCoverage->setName($dataObject->tournament->coverage->name);
+
+        $tournament = new Model\Tournament();
+        $tournament->setId($dataObject->tournament->id);
+        $tournament->setName($dataObject->tournament->name);
+        $tournament->setCoverage($tournamentCoverage);
+
         $expectedObject = new Model\Season();
         $expectedObject->setId($seasonId);
         $expectedObject->setName($dataObject->name);
+        $expectedObject->setTournament($tournament);
 
         return $expectedObject;
     }

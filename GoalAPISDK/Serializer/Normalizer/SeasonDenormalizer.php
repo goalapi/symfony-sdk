@@ -46,6 +46,19 @@ class SeasonDenormalizer extends Denormalizer
         }
         $season->setName($object->name);
 
+        if (isset($object->tournament)) {
+            /** @var Model\Tournament $tournament */
+            $tournament = $this->denormalizer->denormalize(
+                $object->tournament,
+                Model\Tournament::class,
+                $format,
+                $context
+            );
+            $season->setTournament(
+                $tournament
+            );
+        }
+
         return $season;
     }
 }

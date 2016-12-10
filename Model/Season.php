@@ -25,10 +25,14 @@ class Season
     private $tournament;
 
     /**
+     * @var Stage[]
+     */
+    private $stages;
+
+
+    /**
      * @return string
      */
-
-
     public function getName()
     {
         return $this->name;
@@ -72,5 +76,21 @@ class Season
     public function setTournament($tournament)
     {
         $this->tournament = $tournament;
+    }
+
+    /**
+     * @return Stage[]
+     */
+    public function getStages()
+    {
+        return $this->stages;
+    }
+
+    /**
+     * @param Stage[] $stages
+     */
+    public function setStages(array $stages)
+    {
+        $this->stages = $stages;
     }
 }
