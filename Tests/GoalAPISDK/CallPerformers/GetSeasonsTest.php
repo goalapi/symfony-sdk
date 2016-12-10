@@ -13,7 +13,7 @@ use GoalAPI\SDKBundle\Tests\GoalAPISDK\GoalAPISDKTestCase;
 
 class GetSeasonsTest extends GoalAPISDKTestCase
 {
-    public function testGetSeasonsCallPerformer()
+    public function testCallPerformer()
     {
         $json = $this->getJson();
         $dataObjects = json_decode($json);
@@ -22,20 +22,26 @@ class GetSeasonsTest extends GoalAPISDKTestCase
         $callPerformer->setApiClient($this->createAPIClient($json));
         $callPerformer->setSerializer($this->createSerializer());
 
-        $expectedData = [];
-        foreach ($dataObjects as $dataObject) {
-            $seasonLink = $dataObject->_links->self->href;
-            $seasonLink = trim($seasonLink, '/');
-            $seasonLink = explode('/', $seasonLink);
-            $seasonId = $seasonLink[1].'.'.$seasonLink[3];
+        $this->assertEquals(
+            $this->getExpectedData($dataObjects),
+            $callPerformer->deserializeData($json)
+        );
+    }
 
-            $expectedObject = new Model\Season();
-            $expectedObject->setId($seasonId);
-            $expectedObject->setName($dataObject->name);
-            $expectedData[] = $expectedObject;
-        }
+    public function testSDKCall()
+    {
+        $json = $this->getJson();
+        $dataObjects = json_decode($json);
 
-        $this->assertEquals($expectedData, $callPerformer->deserializeData($json));
+        $sdk = new GoalAPISDK();
+        $sdk->setApiClient($this->createAPIClient($json));
+        $sdk->setSerializer($this->createSerializer());
+        $sdk->addCallPerformer('getSeasons', new GoalAPISDK\CallPerformers\GetSeasons());
+
+        $this->assertEquals(
+            $this->getExpectedData($dataObjects),
+            $sdk->getSeasons(new Model\Tournament())
+        );
     }
 
     /**
@@ -64,5 +70,27 @@ class GetSeasonsTest extends GoalAPISDKTestCase
 ]            
             ';
         return $json;
+    }
+
+    /**
+     * @param $dataObjects
+     * @return array
+     */
+    private function getExpectedData($dataObjects)
+    {
+        $expectedData = [];
+        foreach ($dataObjects as $dataObject) {
+            $seasonLink = $dataObject->_links->self->href;
+            $seasonLink = trim($seasonLink, '/');
+            $seasonLink = explode('/', $seasonLink);
+            $seasonId = $seasonLink[1].'.'.$seasonLink[3];
+
+            $expectedObject = new Model\Season();
+            $expectedObject->setId($seasonId);
+            $expectedObject->setName($dataObject->name);
+            $expectedData[] = $expectedObject;
+        }
+
+        return $expectedData;
     }
 }
