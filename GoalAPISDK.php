@@ -17,6 +17,7 @@ use Symfony\Component\Serializer;
  *
  * @method Model\Subscription getSubscription
  * @method Model\Tournament[] getTournaments
+ * @method Model\Season getSeason(Model\Tournament $tournament, String $seasonId)
  */
 class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
 {
