@@ -16,7 +16,7 @@ use Symfony\Component\Serializer;
  * Class GoalAPISDK
  *
  * @method Model\Subscription getSubscription
- * @method Model\Subscription getTournaments
+ * @method Model\Tournament[] getTournaments
  */
 class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
 {
