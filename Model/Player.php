@@ -11,6 +11,11 @@ use Symfony\Component\HttpFoundation\ParameterBag;
 
 class Player
 {
+    const PLAYER_POSITION_GOALKEEPER = 'goalkeeper';
+    const PLAYER_POSITION_DEFENDER = 'defender';
+    const PLAYER_POSITION_MIDFIELDER = 'midfielder';
+    const PLAYER_POSITION_FORWARD = 'forward';
+
     /**
      * @var String
      */
