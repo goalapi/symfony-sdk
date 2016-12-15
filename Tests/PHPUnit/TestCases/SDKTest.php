@@ -7,9 +7,9 @@
 
 namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases;
 
-use GoalAPI\SDKBundle\GoalAPISDK;
+use GoalAPI\SDKBundle\SDK\SDK;
 
-class GoalAPISDKTest extends \PHPUnit_Framework_TestCase
+class SDKTest extends \PHPUnit_Framework_TestCase
 {
 
     public function testAddCallPerformer()
@@ -20,7 +20,7 @@ class GoalAPISDKTest extends \PHPUnit_Framework_TestCase
             'val2',
         ];
 
-        $theSdk = new GoalAPISDK();
+        $theSdk = new SDK();
         $theSdk->addCallPerformer($callName, new CallPerformer\GenericCallPerformer());
         $this->assertEquals(
             $arguments,
@@ -41,7 +41,7 @@ class GoalAPISDKTest extends \PHPUnit_Framework_TestCase
             'va1',
             'val2',
         ];
-        $theSdk = new GoalAPISDK();
+        $theSdk = new SDK();
         $theSdk->setCallPerformers(
             [
                 $callName => new CallPerformer\GenericCallPerformer(),
@@ -61,7 +61,7 @@ class GoalAPISDKTest extends \PHPUnit_Framework_TestCase
 
     public function testUndefinedCall()
     {
-        $theSdk = new GoalAPISDK();
+        $theSdk = new SDK();
         $theSdk->setCallPerformers(
             [
                 'performGenericCall' => new CallPerformer\GenericCallPerformer(),
