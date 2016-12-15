@@ -5,7 +5,7 @@
  *
  */
 
-namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases\Serializer;
+namespace GoalAPI\SDKBundle\Tests\PHPUnit\includes\Serializer;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;

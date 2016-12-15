@@ -8,6 +8,7 @@
 namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases;
 
 use GoalAPI\SDKBundle\SDK\SDK;
+use GoalAPI\SDKBundle\Tests\PHPUnit\includes\CallPerformer\GenericCallPerformer;
 
 class SDKTest extends \PHPUnit_Framework_TestCase
 {
@@ -21,7 +22,7 @@ class SDKTest extends \PHPUnit_Framework_TestCase
         ];
 
         $theSdk = new SDK();
-        $theSdk->addCallPerformer($callName, new CallPerformer\GenericCallPerformer());
+        $theSdk->addCallPerformer($callName, new GenericCallPerformer());
         $this->assertEquals(
             $arguments,
             $theSdk->makeCall($callName, $arguments),
@@ -44,7 +45,7 @@ class SDKTest extends \PHPUnit_Framework_TestCase
         $theSdk = new SDK();
         $theSdk->setCallPerformers(
             [
-                $callName => new CallPerformer\GenericCallPerformer(),
+                $callName => new GenericCallPerformer(),
             ]
         );
         $this->assertEquals(
@@ -64,7 +65,7 @@ class SDKTest extends \PHPUnit_Framework_TestCase
         $theSdk = new SDK();
         $theSdk->setCallPerformers(
             [
-                'performGenericCall' => new CallPerformer\GenericCallPerformer(),
+                'performGenericCall' => new GenericCallPerformer(),
             ]
         );
         $this->expectException(\BadMethodCallException::class);

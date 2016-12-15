@@ -8,7 +8,7 @@
 namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases\GoalAPISDK;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
-use GoalAPI\SDKBundle\Tests\PHPUnit\TestCases\Serializer;
+use GoalAPI\SDKBundle\Tests\PHPUnit\includes\Serializer;
 
 abstract class GoalAPISDKTestCase extends \PHPUnit_Framework_TestCase
 {

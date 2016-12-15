@@ -6,7 +6,7 @@
  * Time: 2:38 PM
  */
 
-namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases\CallPerformer;
+namespace GoalAPI\SDKBundle\Tests\PHPUnit\includes\CallPerformer;
 
 use GoalAPI\SDKBundle\SDK\CallPerformerInterface;
 
