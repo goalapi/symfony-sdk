@@ -15,11 +15,6 @@ class Squad
     private $id;
 
     /**
-     * @var String
-     */
-    private $name;
-
-    /**
      * @var Team
      */
     private $team;
@@ -59,22 +54,6 @@ class Squad
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return String
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param String $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 
     /**
