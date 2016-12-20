@@ -1,0 +1,1170 @@
+[
+  {
+    "id": "690baa6676fe316a8f26b04f84076d62",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group A"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "reamad_esp",
+          "name": "Real Madrid",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/reamad_esp"
+            },
+            "team": {
+              "href": "/teams/reamad_esp"
+            }
+          }
+        },
+        "position": 1,
+        "points": 16,
+        "matches": {
+          "played": 6,
+          "won": 5,
+          "draw": 1,
+          "lost": 0
+        },
+        "goals": {
+          "scored": 19,
+          "conceded": 3
+        }
+      },
+      {
+        "team": {
+          "id": "parsg_fra",
+          "name": "Paris SG",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/parsg_fra"
+            },
+            "team": {
+              "href": "/teams/parsg_fra"
+            }
+          }
+        },
+        "position": 2,
+        "points": 13,
+        "matches": {
+          "played": 6,
+          "won": 4,
+          "draw": 1,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 12,
+          "conceded": 1
+        }
+      },
+      {
+        "team": {
+          "id": "shadon_ukr",
+          "name": "Shakhtar Donetsk",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/shadon_ukr"
+            },
+            "team": {
+              "href": "/teams/shadon_ukr"
+            }
+          }
+        },
+        "position": 3,
+        "points": 3,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 0,
+          "lost": 5
+        },
+        "goals": {
+          "scored": 7,
+          "conceded": 14
+        }
+      },
+      {
+        "team": {
+          "id": "malff_swe",
+          "name": "Malmo FF",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/malff_swe"
+            },
+            "team": {
+              "href": "/teams/malff_swe"
+            }
+          }
+        },
+        "position": 4,
+        "points": 3,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 0,
+          "lost": 5
+        },
+        "goals": {
+          "scored": 1,
+          "conceded": 21
+        }
+      }
+    ]
+  },
+  {
+    "id": "5aff55d839a337b38181ff1379592d94",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group B"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "wol_deu",
+          "name": "Wolfsburg",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/wol_deu"
+            },
+            "team": {
+              "href": "/teams/wol_deu"
+            }
+          }
+        },
+        "position": 1,
+        "points": 12,
+        "matches": {
+          "played": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 9,
+          "conceded": 6
+        }
+      },
+      {
+        "team": {
+          "id": "psv_nld",
+          "name": "PSV",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/psv_nld"
+            },
+            "team": {
+              "href": "/teams/psv_nld"
+            }
+          }
+        },
+        "position": 2,
+        "points": 10,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 8,
+          "conceded": 7
+        }
+      },
+      {
+        "team": {
+          "id": "manuni_eng",
+          "name": "Manchester United",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/manuni_eng"
+            },
+            "team": {
+              "href": "/teams/manuni_eng"
+            }
+          }
+        },
+        "position": 3,
+        "points": 8,
+        "matches": {
+          "played": 6,
+          "won": 2,
+          "draw": 2,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 7,
+          "conceded": 7
+        }
+      },
+      {
+        "team": {
+          "id": "cskmos_rus",
+          "name": "CSKA Moscow",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/cskmos_rus"
+            },
+            "team": {
+              "href": "/teams/cskmos_rus"
+            }
+          }
+        },
+        "position": 4,
+        "points": 4,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 1,
+          "lost": 4
+        },
+        "goals": {
+          "scored": 5,
+          "conceded": 9
+        }
+      }
+    ]
+  },
+  {
+    "id": "0959fda9f9853846bf7acddeb901be00",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group C"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "atlmad_esp",
+          "name": "Atl. Madrid",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/atlmad_esp"
+            },
+            "team": {
+              "href": "/teams/atlmad_esp"
+            }
+          }
+        },
+        "position": 1,
+        "points": 13,
+        "matches": {
+          "played": 6,
+          "won": 4,
+          "draw": 1,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 11,
+          "conceded": 3
+        }
+      },
+      {
+        "team": {
+          "id": "ben_prt",
+          "name": "Benfica",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/ben_prt"
+            },
+            "team": {
+              "href": "/teams/ben_prt"
+            }
+          }
+        },
+        "position": 2,
+        "points": 10,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 10,
+          "conceded": 8
+        }
+      },
+      {
+        "team": {
+          "id": "gal_tur",
+          "name": "Galatasaray",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/gal_tur"
+            },
+            "team": {
+              "href": "/teams/gal_tur"
+            }
+          }
+        },
+        "position": 3,
+        "points": 5,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 2,
+          "lost": 3
+        },
+        "goals": {
+          "scored": 6,
+          "conceded": 10
+        }
+      },
+      {
+        "team": {
+          "id": "fcast_kaz",
+          "name": "FC Astana",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/fcast_kaz"
+            },
+            "team": {
+              "href": "/teams/fcast_kaz"
+            }
+          }
+        },
+        "position": 4,
+        "points": 4,
+        "matches": {
+          "played": 6,
+          "won": 0,
+          "draw": 4,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 5,
+          "conceded": 11
+        }
+      }
+    ]
+  },
+  {
+    "id": "07706f1a0d8e3478ac0fe477e8a11333",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group D"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "mancit_eng",
+          "name": "Manchester City",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/mancit_eng"
+            },
+            "team": {
+              "href": "/teams/mancit_eng"
+            }
+          }
+        },
+        "position": 1,
+        "points": 12,
+        "matches": {
+          "played": 6,
+          "won": 4,
+          "draw": 0,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 12,
+          "conceded": 8
+        }
+      },
+      {
+        "team": {
+          "id": "juv_ita",
+          "name": "Juventus",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/juv_ita"
+            },
+            "team": {
+              "href": "/teams/juv_ita"
+            }
+          }
+        },
+        "position": 2,
+        "points": 11,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 2,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 6,
+          "conceded": 3
+        }
+      },
+      {
+        "team": {
+          "id": "sev_esp",
+          "name": "Sevilla",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/sev_esp"
+            },
+            "team": {
+              "href": "/teams/sev_esp"
+            }
+          }
+        },
+        "position": 3,
+        "points": 6,
+        "matches": {
+          "played": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4
+        },
+        "goals": {
+          "scored": 8,
+          "conceded": 11
+        }
+      },
+      {
+        "team": {
+          "id": "bmon_deu",
+          "name": "B. Monchengladbach",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/bmon_deu"
+            },
+            "team": {
+              "href": "/teams/bmon_deu"
+            }
+          }
+        },
+        "position": 4,
+        "points": 5,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 2,
+          "lost": 3
+        },
+        "goals": {
+          "scored": 8,
+          "conceded": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "d26303952f423150b7ecd196150b49e6",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group E"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "bar_esp",
+          "name": "Barcelona",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/bar_esp"
+            },
+            "team": {
+              "href": "/teams/bar_esp"
+            }
+          }
+        },
+        "position": 1,
+        "points": 14,
+        "matches": {
+          "played": 6,
+          "won": 4,
+          "draw": 2,
+          "lost": 0
+        },
+        "goals": {
+          "scored": 15,
+          "conceded": 4
+        }
+      },
+      {
+        "team": {
+          "id": "asrom_ita",
+          "name": "AS Roma",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/asrom_ita"
+            },
+            "team": {
+              "href": "/teams/asrom_ita"
+            }
+          }
+        },
+        "position": 2,
+        "points": 6,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 3,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 11,
+          "conceded": 16
+        }
+      },
+      {
+        "team": {
+          "id": "baylev_deu",
+          "name": "Bayer Leverkusen",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/baylev_deu"
+            },
+            "team": {
+              "href": "/teams/baylev_deu"
+            }
+          }
+        },
+        "position": 3,
+        "points": 6,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 3,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 13,
+          "conceded": 12
+        }
+      },
+      {
+        "team": {
+          "id": "bat_blr",
+          "name": "BATE",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/bat_blr"
+            },
+            "team": {
+              "href": "/teams/bat_blr"
+            }
+          }
+        },
+        "position": 4,
+        "points": 5,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 2,
+          "lost": 3
+        },
+        "goals": {
+          "scored": 5,
+          "conceded": 12
+        }
+      }
+    ]
+  },
+  {
+    "id": "67048dcd8b133938b447684374028646",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group F"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "baymun_deu",
+          "name": "Bayern Munich",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/baymun_deu"
+            },
+            "team": {
+              "href": "/teams/baymun_deu"
+            }
+          }
+        },
+        "position": 1,
+        "points": 15,
+        "matches": {
+          "played": 6,
+          "won": 5,
+          "draw": 0,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 19,
+          "conceded": 3
+        }
+      },
+      {
+        "team": {
+          "id": "ars_eng",
+          "name": "Arsenal",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/ars_eng"
+            },
+            "team": {
+              "href": "/teams/ars_eng"
+            }
+          }
+        },
+        "position": 2,
+        "points": 9,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 0,
+          "lost": 3
+        },
+        "goals": {
+          "scored": 12,
+          "conceded": 10
+        }
+      },
+      {
+        "team": {
+          "id": "olypir_grc",
+          "name": "Olympiakos Piraeus",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/olypir_grc"
+            },
+            "team": {
+              "href": "/teams/olypir_grc"
+            }
+          }
+        },
+        "position": 3,
+        "points": 9,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 0,
+          "lost": 3
+        },
+        "goals": {
+          "scored": 6,
+          "conceded": 13
+        }
+      },
+      {
+        "team": {
+          "id": "dzag_hrv",
+          "name": "D. Zagreb",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/dzag_hrv"
+            },
+            "team": {
+              "href": "/teams/dzag_hrv"
+            }
+          }
+        },
+        "position": 4,
+        "points": 3,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 0,
+          "lost": 5
+        },
+        "goals": {
+          "scored": 3,
+          "conceded": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "da330be757273760b79bd86078817a5f",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group G"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "che_eng",
+          "name": "Chelsea",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/che_eng"
+            },
+            "team": {
+              "href": "/teams/che_eng"
+            }
+          }
+        },
+        "position": 1,
+        "points": 13,
+        "matches": {
+          "played": 6,
+          "won": 4,
+          "draw": 1,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 13,
+          "conceded": 3
+        }
+      },
+      {
+        "team": {
+          "id": "dynkie_ukr",
+          "name": "Dyn. Kiev",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/dynkie_ukr"
+            },
+            "team": {
+              "href": "/teams/dynkie_ukr"
+            }
+          }
+        },
+        "position": 2,
+        "points": 11,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 2,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 8,
+          "conceded": 4
+        }
+      },
+      {
+        "team": {
+          "id": "fcpor_prt",
+          "name": "FC Porto",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/fcpor_prt"
+            },
+            "team": {
+              "href": "/teams/fcpor_prt"
+            }
+          }
+        },
+        "position": 3,
+        "points": 10,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 9,
+          "conceded": 8
+        }
+      },
+      {
+        "team": {
+          "id": "mactelavi_isr",
+          "name": "Maccabi Tel Aviv",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/mactelavi_isr"
+            },
+            "team": {
+              "href": "/teams/mactelavi_isr"
+            }
+          }
+        },
+        "position": 4,
+        "points": 0,
+        "matches": {
+          "played": 6,
+          "won": 0,
+          "draw": 0,
+          "lost": 6
+        },
+        "goals": {
+          "scored": 1,
+          "conceded": 16
+        }
+      }
+    ]
+  },
+  {
+    "id": "79324cd0d4a134628fcc0fa65c07b86f",
+    "tournament": {
+      "id": "ucl",
+      "name": "Champions League",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl"
+        }
+      },
+      "coverage": {
+        "id": "eu",
+        "name": "Europe",
+        "_links": {
+          "self": {
+            "href": "/territories/eu"
+          }
+        }
+      }
+    },
+    "season": {
+      "name": "Champions League 2015/2016",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016"
+        }
+      }
+    },
+    "stage": {
+      "name": "Group Stage",
+      "_links": {
+        "self": {
+          "href": "/tournaments/ucl/seasons/20152016/stages/groupstage"
+        }
+      }
+    },
+    "context": {
+      "group": "Group H"
+    },
+    "rows": [
+      {
+        "team": {
+          "id": "zenpet_rus",
+          "name": "Zenit Petersburg",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/zenpet_rus"
+            },
+            "team": {
+              "href": "/teams/zenpet_rus"
+            }
+          }
+        },
+        "position": 1,
+        "points": 15,
+        "matches": {
+          "played": 6,
+          "won": 5,
+          "draw": 0,
+          "lost": 1
+        },
+        "goals": {
+          "scored": 13,
+          "conceded": 6
+        }
+      },
+      {
+        "team": {
+          "id": "gent_bel",
+          "name": "Gent",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/gent_bel"
+            },
+            "team": {
+              "href": "/teams/gent_bel"
+            }
+          }
+        },
+        "position": 2,
+        "points": 10,
+        "matches": {
+          "played": 6,
+          "won": 3,
+          "draw": 1,
+          "lost": 2
+        },
+        "goals": {
+          "scored": 8,
+          "conceded": 7
+        }
+      },
+      {
+        "team": {
+          "id": "val_esp",
+          "name": "Valencia",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/val_esp"
+            },
+            "team": {
+              "href": "/teams/val_esp"
+            }
+          }
+        },
+        "position": 3,
+        "points": 6,
+        "matches": {
+          "played": 6,
+          "won": 2,
+          "draw": 0,
+          "lost": 4
+        },
+        "goals": {
+          "scored": 5,
+          "conceded": 9
+        }
+      },
+      {
+        "team": {
+          "id": "lyo_fra",
+          "name": "Lyon",
+          "_links": {
+            "self": {
+              "href": "/tournaments/ucl/seasons/20152016/stages/groupstage/teams/lyo_fra"
+            },
+            "team": {
+              "href": "/teams/lyo_fra"
+            }
+          }
+        },
+        "position": 4,
+        "points": 4,
+        "matches": {
+          "played": 6,
+          "won": 1,
+          "draw": 1,
+          "lost": 4
+        },
+        "goals": {
+          "scored": 5,
+          "conceded": 9
+        }
+      }
+    ]
+  }
+]
