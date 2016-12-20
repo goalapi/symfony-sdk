@@ -21,9 +21,9 @@
   ],
   "require": {
     "php": "^5.3.3|^7.0",
-    "symfony/framework-bundle": "~2.2|~3.0",
+    "symfony/framework-bundle": "~3.2",
     "guzzlehttp/guzzle": "^6.2",
-    "symfony/serializer": "^3.1"
+    "symfony/serializer": "~3.2"
   },
   "require-dev": {
   },
