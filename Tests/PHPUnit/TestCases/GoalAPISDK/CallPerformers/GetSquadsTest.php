@@ -44,6 +44,7 @@ class GetSquadsTest extends GoalAPISDKTestCase
             $this->assertEquals($tournament, $squad->getTournament());
             $this->assertEquals($season, $squad->getSeason());
             $this->assertEquals($stage, $squad->getStage());
+            $this->assertNotEmpty($squad->getId());
         }
     }
 }

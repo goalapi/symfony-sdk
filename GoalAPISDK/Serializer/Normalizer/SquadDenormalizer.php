@@ -19,10 +19,27 @@ class SquadDenormalizer extends Denormalizer
      */
     public function denormalize($data, $class, $format = null, array $context = array())
     {
+
+        $squad = new Model\Squad();
+        if (isset($data->_links->self->href)) {
+            $link = $data->_links->self->href;
+            $link = trim($link, '/');
+            $linkParts = explode('/', $link);
+            $idParts = [
+                $linkParts[1],
+                $linkParts[3],
+                $linkParts[5],
+            ];
+            if (sizeof($linkParts) > 7) {
+                $idParts[3] = $linkParts[7];
+            }
+            $id = implode('.', $idParts);
+            $squad->setId($id);
+        }
+
         /** @var Model\Team $team */
         $team = $this->denormalizer->denormalize($data, Model\Team::class, $format, $context);
 
-        $squad = new Model\Squad();
         $squad->setTeam($team);
 
         if (isset($data->tournament)) {
