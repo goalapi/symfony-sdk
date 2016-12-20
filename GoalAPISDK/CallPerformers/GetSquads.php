@@ -58,14 +58,14 @@ class GetSquads extends CallPerformer
 
     /**
      * @param $data
-     * @return Model\Match[]
+     * @return Model\Squad[]
      */
     public function deserializeData($data)
     {
-        /** @var Model\Match[] $matches */
-        $matches = $this->serializer->deserialize($data, Model\Squad::class.'[]', 'json');
+        /** @var Model\Squad[] $squad */
+        $squad = $this->serializer->deserialize($data, Model\Squad::class.'[]', 'json');
 
-        return $matches;
+        return $squad;
     }
 
 
