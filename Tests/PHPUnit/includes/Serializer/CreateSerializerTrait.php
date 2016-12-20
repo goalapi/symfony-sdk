@@ -30,6 +30,7 @@ trait CreateSerializerTrait
                 new GoalAPISDK\Serializer\Normalizer\TeamDenormalizer(),
                 new GoalAPISDK\Serializer\Normalizer\PlayerInSquadDenormalizer(),
                 new GoalAPISDK\Serializer\Normalizer\PlayerDenormalizer(),
+                new GoalAPISDK\Serializer\Normalizer\SquadDenormalizer(),
                 new ArrayDenormalizer(),
             ], [
                 new Serializer\Encoder\JsonDecode(),

@@ -1,0 +1,938 @@
+[
+  {
+    "id": "asrom_ita",
+    "name": "AS Roma",
+    "_links": {
+      "team": {
+        "href": "/teams/asrom_ita"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/asrom_ita"
+      }
+    }
+  },
+  {
+    "id": "bat_blr",
+    "name": "BATE",
+    "_links": {
+      "team": {
+        "href": "/teams/bat_blr"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/bat_blr"
+      }
+    }
+  },
+  {
+    "id": "baylev_deu",
+    "name": "Bayer Leverkusen",
+    "_links": {
+      "team": {
+        "href": "/teams/baylev_deu"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/baylev_deu"
+      }
+    }
+  },
+  {
+    "id": "bar_esp",
+    "name": "Barcelona",
+    "_links": {
+      "team": {
+        "href": "/teams/bar_esp"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/bar_esp"
+      }
+    }
+  },
+  {
+    "id": "che_eng",
+    "name": "Chelsea",
+    "_links": {
+      "team": {
+        "href": "/teams/che_eng"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/che_eng"
+      }
+    }
+  },
+  {
+    "id": "fcpor_prt",
+    "name": "FC Porto",
+    "_links": {
+      "team": {
+        "href": "/teams/fcpor_prt"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fcpor_prt"
+      }
+    }
+  },
+  {
+    "id": "dynkie_ukr",
+    "name": "Dyn. Kiev",
+    "_links": {
+      "team": {
+        "href": "/teams/dynkie_ukr"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/dynkie_ukr"
+      }
+    }
+  },
+  {
+    "id": "mactelavi_isr",
+    "name": "Maccabi Tel Aviv",
+    "_links": {
+      "team": {
+        "href": "/teams/mactelavi_isr"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mactelavi_isr"
+      }
+    }
+  },
+  {
+    "id": "dzag_hrv",
+    "name": "D. Zagreb",
+    "_links": {
+      "team": {
+        "href": "/teams/dzag_hrv"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/dzag_hrv"
+      }
+    }
+  },
+  {
+    "id": "baymun_deu",
+    "name": "Bayern Munich",
+    "_links": {
+      "team": {
+        "href": "/teams/baymun_deu"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/baymun_deu"
+      }
+    }
+  },
+  {
+    "id": "gent_bel",
+    "name": "Gent",
+    "_links": {
+      "team": {
+        "href": "/teams/gent_bel"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/gent_bel"
+      }
+    }
+  },
+  {
+    "id": "zenpet_rus",
+    "name": "Zenit Petersburg",
+    "_links": {
+      "team": {
+        "href": "/teams/zenpet_rus"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/zenpet_rus"
+      }
+    }
+  },
+  {
+    "id": "olypir_grc",
+    "name": "Olympiakos Piraeus",
+    "_links": {
+      "team": {
+        "href": "/teams/olypir_grc"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/olypir_grc"
+      }
+    }
+  },
+  {
+    "id": "ars_eng",
+    "name": "Arsenal",
+    "_links": {
+      "team": {
+        "href": "/teams/ars_eng"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/ars_eng"
+      }
+    }
+  },
+  {
+    "id": "val_esp",
+    "name": "Valencia",
+    "_links": {
+      "team": {
+        "href": "/teams/val_esp"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/val_esp"
+      }
+    }
+  },
+  {
+    "id": "lyo_fra",
+    "name": "Lyon",
+    "_links": {
+      "team": {
+        "href": "/teams/lyo_fra"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/lyo_fra"
+      }
+    }
+  },
+  {
+    "id": "ben_prt",
+    "name": "Benfica",
+    "_links": {
+      "team": {
+        "href": "/teams/ben_prt"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/ben_prt"
+      }
+    }
+  },
+  {
+    "id": "atlmad_esp",
+    "name": "Atl. Madrid",
+    "_links": {
+      "team": {
+        "href": "/teams/atlmad_esp"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/atlmad_esp"
+      }
+    }
+  },
+  {
+    "id": "gal_tur",
+    "name": "Galatasaray",
+    "_links": {
+      "team": {
+        "href": "/teams/gal_tur"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/gal_tur"
+      }
+    }
+  },
+  {
+    "id": "fcast_kaz",
+    "name": "FC Astana",
+    "_links": {
+      "team": {
+        "href": "/teams/fcast_kaz"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fcast_kaz"
+      }
+    }
+  },
+  {
+    "id": "mancit_eng",
+    "name": "Manchester City",
+    "_links": {
+      "team": {
+        "href": "/teams/mancit_eng"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mancit_eng"
+      }
+    }
+  },
+  {
+    "id": "bmon_deu",
+    "name": "B. Monchengladbach",
+    "_links": {
+      "team": {
+        "href": "/teams/bmon_deu"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/bmon_deu"
+      }
+    }
+  },
+  {
+    "id": "parsg_fra",
+    "name": "Paris SG",
+    "_links": {
+      "team": {
+        "href": "/teams/parsg_fra"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/parsg_fra"
+      }
+    }
+  },
+  {
+    "id": "shadon_ukr",
+    "name": "Shakhtar Donetsk",
+    "_links": {
+      "team": {
+        "href": "/teams/shadon_ukr"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/shadon_ukr"
+      }
+    }
+  },
+  {
+    "id": "psv_nld",
+    "name": "PSV",
+    "_links": {
+      "team": {
+        "href": "/teams/psv_nld"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/psv_nld"
+      }
+    }
+  },
+  {
+    "id": "cskmos_rus",
+    "name": "CSKA Moscow",
+    "_links": {
+      "team": {
+        "href": "/teams/cskmos_rus"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/cskmos_rus"
+      }
+    }
+  },
+  {
+    "id": "reamad_esp",
+    "name": "Real Madrid",
+    "_links": {
+      "team": {
+        "href": "/teams/reamad_esp"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/reamad_esp"
+      }
+    }
+  },
+  {
+    "id": "malff_swe",
+    "name": "Malmo FF",
+    "_links": {
+      "team": {
+        "href": "/teams/malff_swe"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/malff_swe"
+      }
+    }
+  },
+  {
+    "id": "sev_esp",
+    "name": "Sevilla",
+    "_links": {
+      "team": {
+        "href": "/teams/sev_esp"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/sev_esp"
+      }
+    }
+  },
+  {
+    "id": "juv_ita",
+    "name": "Juventus",
+    "_links": {
+      "team": {
+        "href": "/teams/juv_ita"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/juv_ita"
+      }
+    }
+  },
+  {
+    "id": "wol_deu",
+    "name": "Wolfsburg",
+    "_links": {
+      "team": {
+        "href": "/teams/wol_deu"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/wol_deu"
+      }
+    }
+  },
+  {
+    "id": "manuni_eng",
+    "name": "Manchester United",
+    "_links": {
+      "team": {
+        "href": "/teams/manuni_eng"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/manuni_eng"
+      }
+    }
+  },
+  {
+    "id": "tre_svk",
+    "name": "Trencin",
+    "_links": {
+      "team": {
+        "href": "/teams/tre_svk"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/tre_svk"
+      }
+    }
+  },
+  {
+    "id": "fcstebuc_rou",
+    "name": "FC Steaua Bucuresti",
+    "_links": {
+      "team": {
+        "href": "/teams/fcstebuc_rou"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fcstebuc_rou"
+      }
+    }
+  },
+  {
+    "id": "hib_mlt",
+    "name": "Hibernians",
+    "_links": {
+      "team": {
+        "href": "/teams/hib_mlt"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/hib_mlt"
+      }
+    }
+  },
+  {
+    "id": "mol_nor",
+    "name": "Molde",
+    "_links": {
+      "team": {
+        "href": "/teams/mol_nor"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mol_nor"
+      }
+    }
+  },
+  {
+    "id": "pyuyer_arm",
+    "name": "Pyunik Yerevan",
+    "_links": {
+      "team": {
+        "href": "/teams/pyuyer_arm"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/pyuyer_arm"
+      }
+    }
+  },
+  {
+    "id": "ske_alb",
+    "name": "Skenderbeu",
+    "_links": {
+      "team": {
+        "href": "/teams/ske_alb"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/ske_alb"
+      }
+    }
+  },
+  {
+    "id": "cru_nir",
+    "name": "Crusaders",
+    "_links": {
+      "team": {
+        "href": "/teams/cru_nir"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/cru_nir"
+      }
+    }
+  },
+  {
+    "id": "tns_wal",
+    "name": "TNS",
+    "_links": {
+      "team": {
+        "href": "/teams/tns_wal"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/tns_wal"
+      }
+    }
+  },
+  {
+    "id": "vid_hun",
+    "name": "Videoton",
+    "_links": {
+      "team": {
+        "href": "/teams/vid_hun"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/vid_hun"
+      }
+    }
+  },
+  {
+    "id": "lud_bgr",
+    "name": "Ludogorets",
+    "_links": {
+      "team": {
+        "href": "/teams/lud_bgr"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/lud_bgr"
+      }
+    }
+  },
+  {
+    "id": "mil_mda",
+    "name": "Milsami",
+    "_links": {
+      "team": {
+        "href": "/teams/mil_mda"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mil_mda"
+      }
+    }
+  },
+  {
+    "id": "mid_dnk",
+    "name": "Midtjylland",
+    "_links": {
+      "team": {
+        "href": "/teams/mid_dnk"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mid_dnk"
+      }
+    }
+  },
+  {
+    "id": "linredimp_gib",
+    "name": "Lincoln Red Imps",
+    "_links": {
+      "team": {
+        "href": "/teams/linredimp_gib"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/linredimp_gib"
+      }
+    }
+  },
+  {
+    "id": "apo_cyp",
+    "name": "APOEL",
+    "_links": {
+      "team": {
+        "href": "/teams/apo_cyp"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/apo_cyp"
+      }
+    }
+  },
+  {
+    "id": "var_mkd",
+    "name": "Vardar",
+    "_links": {
+      "team": {
+        "href": "/teams/var_mkd"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/var_mkd"
+      }
+    }
+  },
+  {
+    "id": "ven_lva",
+    "name": "Ventspils",
+    "_links": {
+      "team": {
+        "href": "/teams/ven_lva"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/ven_lva"
+      }
+    }
+  },
+  {
+    "id": "hjk_fin",
+    "name": "HJK",
+    "_links": {
+      "team": {
+        "href": "/teams/hjk_fin"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/hjk_fin"
+      }
+    }
+  },
+  {
+    "id": "fol_smr",
+    "name": "Folgore",
+    "_links": {
+      "team": {
+        "href": "/teams/fol_smr"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fol_smr"
+      }
+    }
+  },
+  {
+    "id": "fcsancol_and",
+    "name": "FC Santa Coloma",
+    "_links": {
+      "team": {
+        "href": "/teams/fcsancol_and"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fcsancol_and"
+      }
+    }
+  },
+  {
+    "id": "b36tor_fro",
+    "name": "B36 Torshavn",
+    "_links": {
+      "team": {
+        "href": "/teams/b36tor_fro"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/b36tor_fro"
+      }
+    }
+  },
+  {
+    "id": "lev_est",
+    "name": "Levadia",
+    "_links": {
+      "team": {
+        "href": "/teams/lev_est"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/lev_est"
+      }
+    }
+  },
+  {
+    "id": "laz_ita",
+    "name": "Lazio",
+    "_links": {
+      "team": {
+        "href": "/teams/laz_ita"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/laz_ita"
+      }
+    }
+  },
+  {
+    "id": "clubrukv_bel",
+    "name": "Club Brugge KV",
+    "_links": {
+      "team": {
+        "href": "/teams/clubrukv_bel"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/clubrukv_bel"
+      }
+    }
+  },
+  {
+    "id": "spo_prt",
+    "name": "Sporting",
+    "_links": {
+      "team": {
+        "href": "/teams/spo_prt"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/spo_prt"
+      }
+    }
+  },
+  {
+    "id": "par_srb",
+    "name": "Partizan",
+    "_links": {
+      "team": {
+        "href": "/teams/par_srb"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/par_srb"
+      }
+    }
+  },
+  {
+    "id": "bas_che",
+    "name": "Basel",
+    "_links": {
+      "team": {
+        "href": "/teams/bas_che"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/bas_che"
+      }
+    }
+  },
+  {
+    "id": "cel_sco",
+    "name": "Celtic",
+    "_links": {
+      "team": {
+        "href": "/teams/cel_sco"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/cel_sco"
+      }
+    }
+  },
+  {
+    "id": "mon_fra",
+    "name": "Monaco",
+    "_links": {
+      "team": {
+        "href": "/teams/mon_fra"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mon_fra"
+      }
+    }
+  },
+  {
+    "id": "rapvie_aut",
+    "name": "Rapid Vienna",
+    "_links": {
+      "team": {
+        "href": "/teams/rapvie_aut"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/rapvie_aut"
+      }
+    }
+  },
+  {
+    "id": "plz_cze",
+    "name": "Plzen",
+    "_links": {
+      "team": {
+        "href": "/teams/plz_cze"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/plz_cze"
+      }
+    }
+  },
+  {
+    "id": "fen_tur",
+    "name": "Fenerbahce",
+    "_links": {
+      "team": {
+        "href": "/teams/fen_tur"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fen_tur"
+      }
+    }
+  },
+  {
+    "id": "pan_grc",
+    "name": "Panathinaikos",
+    "_links": {
+      "team": {
+        "href": "/teams/pan_grc"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/pan_grc"
+      }
+    }
+  },
+  {
+    "id": "sal_aut",
+    "name": "Salzburg",
+    "_links": {
+      "team": {
+        "href": "/teams/sal_aut"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/sal_aut"
+      }
+    }
+  },
+  {
+    "id": "lecpoz_pol",
+    "name": "Lech Poznan",
+    "_links": {
+      "team": {
+        "href": "/teams/lecpoz_pol"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/lecpoz_pol"
+      }
+    }
+  },
+  {
+    "id": "spapra_cze",
+    "name": "Sparta Prague",
+    "_links": {
+      "team": {
+        "href": "/teams/spapra_cze"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/spapra_cze"
+      }
+    }
+  },
+  {
+    "id": "qar_aze",
+    "name": "Qarabag",
+    "_links": {
+      "team": {
+        "href": "/teams/qar_aze"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/qar_aze"
+      }
+    }
+  },
+  {
+    "id": "youboy_che",
+    "name": "Young Boys",
+    "_links": {
+      "team": {
+        "href": "/teams/youboy_che"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/youboy_che"
+      }
+    }
+  },
+  {
+    "id": "aja_nld",
+    "name": "Ajax",
+    "_links": {
+      "team": {
+        "href": "/teams/aja_nld"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/aja_nld"
+      }
+    }
+  },
+  {
+    "id": "stj_isl",
+    "name": "Stjarnan",
+    "_links": {
+      "team": {
+        "href": "/teams/stj_isl"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/stj_isl"
+      }
+    }
+  },
+  {
+    "id": "dun_irl",
+    "name": "Dundalk",
+    "_links": {
+      "team": {
+        "href": "/teams/dun_irl"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/dun_irl"
+      }
+    }
+  },
+  {
+    "id": "fksar_bih",
+    "name": "FK Sarajevo",
+    "_links": {
+      "team": {
+        "href": "/teams/fksar_bih"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fksar_bih"
+      }
+    }
+  },
+  {
+    "id": "rud_mne",
+    "name": "Rudar",
+    "_links": {
+      "team": {
+        "href": "/teams/rud_mne"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/rud_mne"
+      }
+    }
+  },
+  {
+    "id": "fol_lux",
+    "name": "Fola",
+    "_links": {
+      "team": {
+        "href": "/teams/fol_lux"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/fol_lux"
+      }
+    }
+  },
+  {
+    "id": "mar_svn",
+    "name": "Maribor",
+    "_links": {
+      "team": {
+        "href": "/teams/mar_svn"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/mar_svn"
+      }
+    }
+  },
+  {
+    "id": "zal_ltu",
+    "name": "Zalgiris",
+    "_links": {
+      "team": {
+        "href": "/teams/zal_ltu"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/zal_ltu"
+      }
+    }
+  },
+  {
+    "id": "dilgor_geo",
+    "name": "Dila Gori",
+    "_links": {
+      "team": {
+        "href": "/teams/dilgor_geo"
+      },
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/teams/dilgor_geo"
+      }
+    }
+  }
+]
