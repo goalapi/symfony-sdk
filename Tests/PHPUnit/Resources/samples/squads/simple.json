@@ -1,0 +1,261 @@
+{
+  "id": "reamad_esp",
+  "name": "Real Madrid",
+  "_links": {
+    "team": {
+      "href": "/teams/reamad_esp"
+    },
+    "self": {
+      "href": "/tournaments/ucl/seasons/20152016/stages/playoffs/teams/reamad_esp"
+    }
+  },
+  "tournament": {
+    "id": "ucl",
+    "name": "Champions League",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl"
+      }
+    },
+    "coverage": {
+      "id": "eu",
+      "name": "Europe",
+      "_links": {
+        "self": {
+          "href": "/territories/eu"
+        }
+      }
+    }
+  },
+  "season": {
+    "name": "Champions League 2015/2016",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016"
+      }
+    }
+  },
+  "players": [
+    {
+      "id": "bale-gareth",
+      "name": "Bale Gareth",
+      "_links": {
+        "self": {
+          "href": "/players/bale-gareth"
+        }
+      },
+      "number": 11
+    },
+    {
+      "id": "benzema-karim",
+      "name": "Benzema Karim",
+      "_links": {
+        "self": {
+          "href": "/players/benzema-karim"
+        }
+      },
+      "number": 9
+    },
+    {
+      "id": "carvajal-daniel",
+      "name": "Carvajal Daniel",
+      "_links": {
+        "self": {
+          "href": "/players/carvajal-daniel"
+        }
+      },
+      "number": 15
+    },
+    {
+      "id": "casemiro",
+      "name": "Casemiro",
+      "_links": {
+        "self": {
+          "href": "/players/casemiro"
+        }
+      },
+      "number": 14
+    },
+    {
+      "id": "kroos-toni",
+      "name": "Kroos Toni",
+      "_links": {
+        "self": {
+          "href": "/players/kroos-toni"
+        }
+      },
+      "number": 8
+    },
+    {
+      "id": "marcelo",
+      "name": "Marcelo",
+      "_links": {
+        "self": {
+          "href": "/players/marcelo"
+        }
+      },
+      "number": 12
+    },
+    {
+      "id": "modric-luka",
+      "name": "Modric Luka",
+      "_links": {
+        "self": {
+          "href": "/players/modric-luka"
+        }
+      },
+      "number": 19
+    },
+    {
+      "id": "navas-keylor",
+      "name": "Navas Keylor",
+      "_links": {
+        "self": {
+          "href": "/players/navas-keylor"
+        }
+      },
+      "number": 1,
+      "role": "goalkeeper"
+    },
+    {
+      "id": "pepe",
+      "name": "Pepe",
+      "_links": {
+        "self": {
+          "href": "/players/pepe"
+        }
+      },
+      "number": 3
+    },
+    {
+      "id": "ramos-sergio",
+      "name": "Ramos Sergio",
+      "_links": {
+        "self": {
+          "href": "/players/ramos-sergio"
+        }
+      },
+      "number": 4,
+      "captain": true
+    },
+    {
+      "id": "ronaldo-cristiano",
+      "name": "Ronaldo Cristiano",
+      "_links": {
+        "self": {
+          "href": "/players/ronaldo-cristiano"
+        }
+      },
+      "number": 7
+    },
+    {
+      "id": "isco",
+      "name": "Isco",
+      "_links": {
+        "self": {
+          "href": "/players/isco"
+        }
+      },
+      "number": 22
+    },
+    {
+      "id": "casilla-francisco",
+      "name": "Casilla Francisco",
+      "_links": {
+        "self": {
+          "href": "/players/casilla-francisco"
+        }
+      },
+      "number": 13,
+      "role": "goalkeeper"
+    },
+    {
+      "id": "danilo",
+      "name": "Danilo",
+      "_links": {
+        "self": {
+          "href": "/players/danilo"
+        }
+      },
+      "number": 23
+    },
+    {
+      "id": "nacho",
+      "name": "Nacho",
+      "_links": {
+        "self": {
+          "href": "/players/nacho"
+        }
+      },
+      "number": 6
+    },
+    {
+      "id": "jese",
+      "name": "Jese",
+      "_links": {
+        "self": {
+          "href": "/players/jese"
+        }
+      },
+      "number": 20
+    },
+    {
+      "id": "lucas",
+      "name": "Lucas",
+      "_links": {
+        "self": {
+          "href": "/players/lucas"
+        }
+      },
+      "number": 18
+    },
+    {
+      "id": "rodriguez-james",
+      "name": "Rodriguez James",
+      "_links": {
+        "self": {
+          "href": "/players/rodriguez-james"
+        }
+      },
+      "number": 10
+    },
+    {
+      "id": "kovacic-mateo",
+      "name": "Kovacic Mateo",
+      "_links": {
+        "self": {
+          "href": "/players/kovacic-mateo"
+        }
+      },
+      "number": 16
+    },
+    {
+      "id": "mayoral-borja",
+      "name": "Mayoral Borja",
+      "_links": {
+        "self": {
+          "href": "/players/mayoral-borja"
+        }
+      },
+      "number": 29
+    },
+    {
+      "id": "varane-raphael",
+      "name": "Varane Raphael",
+      "_links": {
+        "self": {
+          "href": "/players/varane-raphael"
+        }
+      },
+      "number": 2
+    }
+  ],
+  "stage": {
+    "name": "Play Offs",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/stages/playoffs"
+      }
+    }
+  }
+}

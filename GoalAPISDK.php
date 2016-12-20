@@ -22,8 +22,9 @@ use Symfony\Component\Serializer;
  * @method Model\Season getSeason(Model\Tournament $tournament, String $seasonId)
  * @method Model\Stage[] getStages(Model\Tournament $tournament, Model\Season $season)
  * @method Model\Match[] getMatches(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage = null)
- * @method Model\Match getMatch(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage = null, String $matchId)
+ * @method Model\Match getMatch(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage, String $matchId)
  * @method Model\Squad[] getSquads(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage = null)
+ * @method Model\Squad getSquad(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage, Model\Team $team)
  */
 class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
 {
