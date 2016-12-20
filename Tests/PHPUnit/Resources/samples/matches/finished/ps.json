@@ -1,0 +1,1224 @@
+{
+  "id": "00fce7412fed66b64af3289a73db282b",
+  "begin_time": {
+    "date_time": "2016-05-28T18:45:00+00:00",
+    "timestamp": 1464461100
+  },
+  "status": {
+    "status": "finished",
+    "score": [
+      2,
+      1
+    ],
+    "finished_after": "PS"
+  },
+  "tournament": {
+    "id": "ucl",
+    "name": "Champions League",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl"
+      }
+    },
+    "coverage": {
+      "id": "eu",
+      "name": "Europe",
+      "_links": {
+        "self": {
+          "href": "/territories/eu"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "reamad_esp",
+      "name": "Real Madrid",
+      "_links": {
+        "self": {
+          "href": "/teams/reamad_esp"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "bale-gareth",
+            "name": "Bale Gareth",
+            "_links": {
+              "self": {
+                "href": "/players/bale-gareth"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "benzema-karim",
+            "name": "Benzema Karim",
+            "_links": {
+              "self": {
+                "href": "/players/benzema-karim"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "carvajal-daniel",
+            "name": "Carvajal Daniel",
+            "_links": {
+              "self": {
+                "href": "/players/carvajal-daniel"
+              }
+            },
+            "number": 15
+          },
+          {
+            "id": "casemiro",
+            "name": "Casemiro",
+            "_links": {
+              "self": {
+                "href": "/players/casemiro"
+              }
+            },
+            "number": 14
+          },
+          {
+            "id": "kroos-toni",
+            "name": "Kroos Toni",
+            "_links": {
+              "self": {
+                "href": "/players/kroos-toni"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "marcelo",
+            "name": "Marcelo",
+            "_links": {
+              "self": {
+                "href": "/players/marcelo"
+              }
+            },
+            "number": 12
+          },
+          {
+            "id": "modric-luka",
+            "name": "Modric Luka",
+            "_links": {
+              "self": {
+                "href": "/players/modric-luka"
+              }
+            },
+            "number": 19
+          },
+          {
+            "id": "navas-keylor",
+            "name": "Navas Keylor",
+            "_links": {
+              "self": {
+                "href": "/players/navas-keylor"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "pepe",
+            "name": "Pepe",
+            "_links": {
+              "self": {
+                "href": "/players/pepe"
+              }
+            },
+            "number": 3
+          },
+          {
+            "id": "ramos-sergio",
+            "name": "Ramos Sergio",
+            "_links": {
+              "self": {
+                "href": "/players/ramos-sergio"
+              }
+            },
+            "number": 4,
+            "captain": true
+          },
+          {
+            "id": "ronaldo-cristiano",
+            "name": "Ronaldo Cristiano",
+            "_links": {
+              "self": {
+                "href": "/players/ronaldo-cristiano"
+              }
+            },
+            "number": 7
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "isco",
+            "name": "Isco",
+            "_links": {
+              "self": {
+                "href": "/players/isco"
+              }
+            },
+            "number": 22
+          },
+          {
+            "id": "casilla-francisco",
+            "name": "Casilla Francisco",
+            "_links": {
+              "self": {
+                "href": "/players/casilla-francisco"
+              }
+            },
+            "number": 13,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "danilo",
+            "name": "Danilo",
+            "_links": {
+              "self": {
+                "href": "/players/danilo"
+              }
+            },
+            "number": 23
+          },
+          {
+            "id": "nacho",
+            "name": "Nacho",
+            "_links": {
+              "self": {
+                "href": "/players/nacho"
+              }
+            },
+            "number": 6
+          },
+          {
+            "id": "jese",
+            "name": "Jese",
+            "_links": {
+              "self": {
+                "href": "/players/jese"
+              }
+            },
+            "number": 20
+          },
+          {
+            "id": "lucas",
+            "name": "Lucas",
+            "_links": {
+              "self": {
+                "href": "/players/lucas"
+              }
+            },
+            "number": 18
+          },
+          {
+            "id": "rodriguez-james",
+            "name": "Rodriguez James",
+            "_links": {
+              "self": {
+                "href": "/players/rodriguez-james"
+              }
+            },
+            "number": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlmad_esp",
+      "name": "Atl. Madrid",
+      "_links": {
+        "self": {
+          "href": "/teams/atlmad_esp"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "fernandez-augusto",
+            "name": "Fernandez Augusto",
+            "_links": {
+              "self": {
+                "href": "/players/fernandez-augusto"
+              }
+            },
+            "number": 12
+          },
+          {
+            "id": "luis-filipe",
+            "name": "Luis Filipe",
+            "_links": {
+              "self": {
+                "href": "/players/luis-filipe"
+              }
+            },
+            "number": 3
+          },
+          {
+            "id": "gabi",
+            "name": "Gabi",
+            "_links": {
+              "self": {
+                "href": "/players/gabi"
+              }
+            },
+            "number": 14,
+            "captain": true
+          },
+          {
+            "id": "godin-diego",
+            "name": "Godin Diego",
+            "_links": {
+              "self": {
+                "href": "/players/godin-diego"
+              }
+            },
+            "number": 2
+          },
+          {
+            "id": "griezmann-antoine",
+            "name": "Griezmann Antoine",
+            "_links": {
+              "self": {
+                "href": "/players/griezmann-antoine"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "juanfran",
+            "name": "Juanfran",
+            "_links": {
+              "self": {
+                "href": "/players/juanfran"
+              }
+            },
+            "number": 20
+          },
+          {
+            "id": "koke",
+            "name": "Koke",
+            "_links": {
+              "self": {
+                "href": "/players/koke"
+              }
+            },
+            "number": 6
+          },
+          {
+            "id": "niguez-saul",
+            "name": "Niguez Saul",
+            "_links": {
+              "self": {
+                "href": "/players/niguez-saul"
+              }
+            },
+            "number": 17
+          },
+          {
+            "id": "oblak-jan",
+            "name": "Oblak Jan",
+            "_links": {
+              "self": {
+                "href": "/players/oblak-jan"
+              }
+            },
+            "number": 13,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "savic-stefan",
+            "name": "Savic Stefan",
+            "_links": {
+              "self": {
+                "href": "/players/savic-stefan"
+              }
+            },
+            "number": 15
+          },
+          {
+            "id": "torres-fernando",
+            "name": "Torres Fernando",
+            "_links": {
+              "self": {
+                "href": "/players/torres-fernando"
+              }
+            },
+            "number": 9
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "tiago",
+            "name": "Tiago",
+            "_links": {
+              "self": {
+                "href": "/players/tiago"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "carrasco-yannick",
+            "name": "Carrasco Yannick",
+            "_links": {
+              "self": {
+                "href": "/players/carrasco-yannick"
+              }
+            },
+            "number": 21
+          },
+          {
+            "id": "correa-angel",
+            "name": "Correa Angel",
+            "_links": {
+              "self": {
+                "href": "/players/correa-angel"
+              }
+            },
+            "number": 16
+          },
+          {
+            "id": "gimenez-jose",
+            "name": "Gimenez Jose",
+            "_links": {
+              "self": {
+                "href": "/players/gimenez-jose"
+              }
+            },
+            "number": 24
+          },
+          {
+            "id": "hernandez-lucas",
+            "name": "Hernandez Lucas",
+            "_links": {
+              "self": {
+                "href": "/players/hernandez-lucas"
+              }
+            },
+            "number": 19
+          },
+          {
+            "id": "moya-miguel-angel",
+            "name": "Moya Miguel Angel",
+            "_links": {
+              "self": {
+                "href": "/players/moya-miguel-angel"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "teye-partey-thomas",
+            "name": "Teye Partey Thomas",
+            "_links": {
+              "self": {
+                "href": "/players/teye-partey-thomas"
+              }
+            },
+            "number": 22
+          }
+        ]
+      }
+    }
+  ],
+  "season": {
+    "name": "Champions League 2015/2016",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016"
+      }
+    }
+  },
+  "stage": {
+    "name": "Play Offs",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/stages/playoffs"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/ucl/seasons/20152016/matches/00fce7412fed66b64af3289a73db282b"
+    }
+  },
+  "context": {
+    "round": "Final",
+    "final": 1
+  },
+  "last_update_time": {
+    "date_time": "2016-09-01T16:55:22+00:00",
+    "timestamp": 1472748922
+  },
+  "events": [
+    {
+      "type": "card",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "moment": {
+          "minute": 11
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "carvajal-daniel",
+        "name": "Carvajal Daniel",
+        "_links": {
+          "self": {
+            "href": "/players/carvajal-daniel"
+          }
+        }
+      }
+    },
+    {
+      "type": "goal",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "moment": {
+          "minute": 15
+        }
+      },
+      "player": {
+        "id": "ramos-sergio",
+        "name": "Ramos Sergio",
+        "_links": {
+          "self": {
+            "href": "/players/ramos-sergio"
+          }
+        }
+      },
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 46
+        }
+      },
+      "players": {
+        "in": {
+          "id": "carrasco-yannick",
+          "name": "Carrasco Yannick",
+          "_links": {
+            "self": {
+              "href": "/players/carrasco-yannick"
+            }
+          }
+        },
+        "out": {
+          "id": "fernandez-augusto",
+          "name": "Fernandez Augusto",
+          "_links": {
+            "self": {
+              "href": "/players/fernandez-augusto"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 47
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "navas-keylor",
+        "name": "Navas Keylor",
+        "_links": {
+          "self": {
+            "href": "/players/navas-keylor"
+          }
+        }
+      }
+    },
+    {
+      "type": "penalty_missed",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 48
+        }
+      },
+      "player": {
+        "id": "griezmann-antoine",
+        "name": "Griezmann Antoine",
+        "_links": {
+          "self": {
+            "href": "/players/griezmann-antoine"
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 52
+        }
+      },
+      "players": {
+        "in": {
+          "id": "danilo",
+          "name": "Danilo",
+          "_links": {
+            "self": {
+              "href": "/players/danilo"
+            }
+          }
+        },
+        "out": {
+          "id": "carvajal-daniel",
+          "name": "Carvajal Daniel",
+          "_links": {
+            "self": {
+              "href": "/players/carvajal-daniel"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 61
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "torres-fernando",
+        "name": "Torres Fernando",
+        "_links": {
+          "self": {
+            "href": "/players/torres-fernando"
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 72
+        }
+      },
+      "players": {
+        "in": {
+          "id": "isco",
+          "name": "Isco",
+          "_links": {
+            "self": {
+              "href": "/players/isco"
+            }
+          }
+        },
+        "out": {
+          "id": "kroos-toni",
+          "name": "Kroos Toni",
+          "_links": {
+            "self": {
+              "href": "/players/kroos-toni"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 77
+        }
+      },
+      "players": {
+        "in": {
+          "id": "lucas",
+          "name": "Lucas",
+          "_links": {
+            "self": {
+              "href": "/players/lucas"
+            }
+          }
+        },
+        "out": {
+          "id": "benzema-karim",
+          "name": "Benzema Karim",
+          "_links": {
+            "self": {
+              "href": "/players/benzema-karim"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 79
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "casemiro",
+        "name": "Casemiro",
+        "_links": {
+          "self": {
+            "href": "/players/casemiro"
+          }
+        }
+      }
+    },
+    {
+      "type": "goal",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 79
+        }
+      },
+      "player": {
+        "id": "carrasco-yannick",
+        "name": "Carrasco Yannick",
+        "_links": {
+          "self": {
+            "href": "/players/carrasco-yannick"
+          }
+        }
+      },
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 93
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "ramos-sergio",
+        "name": "Ramos Sergio",
+        "_links": {
+          "self": {
+            "href": "/players/ramos-sergio"
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 93
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "gabi",
+        "name": "Gabi",
+        "_links": {
+          "self": {
+            "href": "/players/gabi"
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "ET",
+        "moment": {
+          "minute": 93
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "danilo",
+        "name": "Danilo",
+        "_links": {
+          "self": {
+            "href": "/players/danilo"
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "ET",
+        "moment": {
+          "minute": 109
+        }
+      },
+      "players": {
+        "in": {
+          "id": "hernandez-lucas",
+          "name": "Hernandez Lucas",
+          "_links": {
+            "self": {
+              "href": "/players/hernandez-lucas"
+            }
+          }
+        },
+        "out": {
+          "id": "luis-filipe",
+          "name": "Luis Filipe",
+          "_links": {
+            "self": {
+              "href": "/players/luis-filipe"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "reamad_esp",
+        "name": "Real Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/reamad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "ET",
+        "moment": {
+          "minute": 112
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "pepe",
+        "name": "Pepe",
+        "_links": {
+          "self": {
+            "href": "/players/pepe"
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "atlmad_esp",
+        "name": "Atl. Madrid",
+        "_links": {
+          "self": {
+            "href": "/teams/atlmad_esp"
+          }
+        }
+      },
+      "moment": {
+        "period": "ET",
+        "moment": {
+          "minute": 116
+        }
+      },
+      "players": {
+        "in": {
+          "id": "teye-partey-thomas",
+          "name": "Teye Partey Thomas",
+          "_links": {
+            "self": {
+              "href": "/players/teye-partey-thomas"
+            }
+          }
+        },
+        "out": {
+          "id": "koke",
+          "name": "Koke",
+          "_links": {
+            "self": {
+              "href": "/players/koke"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "penalty_shootout": {
+    "score": [
+      5,
+      3
+    ],
+    "kicks": [
+      {
+        "team": {
+          "id": "reamad_esp",
+          "name": "Real Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/reamad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "lucas",
+          "name": "Lucas",
+          "_links": {
+            "self": {
+              "href": "/players/lucas"
+            }
+          }
+        },
+        "score": [
+          1,
+          0
+        ]
+      },
+      {
+        "team": {
+          "id": "atlmad_esp",
+          "name": "Atl. Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/atlmad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "griezmann-antoine",
+          "name": "Griezmann Antoine",
+          "_links": {
+            "self": {
+              "href": "/players/griezmann-antoine"
+            }
+          }
+        },
+        "score": [
+          1,
+          1
+        ]
+      },
+      {
+        "team": {
+          "id": "reamad_esp",
+          "name": "Real Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/reamad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "marcelo",
+          "name": "Marcelo",
+          "_links": {
+            "self": {
+              "href": "/players/marcelo"
+            }
+          }
+        },
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "team": {
+          "id": "atlmad_esp",
+          "name": "Atl. Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/atlmad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "gabi",
+          "name": "Gabi",
+          "_links": {
+            "self": {
+              "href": "/players/gabi"
+            }
+          }
+        },
+        "score": [
+          2,
+          2
+        ]
+      },
+      {
+        "team": {
+          "id": "reamad_esp",
+          "name": "Real Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/reamad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "bale-gareth",
+          "name": "Bale Gareth",
+          "_links": {
+            "self": {
+              "href": "/players/bale-gareth"
+            }
+          }
+        },
+        "score": [
+          3,
+          2
+        ]
+      },
+      {
+        "team": {
+          "id": "atlmad_esp",
+          "name": "Atl. Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/atlmad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "niguez-saul",
+          "name": "Niguez Saul",
+          "_links": {
+            "self": {
+              "href": "/players/niguez-saul"
+            }
+          }
+        },
+        "score": [
+          3,
+          3
+        ]
+      },
+      {
+        "team": {
+          "id": "reamad_esp",
+          "name": "Real Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/reamad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "ramos-sergio",
+          "name": "Ramos Sergio",
+          "_links": {
+            "self": {
+              "href": "/players/ramos-sergio"
+            }
+          }
+        },
+        "score": [
+          4,
+          3
+        ]
+      },
+      {
+        "team": {
+          "id": "atlmad_esp",
+          "name": "Atl. Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/atlmad_esp"
+            }
+          }
+        },
+        "missed": true,
+        "player": {
+          "id": "juanfran",
+          "name": "Juanfran",
+          "_links": {
+            "self": {
+              "href": "/players/juanfran"
+            }
+          }
+        }
+      },
+      {
+        "team": {
+          "id": "reamad_esp",
+          "name": "Real Madrid",
+          "_links": {
+            "self": {
+              "href": "/teams/reamad_esp"
+            }
+          }
+        },
+        "player": {
+          "id": "ronaldo-cristiano",
+          "name": "Ronaldo Cristiano",
+          "_links": {
+            "self": {
+              "href": "/players/ronaldo-cristiano"
+            }
+          }
+        },
+        "score": [
+          5,
+          3
+        ]
+      }
+    ]
+  }
+}

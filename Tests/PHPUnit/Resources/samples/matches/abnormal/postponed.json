@@ -1,0 +1,80 @@
+{
+  "id": "98d86395ad87dc4fbed368038b565260",
+  "begin_time": {
+    "date_time": "2016-12-18T19:00:00+00:00",
+    "timestamp": 1482087600
+  },
+  "status": {
+    "status": "postponed",
+    "score": [
+      0,
+      0
+    ]
+  },
+  "tournament": {
+    "id": "esp_ll",
+    "name": "Primera Division",
+    "_links": {
+      "self": {
+        "href": "/tournaments/esp_ll"
+      }
+    },
+    "coverage": {
+      "id": "esp",
+      "name": "Spain",
+      "_links": {
+        "self": {
+          "href": "/territories/esp"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "val_esp",
+      "name": "Valencia",
+      "_links": {
+        "self": {
+          "href": "/teams/val_esp"
+        }
+      }
+    },
+    {
+      "id": "reamad_esp",
+      "name": "Real Madrid",
+      "_links": {
+        "self": {
+          "href": "/teams/reamad_esp"
+        }
+      }
+    }
+  ],
+  "season": {
+    "name": "LaLiga 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/esp_ll/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/esp_ll/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/esp_ll/seasons/20162017/stages/main/matches/98d86395ad87dc4fbed368038b565260"
+    }
+  },
+  "context": {
+    "matchday": 16
+  },
+  "last_update_time": {
+    "date_time": "2016-11-14T15:20:09+00:00",
+    "timestamp": 1479136809
+  }
+}

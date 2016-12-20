@@ -1,0 +1,457 @@
+{
+  "id": "65a29496a904f370f8bcfb39221d12a1",
+  "begin_time": {
+    "date_time": "2016-12-18T17:00:00+00:00",
+    "timestamp": 1482080400
+  },
+  "status": {
+    "status": "online",
+    "score": [
+      0,
+      0
+    ],
+    "period": "HT"
+  },
+  "tournament": {
+    "id": "esp_sd",
+    "name": "Segunda Division",
+    "_links": {
+      "self": {
+        "href": "/tournaments/esp_sd"
+      }
+    },
+    "coverage": {
+      "id": "esp",
+      "name": "Spain",
+      "_links": {
+        "self": {
+          "href": "/territories/esp"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "rayval_esp",
+      "name": "Rayo Vallecano",
+      "_links": {
+        "self": {
+          "href": "/teams/rayval_esp"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "gazzaniga-paulo",
+            "name": "Gazzaniga Paulo",
+            "_links": {
+              "self": {
+                "href": "/players/gazzaniga-paulo"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "aguirre-diego",
+            "name": "Aguirre Diego",
+            "_links": {
+              "self": {
+                "href": "/players/aguirre-diego"
+              }
+            },
+            "number": 22
+          },
+          {
+            "id": "beltran-francisco",
+            "name": "Beltran Francisco",
+            "_links": {
+              "self": {
+                "href": "/players/beltran-francisco"
+              }
+            },
+            "number": 29
+          },
+          {
+            "id": "dorado-jose-antonio",
+            "name": "Dorado Jose Antonio",
+            "_links": {
+              "self": {
+                "href": "/players/dorado-jose-antonio"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "embarba-adri",
+            "name": "Embarba Adri",
+            "_links": {
+              "self": {
+                "href": "/players/embarba-adri"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "guerra-javi",
+            "name": "Guerra Javi",
+            "_links": {
+              "self": {
+                "href": "/players/guerra-javi"
+              }
+            },
+            "number": 24
+          },
+          {
+            "id": "miku",
+            "name": "Miku",
+            "_links": {
+              "self": {
+                "href": "/players/miku"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "moreno-alex",
+            "name": "Moreno Alex",
+            "_links": {
+              "self": {
+                "href": "/players/moreno-alex"
+              }
+            },
+            "number": 6
+          },
+          {
+            "id": "quini",
+            "name": "Quini",
+            "_links": {
+              "self": {
+                "href": "/players/quini"
+              }
+            },
+            "number": 17
+          },
+          {
+            "id": "trashorras-roberto",
+            "name": "Trashorras Roberto",
+            "_links": {
+              "self": {
+                "href": "/players/trashorras-roberto"
+              }
+            },
+            "number": 10
+          },
+          {
+            "id": "ze-castro",
+            "name": "Ze Castro",
+            "_links": {
+              "self": {
+                "href": "/players/ze-castro"
+              }
+            },
+            "number": 18
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "amaya-antonio",
+            "name": "Amaya Antonio",
+            "_links": {
+              "self": {
+                "href": "/players/amaya-antonio"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "baena-jose",
+            "name": "Baena Raul",
+            "_links": {
+              "self": {
+                "href": "/players/baena-jose"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "manucho",
+            "name": "Manucho",
+            "_links": {
+              "self": {
+                "href": "/players/manucho"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "cristaldo-franco",
+            "name": "Cristaldo Franco",
+            "_links": {
+              "self": {
+                "href": "/players/cristaldo-franco"
+              }
+            },
+            "number": 16
+          },
+          {
+            "id": "garcia-luis",
+            "name": "Garcia Luis",
+            "_links": {
+              "self": {
+                "href": "/players/garcia-luis"
+              }
+            },
+            "number": 30,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "piti",
+            "name": "Piti",
+            "_links": {
+              "self": {
+                "href": "/players/piti"
+              }
+            },
+            "number": 23
+          },
+          {
+            "id": "rat-razvan",
+            "name": "Rat Razvan",
+            "_links": {
+              "self": {
+                "href": "/players/rat-razvan"
+              }
+            },
+            "number": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "zar_esp",
+      "name": "Zaragoza",
+      "_links": {
+        "self": {
+          "href": "/teams/zar_esp"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "irureta-xabi",
+            "name": "Irureta Xabi",
+            "_links": {
+              "self": {
+                "href": "/players/irureta-xabi"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "cabrera-leandro",
+            "name": "Cabrera Leandro",
+            "_links": {
+              "self": {
+                "href": "/players/cabrera-leandro"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "cani",
+            "name": "Cani",
+            "_links": {
+              "self": {
+                "href": "/players/cani"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "dongou-jean-marie",
+            "name": "Dongou Jean Marie",
+            "_links": {
+              "self": {
+                "href": "/players/dongou-jean-marie"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "enrique-jose",
+            "name": "Enrique Jose",
+            "_links": {
+              "self": {
+                "href": "/players/enrique-jose"
+              }
+            },
+            "number": 19
+          },
+          {
+            "id": "isaac-carcelen",
+            "name": "Isaac Carcelen",
+            "_links": {
+              "self": {
+                "href": "/players/isaac-carcelen"
+              }
+            },
+            "number": 16
+          },
+          {
+            "id": "jimenez-xisco",
+            "name": "Jimenez Xisco",
+            "_links": {
+              "self": {
+                "href": "/players/jimenez-xisco"
+              }
+            },
+            "number": 37
+          },
+          {
+            "id": "rodriguez-angel",
+            "name": "Rodriguez Angel",
+            "_links": {
+              "self": {
+                "href": "/players/rodriguez-angel"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "ros-javi",
+            "name": "Ros Javi",
+            "_links": {
+              "self": {
+                "href": "/players/ros-javi"
+              }
+            },
+            "number": 10
+          },
+          {
+            "id": "silva-marcelo",
+            "name": "Silva Marcelo",
+            "_links": {
+              "self": {
+                "href": "/players/silva-marcelo"
+              }
+            },
+            "number": 14
+          },
+          {
+            "id": "zapater-alberto",
+            "name": "Zapater Alberto",
+            "_links": {
+              "self": {
+                "href": "/players/zapater-alberto"
+              }
+            },
+            "number": 21
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "bagnack-macky",
+            "name": "Bagnack Macky",
+            "_links": {
+              "self": {
+                "href": "/players/bagnack-macky"
+              }
+            },
+            "number": 15
+          },
+          {
+            "id": "barrera-alex",
+            "name": "Barrera Alex",
+            "_links": {
+              "self": {
+                "href": "/players/barrera-alex"
+              }
+            },
+            "number": 20
+          },
+          {
+            "id": "casado-jorge",
+            "name": "Casado Jorge",
+            "_links": {
+              "self": {
+                "href": "/players/casado-jorge"
+              }
+            },
+            "number": 3
+          },
+          {
+            "id": "lanzarote-manuel",
+            "name": "Lanzarote Manuel",
+            "_links": {
+              "self": {
+                "href": "/players/lanzarote-manuel"
+              }
+            },
+            "number": 12
+          },
+          {
+            "id": "moran-erik",
+            "name": "Moran Erik",
+            "_links": {
+              "self": {
+                "href": "/players/moran-erik"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "munoz-juan",
+            "name": "Munoz Juan",
+            "_links": {
+              "self": {
+                "href": "/players/munoz-juan"
+              }
+            },
+            "number": 18
+          },
+          {
+            "id": "raton-alvaro",
+            "name": "Raton Alvaro",
+            "_links": {
+              "self": {
+                "href": "/players/raton-alvaro"
+              }
+            },
+            "number": 30,
+            "role": "goalkeeper"
+          }
+        ]
+      }
+    }
+  ],
+  "season": {
+    "name": "LaLiga2 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/esp_sd/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/esp_sd/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/esp_sd/seasons/20162017/stages/main/matches/65a29496a904f370f8bcfb39221d12a1"
+    }
+  },
+  "context": {
+    "matchday": 19
+  },
+  "last_update_time": {
+    "date_time": "2016-12-18T17:50:05+00:00",
+    "timestamp": 1482083405
+  }
+}

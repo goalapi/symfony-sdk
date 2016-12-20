@@ -1,0 +1,82 @@
+{
+  "id": "00fce7412fed66b64af3289a73db282b",
+  "begin_time": {
+    "date_time": "2016-05-28T18:45:00+00:00",
+    "timestamp": 1464461100
+  },
+  "status": {
+    "status": "finished",
+    "score": [
+      2,
+      1
+    ],
+    "finished_after": "2T"
+  },
+  "tournament": {
+    "id": "ucl",
+    "name": "Champions League",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl"
+      }
+    },
+    "coverage": {
+      "id": "eu",
+      "name": "Europe",
+      "_links": {
+        "self": {
+          "href": "/territories/eu"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "reamad_esp",
+      "name": "Real Madrid",
+      "_links": {
+        "self": {
+          "href": "/teams/reamad_esp"
+        }
+      }
+    },
+    {
+      "id": "atlmad_esp",
+      "name": "Atl. Madrid",
+      "_links": {
+        "self": {
+          "href": "/teams/atlmad_esp"
+        }
+      }
+    }
+  ],
+  "season": {
+    "name": "Champions League 2015/2016",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016"
+      }
+    }
+  },
+  "stage": {
+    "name": "Play Offs",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20152016/stages/playoffs"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/ucl/seasons/20152016/matches/00fce7412fed66b64af3289a73db282b"
+    }
+  },
+  "context": {
+    "round": "Final",
+    "final": 1
+  },
+  "last_update_time": {
+    "date_time": "2016-09-01T16:55:22+00:00",
+    "timestamp": 1472748922
+  }
+}

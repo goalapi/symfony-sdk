@@ -1,0 +1,81 @@
+{
+  "id": "e79bcfe23d141877fdcf508cefaf68dd",
+  "begin_time": {
+    "date_time": "2017-02-14T19:45:00+00:00",
+    "timestamp": 1487101500
+  },
+  "status": {
+    "status": "scheduled",
+    "score": [
+      0,
+      0
+    ]
+  },
+  "tournament": {
+    "id": "ucl",
+    "name": "Champions League",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl"
+      }
+    },
+    "coverage": {
+      "id": "eu",
+      "name": "Europe",
+      "_links": {
+        "self": {
+          "href": "/territories/eu"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "ben_prt",
+      "name": "Benfica",
+      "_links": {
+        "self": {
+          "href": "/teams/ben_prt"
+        }
+      }
+    },
+    {
+      "id": "dor_deu",
+      "name": "Dortmund",
+      "_links": {
+        "self": {
+          "href": "/teams/dor_deu"
+        }
+      }
+    }
+  ],
+  "season": {
+    "name": "Champions League 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Play Offs",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20162017/stages/playoffs"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/ucl/seasons/20162017/stages/playoffs/matches/e79bcfe23d141877fdcf508cefaf68dd"
+    }
+  },
+  "context": {
+    "round": "1/8-finals",
+    "final": 8
+  },
+  "last_update_time": {
+    "date_time": "2016-12-14T08:38:19+00:00",
+    "timestamp": 1481704699
+  }
+}

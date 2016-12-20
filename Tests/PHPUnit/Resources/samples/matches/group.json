@@ -1,0 +1,82 @@
+{
+  "id": "9f58d6b3687bd8290c854afb501fc15c",
+  "begin_time": {
+    "date_time": "2016-09-13T18:45:00+00:00",
+    "timestamp": 1473792300
+  },
+  "status": {
+    "status": "finished",
+    "score": [
+      7,
+      0
+    ],
+    "finished_after": "2T"
+  },
+  "tournament": {
+    "id": "ucl",
+    "name": "Champions League",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl"
+      }
+    },
+    "coverage": {
+      "id": "eu",
+      "name": "Europe",
+      "_links": {
+        "self": {
+          "href": "/territories/eu"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "bar_esp",
+      "name": "Barcelona",
+      "_links": {
+        "self": {
+          "href": "/teams/bar_esp"
+        }
+      }
+    },
+    {
+      "id": "cel_sco",
+      "name": "Celtic",
+      "_links": {
+        "self": {
+          "href": "/teams/cel_sco"
+        }
+      }
+    }
+  ],
+  "season": {
+    "name": "Champions League 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Group Stage",
+    "_links": {
+      "self": {
+        "href": "/tournaments/ucl/seasons/20162017/stages/groupstage"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/ucl/seasons/20162017/stages/groupstage/matches/9f58d6b3687bd8290c854afb501fc15c"
+    }
+  },
+  "context": {
+    "matchday": 1,
+    "group": "Group A"
+  },
+  "last_update_time": {
+    "date_time": "2016-09-13T20:39:03+00:00",
+    "timestamp": 1473799143
+  }
+}

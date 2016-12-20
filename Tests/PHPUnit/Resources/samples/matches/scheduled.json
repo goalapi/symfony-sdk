@@ -1,0 +1,80 @@
+{
+  "id": "a2ed45ad1b8213df3800ecd618474820",
+  "begin_time": {
+    "date_time": "2016-12-18T23:00:00+00:00",
+    "timestamp": 1482102000
+  },
+  "status": {
+    "status": "scheduled",
+    "score": [
+      0,
+      0
+    ]
+  },
+  "tournament": {
+    "id": "arg_pd",
+    "name": "Primera Division",
+    "_links": {
+      "self": {
+        "href": "/tournaments/arg_pd"
+      }
+    },
+    "coverage": {
+      "id": "arg",
+      "name": "Argentina",
+      "_links": {
+        "self": {
+          "href": "/territories/arg"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "olibahbla_arg",
+      "name": "Olimpo Bahia Blanca",
+      "_links": {
+        "self": {
+          "href": "/teams/olibahbla_arg"
+        }
+      }
+    },
+    {
+      "id": "rivpla_arg",
+      "name": "River Plate",
+      "_links": {
+        "self": {
+          "href": "/teams/rivpla_arg"
+        }
+      }
+    }
+  ],
+  "season": {
+    "name": "Primera Division 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/arg_pd/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/arg_pd/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/arg_pd/seasons/20162017/stages/main/matches/a2ed45ad1b8213df3800ecd618474820"
+    }
+  },
+  "context": {
+    "matchday": 14
+  },
+  "last_update_time": {
+    "date_time": "2016-12-14T08:37:58+00:00",
+    "timestamp": 1481704678
+  }
+}

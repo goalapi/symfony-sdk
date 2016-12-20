@@ -1,0 +1,85 @@
+{
+  "id": "b1a908e5e36bea19a6c8d149e0bc4928",
+  "begin_time": {
+    "date_time": "2016-12-19T15:30:00+00:00",
+    "timestamp": 1482161400
+  },
+  "status": {
+    "status": "online",
+    "score": [
+      0,
+      0
+    ],
+    "period": "E2T",
+    "period_finish_time": {
+      "date_time": "2016-12-19T16:17:25+00:00",
+      "timestamp": 1482164245
+    }
+  },
+  "tournament": {
+    "id": "tur_p1l",
+    "name": "Ptt 1 Lig",
+    "_links": {
+      "self": {
+        "href": "/tournaments/tur_p1l"
+      }
+    },
+    "coverage": {
+      "id": "tur",
+      "name": "Turkey",
+      "_links": {
+        "self": {
+          "href": "/territories/tur"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "gir_tur",
+      "name": "Giresunspor",
+      "_links": {
+        "self": {
+          "href": "/teams/gir_tur"
+        }
+      }
+    },
+    {
+      "id": "sam_tur",
+      "name": "Samsunspor",
+      "_links": {
+        "self": {
+          "href": "/teams/sam_tur"
+        }
+      }
+    }
+  ],
+  "season": {
+    "name": "TFF 1. Lig 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/tur_p1l/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/tur_p1l/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/tur_p1l/seasons/20162017/stages/main/matches/b1a908e5e36bea19a6c8d149e0bc4928"
+    }
+  },
+  "context": {
+    "matchday": 15
+  },
+  "last_update_time": {
+    "date_time": "2016-12-19T15:34:02+00:00",
+    "timestamp": 1482161642
+  }
+}

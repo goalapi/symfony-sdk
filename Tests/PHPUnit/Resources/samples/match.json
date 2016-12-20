@@ -1,0 +1,823 @@
+{
+  "id": "cc5dd9ba9b00f6b19b1bc7dfd7ea5aaf",
+  "begin_time": {
+    "date_time": "2016-12-14T11:00:00+00:00",
+    "timestamp": 1481713200
+  },
+  "status": {
+    "status": "finished",
+    "score": [
+      1,
+      1
+    ],
+    "finished_after": "2T"
+  },
+  "tournament": {
+    "id": "bgr_ap",
+    "name": "A Pfg",
+    "_links": {
+      "self": {
+        "href": "/tournaments/bgr_ap"
+      }
+    },
+    "coverage": {
+      "id": "bgr",
+      "name": "Bulgaria",
+      "_links": {
+        "self": {
+          "href": "/territories/bgr"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "lokplo_bgr",
+      "name": "Lok. Plovdiv",
+      "_links": {
+        "self": {
+          "href": "/teams/lokplo_bgr"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "bakalov-dimo",
+            "name": "Bakalov Dimo",
+            "_links": {
+              "self": {
+                "href": "/players/bakalov-dimo"
+              }
+            },
+            "number": 27
+          },
+          {
+            "id": "el-kharroubi-yassine",
+            "name": "El Kharroubi Yassine",
+            "_links": {
+              "self": {
+                "href": "/players/el-kharroubi-yassine"
+              }
+            },
+            "number": 16,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "goranov-ivan",
+            "name": "Goranov Ivan",
+            "_links": {
+              "self": {
+                "href": "/players/goranov-ivan"
+              }
+            },
+            "number": 14
+          },
+          {
+            "id": "kamburov-martin",
+            "name": "Kamburov Martin",
+            "_links": {
+              "self": {
+                "href": "/players/kamburov-martin"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "kiki-dani",
+            "name": "Kiki Dani",
+            "_links": {
+              "self": {
+                "href": "/players/kiki-dani"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "kotev-kiril",
+            "name": "Kotev Kiril",
+            "_links": {
+              "self": {
+                "href": "/players/kotev-kiril"
+              }
+            },
+            "number": 6
+          },
+          {
+            "id": "luque-miguel-angel",
+            "name": "Luque Miguel Angel",
+            "_links": {
+              "self": {
+                "href": "/players/luque-miguel-angel"
+              }
+            },
+            "number": 23
+          },
+          {
+            "id": "marchev-veselin",
+            "name": "Marchev Veselin",
+            "_links": {
+              "self": {
+                "href": "/players/marchev-veselin"
+              }
+            },
+            "number": 10
+          },
+          {
+            "id": "trajanov-vanco",
+            "name": "Trajanov Vanco",
+            "_links": {
+              "self": {
+                "href": "/players/trajanov-vanco"
+              }
+            },
+            "number": 17
+          },
+          {
+            "id": "velkovski-dimitar",
+            "name": "Velkovski Dimitar",
+            "_links": {
+              "self": {
+                "href": "/players/velkovski-dimitar"
+              }
+            },
+            "number": 19
+          },
+          {
+            "id": "vidanov-pavel",
+            "name": "Vidanov Pavel",
+            "_links": {
+              "self": {
+                "href": "/players/vidanov-pavel"
+              }
+            },
+            "number": 5
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "hamud-iyad",
+            "name": "Hamud Iyad",
+            "_links": {
+              "self": {
+                "href": "/players/hamud-iyad"
+              }
+            },
+            "number": 77
+          },
+          {
+            "id": "jevtoski-stefan",
+            "name": "Jevtoski Stefan",
+            "_links": {
+              "self": {
+                "href": "/players/jevtoski-stefan"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "karageren-birsent",
+            "name": "Karageren Birsent",
+            "_links": {
+              "self": {
+                "href": "/players/karageren-birsent"
+              }
+            },
+            "number": 21
+          },
+          {
+            "id": "pirgov-ilko",
+            "name": "Pirgov Ilko",
+            "_links": {
+              "self": {
+                "href": "/players/pirgov-ilko"
+              }
+            },
+            "number": 38,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "raynov-martin",
+            "name": "Raynov Martin",
+            "_links": {
+              "self": {
+                "href": "/players/raynov-martin"
+              }
+            },
+            "number": 18
+          },
+          {
+            "id": "umarbaev-parvizdzhon",
+            "name": "Umarbaev Parvizdzhon",
+            "_links": {
+              "self": {
+                "href": "/players/umarbaev-parvizdzhon"
+              }
+            },
+            "number": 39
+          },
+          {
+            "id": "vezalov-dimitar",
+            "name": "Vezalov Dimitar",
+            "_links": {
+              "self": {
+                "href": "/players/vezalov-dimitar"
+              }
+            },
+            "number": 15
+          }
+        ]
+      }
+    },
+    {
+      "id": "slasof_bgr",
+      "name": "Slavia Sofia",
+      "_links": {
+        "self": {
+          "href": "/teams/slasof_bgr"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "dimitrov-nikolay1",
+            "name": "Dimitrov Nikolay",
+            "_links": {
+              "self": {
+                "href": "/players/dimitrov-nikolay1"
+              }
+            },
+            "number": 77
+          },
+          {
+            "id": "giurgiu-alexandru",
+            "name": "Giurgiu Alexandru",
+            "_links": {
+              "self": {
+                "href": "/players/giurgiu-alexandru"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "hristov-petko",
+            "name": "Hristov Petko",
+            "_links": {
+              "self": {
+                "href": "/players/hristov-petko"
+              }
+            },
+            "number": 15
+          },
+          {
+            "id": "karabelyov-yanis",
+            "name": "Karabelyov Yanis",
+            "_links": {
+              "self": {
+                "href": "/players/karabelyov-yanis"
+              }
+            },
+            "number": 91
+          },
+          {
+            "id": "krastev-kaloyan",
+            "name": "Krastev Kaloyan",
+            "_links": {
+              "self": {
+                "href": "/players/krastev-kaloyan"
+              }
+            },
+            "number": 20
+          },
+          {
+            "id": "martinov-emil",
+            "name": "Martinov Emil",
+            "_links": {
+              "self": {
+                "href": "/players/martinov-emil"
+              }
+            },
+            "number": 27
+          },
+          {
+            "id": "pashov-georgi",
+            "name": "Pashov Georgi",
+            "_links": {
+              "self": {
+                "href": "/players/pashov-georgi"
+              }
+            },
+            "number": 21
+          },
+          {
+            "id": "semerdzhiev-vladimir",
+            "name": "Semerdzhiev Vladimir",
+            "_links": {
+              "self": {
+                "href": "/players/semerdzhiev-vladimir"
+              }
+            },
+            "number": 22
+          },
+          {
+            "id": "stergiakis-antonis",
+            "name": "Stergiakis Antonis",
+            "_links": {
+              "self": {
+                "href": "/players/stergiakis-antonis"
+              }
+            },
+            "number": 32,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "vasev-bozhidar",
+            "name": "Vasev Bozhidar",
+            "_links": {
+              "self": {
+                "href": "/players/vasev-bozhidar"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "velkov-stefan",
+            "name": "Velkov Stefan",
+            "_links": {
+              "self": {
+                "href": "/players/velkov-stefan"
+              }
+            },
+            "number": 19
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "baldzhiyski-borislav",
+            "name": "Baldzhiyski Borislav",
+            "_links": {
+              "self": {
+                "href": "/players/baldzhiyski-borislav"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "dimitrov-ivaylo",
+            "name": "Dimitrov Ivaylo",
+            "_links": {
+              "self": {
+                "href": "/players/dimitrov-ivaylo"
+              }
+            },
+            "number": 14
+          },
+          {
+            "id": "domovchiyski-valeri",
+            "name": "Domovchiyski Valeri",
+            "_links": {
+              "self": {
+                "href": "/players/domovchiyski-valeri"
+              }
+            },
+            "number": 24
+          },
+          {
+            "id": "hristov-andrea",
+            "name": "Hristov Andrea",
+            "_links": {
+              "self": {
+                "href": "/players/hristov-andrea"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "kirev-mario",
+            "name": "Kirev Mario",
+            "_links": {
+              "self": {
+                "href": "/players/kirev-mario"
+              }
+            },
+            "number": 13,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "minchev-ivan",
+            "name": "Minchev Ivan",
+            "_links": {
+              "self": {
+                "href": "/players/minchev-ivan"
+              }
+            },
+            "number": 73
+          },
+          {
+            "id": "yomov-georgi",
+            "name": "Yomov Georgi",
+            "_links": {
+              "self": {
+                "href": "/players/yomov-georgi"
+              }
+            },
+            "number": 35
+          }
+        ]
+      }
+    }
+  ],
+  "season": {
+    "name": "Parva Liga 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/bgr_ap/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/bgr_ap/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/bgr_ap/seasons/20162017/stages/main/matches/cc5dd9ba9b00f6b19b1bc7dfd7ea5aaf"
+    }
+  },
+  "context": {
+    "matchday": 19
+  },
+  "last_update_time": {
+    "date_time": "2016-12-14T12:53:02+00:00",
+    "timestamp": 1481719982
+  },
+  "events": [
+    {
+      "type": "goal",
+      "team": {
+        "id": "lokplo_bgr",
+        "name": "Lok. Plovdiv",
+        "_links": {
+          "self": {
+            "href": "/teams/lokplo_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "moment": {
+          "minute": 9
+        }
+      },
+      "player": {
+        "id": "kotev-kiril",
+        "name": "Kotev Kiril",
+        "_links": {
+          "self": {
+            "href": "/players/kotev-kiril"
+          }
+        }
+      },
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "goal",
+      "team": {
+        "id": "slasof_bgr",
+        "name": "Slavia Sofia",
+        "_links": {
+          "self": {
+            "href": "/teams/slasof_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "moment": {
+          "minute": 43
+        }
+      },
+      "player": {
+        "id": "vasev-bozhidar",
+        "name": "Vasev Bozhidar",
+        "_links": {
+          "self": {
+            "href": "/players/vasev-bozhidar"
+          }
+        }
+      },
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "lokplo_bgr",
+        "name": "Lok. Plovdiv",
+        "_links": {
+          "self": {
+            "href": "/teams/lokplo_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 56
+        }
+      },
+      "players": {
+        "in": {
+          "id": "umarbaev-parvizdzhon",
+          "name": "Umarbaev Parvizdzhon",
+          "_links": {
+            "self": {
+              "href": "/players/umarbaev-parvizdzhon"
+            }
+          }
+        },
+        "out": {
+          "id": "luque-miguel-angel",
+          "name": "Luque Miguel Angel",
+          "_links": {
+            "self": {
+              "href": "/players/luque-miguel-angel"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "slasof_bgr",
+        "name": "Slavia Sofia",
+        "_links": {
+          "self": {
+            "href": "/teams/slasof_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 66
+        }
+      },
+      "players": {
+        "in": {
+          "id": "baldzhiyski-borislav",
+          "name": "Baldzhiyski Borislav",
+          "_links": {
+            "self": {
+              "href": "/players/baldzhiyski-borislav"
+            }
+          }
+        },
+        "out": {
+          "id": "giurgiu-alexandru",
+          "name": "Giurgiu Alexandru",
+          "_links": {
+            "self": {
+              "href": "/players/giurgiu-alexandru"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "lokplo_bgr",
+        "name": "Lok. Plovdiv",
+        "_links": {
+          "self": {
+            "href": "/teams/lokplo_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 70
+        }
+      },
+      "players": {
+        "in": {
+          "id": "jevtoski-stefan",
+          "name": "Jevtoski Stefan",
+          "_links": {
+            "self": {
+              "href": "/players/jevtoski-stefan"
+            }
+          }
+        },
+        "out": {
+          "id": "velkovski-dimitar",
+          "name": "Velkovski Dimitar",
+          "_links": {
+            "self": {
+              "href": "/players/velkovski-dimitar"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "slasof_bgr",
+        "name": "Slavia Sofia",
+        "_links": {
+          "self": {
+            "href": "/teams/slasof_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 76
+        }
+      },
+      "players": {
+        "in": {
+          "id": "domovchiyski-valeri",
+          "name": "Domovchiyski Valeri",
+          "_links": {
+            "self": {
+              "href": "/players/domovchiyski-valeri"
+            }
+          }
+        },
+        "out": {
+          "id": "dimitrov-nikolay1",
+          "name": "Dimitrov Nikolay",
+          "_links": {
+            "self": {
+              "href": "/players/dimitrov-nikolay1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "slasof_bgr",
+        "name": "Slavia Sofia",
+        "_links": {
+          "self": {
+            "href": "/teams/slasof_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 83
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "hristov-petko",
+        "name": "Hristov Petko",
+        "_links": {
+          "self": {
+            "href": "/players/hristov-petko"
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "slasof_bgr",
+        "name": "Slavia Sofia",
+        "_links": {
+          "self": {
+            "href": "/teams/slasof_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 84
+        }
+      },
+      "players": {
+        "in": {
+          "id": "dimitrov-ivaylo",
+          "name": "Dimitrov Ivaylo",
+          "_links": {
+            "self": {
+              "href": "/players/dimitrov-ivaylo"
+            }
+          }
+        },
+        "out": {
+          "id": "vasev-bozhidar",
+          "name": "Vasev Bozhidar",
+          "_links": {
+            "self": {
+              "href": "/players/vasev-bozhidar"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "slasof_bgr",
+        "name": "Slavia Sofia",
+        "_links": {
+          "self": {
+            "href": "/teams/slasof_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 85
+        }
+      },
+      "color": "yellow_red",
+      "player": {
+        "id": "hristov-petko",
+        "name": "Hristov Petko",
+        "_links": {
+          "self": {
+            "href": "/players/hristov-petko"
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "lokplo_bgr",
+        "name": "Lok. Plovdiv",
+        "_links": {
+          "self": {
+            "href": "/teams/lokplo_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 91
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "umarbaev-parvizdzhon",
+        "name": "Umarbaev Parvizdzhon",
+        "_links": {
+          "self": {
+            "href": "/players/umarbaev-parvizdzhon"
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "lokplo_bgr",
+        "name": "Lok. Plovdiv",
+        "_links": {
+          "self": {
+            "href": "/teams/lokplo_bgr"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "moment": {
+          "minute": 92
+        }
+      },
+      "color": "yellow",
+      "player": {
+        "id": "jevtoski-stefan",
+        "name": "Jevtoski Stefan",
+        "_links": {
+          "self": {
+            "href": "/players/jevtoski-stefan"
+          }
+        }
+      }
+    }
+  ]
+}

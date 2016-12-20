@@ -1,0 +1,461 @@
+{
+  "id": "b1a908e5e36bea19a6c8d149e0bc4928",
+  "begin_time": {
+    "date_time": "2016-12-19T15:30:00+00:00",
+    "timestamp": 1482161400
+  },
+  "status": {
+    "status": "online",
+    "score": [
+      1,
+      0
+    ],
+    "period": "1T",
+    "period_finish_time": {
+      "date_time": "2016-12-19T16:17:25+00:00",
+      "timestamp": 1482164245
+    }
+  },
+  "tournament": {
+    "id": "tur_p1l",
+    "name": "Ptt 1 Lig",
+    "_links": {
+      "self": {
+        "href": "/tournaments/tur_p1l"
+      }
+    },
+    "coverage": {
+      "id": "tur",
+      "name": "Turkey",
+      "_links": {
+        "self": {
+          "href": "/territories/tur"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "gir_tur",
+      "name": "Giresunspor",
+      "_links": {
+        "self": {
+          "href": "/teams/gir_tur"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "abwo-david",
+            "name": "Abwo David",
+            "_links": {
+              "self": {
+                "href": "/players/abwo-david"
+              }
+            },
+            "number": 14
+          },
+          {
+            "id": "altin-eser",
+            "name": "Altin Eser",
+            "_links": {
+              "self": {
+                "href": "/players/altin-eser"
+              }
+            },
+            "number": 99,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "aydin-recep",
+            "name": "Aydin Recep",
+            "_links": {
+              "self": {
+                "href": "/players/aydin-recep"
+              }
+            },
+            "number": 17
+          },
+          {
+            "id": "dimitriadis-panajotis",
+            "name": "Dimitriadis Panajotis",
+            "_links": {
+              "self": {
+                "href": "/players/dimitriadis-panajotis"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "dodo1",
+            "name": "Dodo",
+            "_links": {
+              "self": {
+                "href": "/players/dodo1"
+              }
+            },
+            "number": 25
+          },
+          {
+            "id": "okumak-volkan",
+            "name": "Okumak Volkan",
+            "_links": {
+              "self": {
+                "href": "/players/okumak-volkan"
+              }
+            },
+            "number": 10
+          },
+          {
+            "id": "ozcan-ozgurcan",
+            "name": "Ozcan Ozgurcan",
+            "_links": {
+              "self": {
+                "href": "/players/ozcan-ozgurcan"
+              }
+            },
+            "number": 19
+          },
+          {
+            "id": "sahin-rizvan",
+            "name": "Sahin Rizvan",
+            "_links": {
+              "self": {
+                "href": "/players/sahin-rizvan"
+              }
+            },
+            "number": 24
+          },
+          {
+            "id": "tarasovs-igors",
+            "name": "Tarasovs Igors",
+            "_links": {
+              "self": {
+                "href": "/players/tarasovs-igors"
+              }
+            },
+            "number": 32
+          },
+          {
+            "id": "yildirim-berkan",
+            "name": "Yildirim Berkan",
+            "_links": {
+              "self": {
+                "href": "/players/yildirim-berkan"
+              }
+            },
+            "number": 16
+          },
+          {
+            "id": "yilmaz-ozgur",
+            "name": "Yilmaz Ozgur",
+            "_links": {
+              "self": {
+                "href": "/players/yilmaz-ozgur"
+              }
+            },
+            "number": 57
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "atag-anil",
+            "name": "Atag Anil",
+            "_links": {
+              "self": {
+                "href": "/players/atag-anil"
+              }
+            },
+            "number": 27,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "bulbul-cagri",
+            "name": "Bulbul Cagri",
+            "_links": {
+              "self": {
+                "href": "/players/bulbul-cagri"
+              }
+            },
+            "number": 6
+          },
+          {
+            "id": "demir-onur",
+            "name": "Demir Onur",
+            "_links": {
+              "self": {
+                "href": "/players/demir-onur"
+              }
+            },
+            "number": 28
+          },
+          {
+            "id": "kocer-guido",
+            "name": "Kocer Guido",
+            "_links": {
+              "self": {
+                "href": "/players/kocer-guido"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "okafor-onyekachi",
+            "name": "Okafor Onyekachi",
+            "_links": {
+              "self": {
+                "href": "/players/okafor-onyekachi"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "yesilmen-youssef",
+            "name": "Yesilmen Youssef",
+            "_links": {
+              "self": {
+                "href": "/players/yesilmen-youssef"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "yilmaz-gokhan",
+            "name": "Yilmaz Gokhan",
+            "_links": {
+              "self": {
+                "href": "/players/yilmaz-gokhan"
+              }
+            },
+            "number": 33
+          }
+        ]
+      }
+    },
+    {
+      "id": "sam_tur",
+      "name": "Samsunspor",
+      "_links": {
+        "self": {
+          "href": "/teams/sam_tur"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "arman-burhan",
+            "name": "Arman Burhan",
+            "_links": {
+              "self": {
+                "href": "/players/arman-burhan"
+              }
+            },
+            "number": 23
+          },
+          {
+            "id": "aydin-canberk",
+            "name": "Aydin Canberk",
+            "_links": {
+              "self": {
+                "href": "/players/aydin-canberk"
+              }
+            },
+            "number": 21
+          },
+          {
+            "id": "efe-muharrem",
+            "name": "Efe Muharrem",
+            "_links": {
+              "self": {
+                "href": "/players/efe-muharrem"
+              }
+            },
+            "number": 99
+          },
+          {
+            "id": "gurbuzerol-murat",
+            "name": "Gurbuzerol Murat",
+            "_links": {
+              "self": {
+                "href": "/players/gurbuzerol-murat"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "kilic-hasan",
+            "name": "Kilic Hasan",
+            "_links": {
+              "self": {
+                "href": "/players/kilic-hasan"
+              }
+            },
+            "number": 28
+          },
+          {
+            "id": "kilickaya-fatih",
+            "name": "Kilickaya Fatih",
+            "_links": {
+              "self": {
+                "href": "/players/kilickaya-fatih"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "kose-furkan",
+            "name": "Kose Furkan",
+            "_links": {
+              "self": {
+                "href": "/players/kose-furkan"
+              }
+            },
+            "number": 55,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "n-diaye-ousmane",
+            "name": "N Diaye Ousmane",
+            "_links": {
+              "self": {
+                "href": "/players/n-diaye-ousmane"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "pak-alperen",
+            "name": "Pak Alperen",
+            "_links": {
+              "self": {
+                "href": "/players/pak-alperen"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "peksen-halil-ibrahim",
+            "name": "Peksen Halil Ibrahim",
+            "_links": {
+              "self": {
+                "href": "/players/peksen-halil-ibrahim"
+              }
+            },
+            "number": 16
+          },
+          {
+            "id": "sevgi-mustafa",
+            "name": "Sevgi Mustafa",
+            "_links": {
+              "self": {
+                "href": "/players/sevgi-mustafa"
+              }
+            },
+            "number": 26
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "cakir-mehmet",
+            "name": "Cakir Mehmet",
+            "_links": {
+              "self": {
+                "href": "/players/cakir-mehmet"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "dikmen-erdi",
+            "name": "Dikmen Erdi",
+            "_links": {
+              "self": {
+                "href": "/players/dikmen-erdi"
+              }
+            },
+            "number": 97
+          },
+          {
+            "id": "ilkin-enes",
+            "name": "Ilkin Enes",
+            "_links": {
+              "self": {
+                "href": "/players/ilkin-enes"
+              }
+            },
+            "number": 77
+          },
+          {
+            "id": "polat-berkay",
+            "name": "Polat Berkay",
+            "_links": {
+              "self": {
+                "href": "/players/polat-berkay"
+              }
+            },
+            "number": 96
+          },
+          {
+            "id": "sevgi-bekir",
+            "name": "Sevgi Bekir",
+            "_links": {
+              "self": {
+                "href": "/players/sevgi-bekir"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "yazici-ercan",
+            "name": "Yazici Ercan",
+            "_links": {
+              "self": {
+                "href": "/players/yazici-ercan"
+              }
+            },
+            "number": 12
+          },
+          {
+            "id": "zola-distel",
+            "name": "Zola Distel",
+            "_links": {
+              "self": {
+                "href": "/players/zola-distel"
+              }
+            },
+            "number": 6
+          }
+        ]
+      }
+    }
+  ],
+  "season": {
+    "name": "TFF 1. Lig 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/tur_p1l/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/tur_p1l/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/tur_p1l/seasons/20162017/stages/main/matches/b1a908e5e36bea19a6c8d149e0bc4928"
+    }
+  },
+  "context": {
+    "matchday": 15
+  },
+  "last_update_time": {
+    "date_time": "2016-12-19T15:34:02+00:00",
+    "timestamp": 1482161642
+  }
+}

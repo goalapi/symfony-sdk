@@ -1,0 +1,871 @@
+{
+  "id": "05cedd88b97586caa79d577513d25a74",
+  "begin_time": {
+    "date_time": "2016-12-18T13:30:00+00:00",
+    "timestamp": 1482067800
+  },
+  "status": {
+    "status": "finished",
+    "score": [
+      1,
+      3
+    ],
+    "finished_after": "2T"
+  },
+  "tournament": {
+    "id": "eng_pl",
+    "name": "Premier League",
+    "_links": {
+      "self": {
+        "href": "/tournaments/eng_pl"
+      }
+    },
+    "coverage": {
+      "id": "eng",
+      "name": "England",
+      "_links": {
+        "self": {
+          "href": "/territories/eng"
+        }
+      }
+    }
+  },
+  "teams": [
+    {
+      "id": "bou_eng",
+      "name": "Bournemouth",
+      "_links": {
+        "self": {
+          "href": "/teams/bou_eng"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "ake-nathan",
+            "name": "Ake Nathan",
+            "_links": {
+              "self": {
+                "href": "/players/ake-nathan"
+              }
+            },
+            "number": 5
+          },
+          {
+            "id": "arter-harry",
+            "name": "Arter Harry",
+            "_links": {
+              "self": {
+                "href": "/players/arter-harry"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "boruc-artur",
+            "name": "Boruc Artur",
+            "_links": {
+              "self": {
+                "href": "/players/boruc-artur"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "cook-steve",
+            "name": "Cook Steve",
+            "_links": {
+              "self": {
+                "href": "/players/cook-steve"
+              }
+            },
+            "number": 3
+          },
+          {
+            "id": "daniels-charlie",
+            "name": "Daniels Charlie",
+            "_links": {
+              "self": {
+                "href": "/players/daniels-charlie"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "francis-simon",
+            "name": "Francis Simon",
+            "_links": {
+              "self": {
+                "href": "/players/francis-simon"
+              }
+            },
+            "number": 2,
+            "captain": true
+          },
+          {
+            "id": "king-joshua",
+            "name": "King Joshua",
+            "_links": {
+              "self": {
+                "href": "/players/king-joshua"
+              }
+            },
+            "number": 17
+          },
+          {
+            "id": "pugh-marc",
+            "name": "Pugh Marc",
+            "_links": {
+              "self": {
+                "href": "/players/pugh-marc"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "smith-adam",
+            "name": "Smith Adam",
+            "_links": {
+              "self": {
+                "href": "/players/smith-adam"
+              }
+            },
+            "number": 15
+          },
+          {
+            "id": "wilshere-jack",
+            "name": "Wilshere Jack",
+            "_links": {
+              "self": {
+                "href": "/players/wilshere-jack"
+              }
+            },
+            "number": 32
+          },
+          {
+            "id": "wilson-callum",
+            "name": "Wilson Callum",
+            "_links": {
+              "self": {
+                "href": "/players/wilson-callum"
+              }
+            },
+            "number": 13
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "afobe-benik",
+            "name": "Afobe Benik",
+            "_links": {
+              "self": {
+                "href": "/players/afobe-benik"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "federici-adam",
+            "name": "Federici Adam",
+            "_links": {
+              "self": {
+                "href": "/players/federici-adam"
+              }
+            },
+            "number": 23,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "fraser-ryan",
+            "name": "Fraser Ryan",
+            "_links": {
+              "self": {
+                "href": "/players/fraser-ryan"
+              }
+            },
+            "number": 24
+          },
+          {
+            "id": "gosling-dan",
+            "name": "Gosling Dan",
+            "_links": {
+              "self": {
+                "href": "/players/gosling-dan"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "ibe-jordon",
+            "name": "Ibe Jordon",
+            "_links": {
+              "self": {
+                "href": "/players/ibe-jordon"
+              }
+            },
+            "number": 33
+          },
+          {
+            "id": "mings-tyrone",
+            "name": "Mings Tyrone",
+            "_links": {
+              "self": {
+                "href": "/players/mings-tyrone"
+              }
+            },
+            "number": 26
+          },
+          {
+            "id": "smith-bradley",
+            "name": "Smith Bradley",
+            "_links": {
+              "self": {
+                "href": "/players/smith-bradley"
+              }
+            },
+            "number": 14
+          }
+        ]
+      }
+    },
+    {
+      "id": "sou_eng",
+      "name": "Southampton",
+      "_links": {
+        "self": {
+          "href": "/teams/sou_eng"
+        }
+      },
+      "squad": {
+        "eleven": [
+          {
+            "id": "bertrand-ryan",
+            "name": "Bertrand Ryan",
+            "_links": {
+              "self": {
+                "href": "/players/bertrand-ryan"
+              }
+            },
+            "number": 21
+          },
+          {
+            "id": "boufal-sofiane",
+            "name": "Boufal Sofiane",
+            "_links": {
+              "self": {
+                "href": "/players/boufal-sofiane"
+              }
+            },
+            "number": 19
+          },
+          {
+            "id": "cedric-alves",
+            "name": "Cedric Alves",
+            "_links": {
+              "self": {
+                "href": "/players/cedric-alves"
+              }
+            },
+            "number": 2
+          },
+          {
+            "id": "clasie-jordy",
+            "name": "Clasie Jordy",
+            "_links": {
+              "self": {
+                "href": "/players/clasie-jordy"
+              }
+            },
+            "number": 4
+          },
+          {
+            "id": "forster-fraser",
+            "name": "Forster Fraser",
+            "_links": {
+              "self": {
+                "href": "/players/forster-fraser"
+              }
+            },
+            "number": 1,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "hojbjerg-pierre-emile",
+            "name": "Hojbjerg Pierre Emile",
+            "_links": {
+              "self": {
+                "href": "/players/hojbjerg-pierre-emile"
+              }
+            },
+            "number": 23
+          },
+          {
+            "id": "redmond-nathan",
+            "name": "Redmond Nathan",
+            "_links": {
+              "self": {
+                "href": "/players/redmond-nathan"
+              }
+            },
+            "number": 22
+          },
+          {
+            "id": "reed-harrison",
+            "name": "Reed Harrison",
+            "_links": {
+              "self": {
+                "href": "/players/reed-harrison"
+              }
+            },
+            "number": 18
+          },
+          {
+            "id": "rodriguez-jay",
+            "name": "Rodriguez Jay",
+            "_links": {
+              "self": {
+                "href": "/players/rodriguez-jay"
+              }
+            },
+            "number": 9
+          },
+          {
+            "id": "van-dijk-virgil",
+            "name": "Van Dijk Virgil",
+            "_links": {
+              "self": {
+                "href": "/players/van-dijk-virgil"
+              }
+            },
+            "number": 17,
+            "captain": true
+          },
+          {
+            "id": "yoshida-maya",
+            "name": "Yoshida Maya",
+            "_links": {
+              "self": {
+                "href": "/players/yoshida-maya"
+              }
+            },
+            "number": 3
+          }
+        ],
+        "substitutions": [
+          {
+            "id": "davis-steven",
+            "name": "Davis Steven",
+            "_links": {
+              "self": {
+                "href": "/players/davis-steven"
+              }
+            },
+            "number": 8
+          },
+          {
+            "id": "fonte-jose",
+            "name": "Fonte Jose",
+            "_links": {
+              "self": {
+                "href": "/players/fonte-jose"
+              }
+            },
+            "number": 6
+          },
+          {
+            "id": "long-shane",
+            "name": "Long Shane",
+            "_links": {
+              "self": {
+                "href": "/players/long-shane"
+              }
+            },
+            "number": 7
+          },
+          {
+            "id": "martina-cuco",
+            "name": "Martina Cuco",
+            "_links": {
+              "self": {
+                "href": "/players/martina-cuco"
+              }
+            },
+            "number": 15
+          },
+          {
+            "id": "tadic-dusan",
+            "name": "Tadic Dusan",
+            "_links": {
+              "self": {
+                "href": "/players/tadic-dusan"
+              }
+            },
+            "number": 11
+          },
+          {
+            "id": "taylor-stuart",
+            "name": "Taylor Stuart",
+            "_links": {
+              "self": {
+                "href": "/players/taylor-stuart"
+              }
+            },
+            "number": 28,
+            "role": "goalkeeper"
+          },
+          {
+            "id": "ward-prowse-james",
+            "name": "Ward Prowse James",
+            "_links": {
+              "self": {
+                "href": "/players/ward-prowse-james"
+              }
+            },
+            "number": 16
+          }
+        ]
+      }
+    }
+  ],
+  "season": {
+    "name": "Premier League 2016/2017",
+    "_links": {
+      "self": {
+        "href": "/tournaments/eng_pl/seasons/20162017"
+      }
+    }
+  },
+  "stage": {
+    "name": "Main",
+    "_links": {
+      "self": {
+        "href": "/tournaments/eng_pl/seasons/20162017/stages/main"
+      }
+    }
+  },
+  "_links": {
+    "self": {
+      "href": "/tournaments/eng_pl/seasons/20162017/stages/main/matches/05cedd88b97586caa79d577513d25a74"
+    }
+  },
+  "context": {
+    "matchday": 17
+  },
+  "last_update_time": {
+    "date_time": "2016-12-18T15:23:03+00:00",
+    "timestamp": 1482074583
+  },
+  "events": [
+    {
+      "type": "goal",
+      "team": {
+        "id": "bou_eng",
+        "name": "Bournemouth",
+        "_links": {
+          "self": {
+            "href": "/teams/bou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "minute": 6
+      },
+      "player": {
+        "id": "ake-nathan",
+        "name": "Ake Nathan",
+        "_links": {
+          "self": {
+            "href": "/players/ake-nathan"
+          }
+        }
+      },
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "type": "goal",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "minute": 14
+      },
+      "player": {
+        "id": "bertrand-ryan",
+        "name": "Bertrand Ryan",
+        "_links": {
+          "self": {
+            "href": "/players/bertrand-ryan"
+          }
+        }
+      },
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "1T",
+        "minute": 34
+      },
+      "color": "yellow",
+      "player": {
+        "id": "boufal-sofiane",
+        "name": "Boufal Sofiane",
+        "_links": {
+          "self": {
+            "href": "/players/boufal-sofiane"
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 46
+      },
+      "players": {
+        "in": {
+          "id": "davis-steven",
+          "name": "Davis Steven",
+          "_links": {
+            "self": {
+              "href": "/players/davis-steven"
+            }
+          }
+        },
+        "out": {
+          "id": "reed-harrison",
+          "name": "Reed Harrison",
+          "_links": {
+            "self": {
+              "href": "/players/reed-harrison"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "goal",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 48
+      },
+      "player": {
+        "id": "rodriguez-jay",
+        "name": "Rodriguez Jay",
+        "_links": {
+          "self": {
+            "href": "/players/rodriguez-jay"
+          }
+        }
+      },
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "bou_eng",
+        "name": "Bournemouth",
+        "_links": {
+          "self": {
+            "href": "/teams/bou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 55
+      },
+      "players": {
+        "in": {
+          "id": "fraser-ryan",
+          "name": "Fraser Ryan",
+          "_links": {
+            "self": {
+              "href": "/players/fraser-ryan"
+            }
+          }
+        },
+        "out": {
+          "id": "pugh-marc",
+          "name": "Pugh Marc",
+          "_links": {
+            "self": {
+              "href": "/players/pugh-marc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 62
+      },
+      "players": {
+        "in": {
+          "id": "tadic-dusan",
+          "name": "Tadic Dusan",
+          "_links": {
+            "self": {
+              "href": "/players/tadic-dusan"
+            }
+          }
+        },
+        "out": {
+          "id": "boufal-sofiane",
+          "name": "Boufal Sofiane",
+          "_links": {
+            "self": {
+              "href": "/players/boufal-sofiane"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "bou_eng",
+        "name": "Bournemouth",
+        "_links": {
+          "self": {
+            "href": "/teams/bou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 64
+      },
+      "players": {
+        "in": {
+          "id": "afobe-benik",
+          "name": "Afobe Benik",
+          "_links": {
+            "self": {
+              "href": "/players/afobe-benik"
+            }
+          }
+        },
+        "out": {
+          "id": "wilson-callum",
+          "name": "Wilson Callum",
+          "_links": {
+            "self": {
+              "href": "/players/wilson-callum"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "bou_eng",
+        "name": "Bournemouth",
+        "_links": {
+          "self": {
+            "href": "/teams/bou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 72
+      },
+      "players": {
+        "in": {
+          "id": "ibe-jordon",
+          "name": "Ibe Jordon",
+          "_links": {
+            "self": {
+              "href": "/players/ibe-jordon"
+            }
+          }
+        },
+        "out": {
+          "id": "king-joshua",
+          "name": "King Joshua",
+          "_links": {
+            "self": {
+              "href": "/players/king-joshua"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 76
+      },
+      "color": "yellow",
+      "player": {
+        "id": "clasie-jordy",
+        "name": "Clasie Jordy",
+        "_links": {
+          "self": {
+            "href": "/players/clasie-jordy"
+          }
+        }
+      }
+    },
+    {
+      "type": "card",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 78
+      },
+      "color": "yellow",
+      "player": {
+        "id": "davis-steven",
+        "name": "Davis Steven",
+        "_links": {
+          "self": {
+            "href": "/players/davis-steven"
+          }
+        }
+      }
+    },
+    {
+      "type": "goal",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 85
+      },
+      "player": {
+        "id": "rodriguez-jay",
+        "name": "Rodriguez Jay",
+        "_links": {
+          "self": {
+            "href": "/players/rodriguez-jay"
+          }
+        }
+      },
+      "score": [
+        1,
+        3
+      ]
+    },
+    {
+      "type": "substitution",
+      "team": {
+        "id": "sou_eng",
+        "name": "Southampton",
+        "_links": {
+          "self": {
+            "href": "/teams/sou_eng"
+          }
+        }
+      },
+      "moment": {
+        "period": "2T",
+        "minute": 93
+      },
+      "players": {
+        "in": {
+          "id": "long-shane",
+          "name": "Long Shane",
+          "_links": {
+            "self": {
+              "href": "/players/long-shane"
+            }
+          }
+        },
+        "out": {
+          "id": "rodriguez-jay",
+          "name": "Rodriguez Jay",
+          "_links": {
+            "self": {
+              "href": "/players/rodriguez-jay"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
