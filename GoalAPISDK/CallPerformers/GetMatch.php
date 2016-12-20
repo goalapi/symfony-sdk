@@ -43,7 +43,7 @@ class GetMatch extends CallPerformer
             $url = '/tournaments/'.$tournamentId.'/seasons/'.$seasonId.'/stage/'.$stageId;
         }
 
-        $url .= '/'.$matchId;
+        $url .= '/matches/'.$matchId;
 
         $response = $this->apiClient->makeAPICall($url);
 
