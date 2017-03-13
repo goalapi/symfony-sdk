@@ -2,7 +2,7 @@
 <phpunit bootstrap="vendor/autoload.php" colors="true">
     <testsuites>
         <testsuite name="GoalAPISDKBundle Unit Test Suite">
-            <directory suffix="Test.php">./Tests/PHPUnit/TestCases</directory>
+            <directory suffix="Test.php">./Tests/unit/TestCases</directory>
         </testsuite>
     </testsuites>
     <filter>
