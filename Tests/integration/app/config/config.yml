@@ -1,0 +1,6 @@
+imports:
+    - { resource: parameters.yml }
+
+goalapi:
+    apikey: '%goalapi.apikey%'
+

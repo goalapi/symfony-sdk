@@ -1,2 +1,5 @@
-/.idea/
-/vendor/
+.idea/
+vendor/
+Tests/integration/app/cache
+Tests/integration/app/logs
+Tests/integration/app/config/parameter.yml
