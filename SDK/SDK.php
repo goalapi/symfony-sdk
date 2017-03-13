@@ -30,7 +30,7 @@ class SDK
     public function makeCall($name, $arguments)
     {
         if (!isset($this->callPerformers[$name])) {
-            throw new \BadMethodCallException();
+            throw new \BadMethodCallException('Can not find call performer for '.$name);
         }
         /** @var CallPerformerInterface $callPerformer */
         $callPerformer = $this->callPerformers[$name];
