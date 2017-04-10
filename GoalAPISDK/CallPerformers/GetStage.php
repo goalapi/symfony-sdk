@@ -24,7 +24,7 @@ class GetStage extends CallPerformer
         $stageId = null
     ) {
         $response = $this->apiClient->makeAPICall(
-            '/tournaments/'.$tournament->getId().'/seasons/'.$season->getId().'/stages/'.$stageId
+            CallPerformer::pathFromIds([$tournament->getId(), $season->getId(), $stageId])
         );
 
         return $response->getBody();
