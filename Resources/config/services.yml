@@ -3,6 +3,50 @@ services:
     class: GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle\Client
     arguments: ['%goalapi.base_url%', '%goalapi.apikey%']
 
+  goalapi.performer.get_subscription:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetSubscription
+    public: false
+
+  goalapi.performer.get_tournaments:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetTournaments
+    public: false
+
+  goalapi.performer.get_tournament:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetTournament
+    public: false
+
+  goalapi.performer.get_seasons:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetSeasons
+    public: false
+
+  goalapi.performer.get_season:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetSeason
+    public: false
+
+  goalapi.performer.get_stages:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetStages
+    public: false
+
+  goalapi.denormalizer.subscription:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SubscriptionDenormalizer
+    public: false
+
+  goalapi.denormalizer.tournament:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\TournamentDenormalizer
+    public: false
+
+  goalapi.denormalizer.season:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SeasonDenormalizer
+    public: false
+
+  goalapi.denormalizer.stage:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\StageDenormalizer
+    public: false
+
+  goalapi.denormalizer.territory:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\TerritoryDenormalizer
+    public: false
+
   goalapi.denormalizer.array:
     class: GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer
     public: false
@@ -31,6 +75,11 @@ services:
     arguments:
       0:
         - '@goalapi.denormalizer.array'
+        - '@goalapi.denormalizer.subscription'
+        - '@goalapi.denormalizer.tournament'
+        - '@goalapi.denormalizer.season'
+        - '@goalapi.denormalizer.stage'
+        - '@goalapi.denormalizer.territory'
       1:
         - '@goalapi.serializer.encoder.json'
     public: false
@@ -40,3 +89,8 @@ services:
     calls:
      - [setApiClient, ['@goalapi.api-client']]
      - [setSerializer, ['@goalapi.serializer']]
+     - [addCallPerformer, ['getSubscription', '@goalapi.performer.get_subscription']]
+     - [addCallPerformer, ['getTournaments', '@goalapi.performer.get_tournaments']]
+     - [addCallPerformer, ['getTournament', '@goalapi.performer.get_tournament']]
+     - [addCallPerformer, ['getSeasons', '@goalapi.performer.get_seasons']]
+     - [addCallPerformer, ['getSeason', '@goalapi.performer.get_season']]
