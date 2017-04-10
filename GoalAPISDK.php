@@ -21,6 +21,7 @@ use Symfony\Component\Serializer;
  * @method Model\Season[] getSeasons(Model\Tournament $tournament)
  * @method Model\Season getSeason(Model\Tournament $tournament, String $seasonId)
  * @method Model\Stage[] getStages(Model\Tournament $tournament, Model\Season $season)
+ * @method Model\Stage getStage(Model\Tournament $tournament, Model\Season $season, String $stageId)
  * @method Model\Match[] getMatches(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage = null)
  * @method Model\Match getMatch(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage, String $matchId)
  * @method Model\Squad[] getSquads(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage = null)

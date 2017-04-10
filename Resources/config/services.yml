@@ -27,6 +27,10 @@ services:
     class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetStages
     public: false
 
+  goalapi.performer.get_stage:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetStage
+    public: false
+
   goalapi.denormalizer.subscription:
     class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SubscriptionDenormalizer
     public: false
@@ -94,3 +98,5 @@ services:
      - [addCallPerformer, ['getTournament', '@goalapi.performer.get_tournament']]
      - [addCallPerformer, ['getSeasons', '@goalapi.performer.get_seasons']]
      - [addCallPerformer, ['getSeason', '@goalapi.performer.get_season']]
+     - [addCallPerformer, ['getStages', '@goalapi.performer.get_stages']]
+     - [addCallPerformer, ['getStage', '@goalapi.performer.get_stage']]
