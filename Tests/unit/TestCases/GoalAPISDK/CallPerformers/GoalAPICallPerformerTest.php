@@ -46,6 +46,16 @@ class GoalAPICallPerformerTest extends TestCase
         /** @var CallPerformer $callPerformer */
         $callPerformer->performCall([]);
     }
+
+    public function testPathFromIds()
+    {
+        $ids = [
+            'rus_pl',
+            'rus_pl.20162017',
+            'rus_pl.20162017.main',
+        ];
+        $this->assertEquals('/tournaments/rus_pl/seasons/20162017/stages/main', CallPerformer::pathFromIds($ids));
+    }
 }
 
 class GoalAPICallPerformer extends CallPerformer

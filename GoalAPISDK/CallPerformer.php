@@ -12,6 +12,30 @@ abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\AP
     use Serializer\SerializerAwareTrait;
 
     /**
+     * @param array $ids
+     * @return string
+     */
+    public static function pathFromIds(array $ids)
+    {
+        $pathFragments = [
+            'tournaments',
+            'seasons',
+            'stages',
+        ];
+        $path = '';
+        $idsCount = sizeof($ids);
+        for ($i = 0; $i < $idsCount; $i++) {
+            $id = $ids[$i];
+            if ($i > 0 && 0 === strpos($id, $ids[$i - 1])) {
+                $id = substr($id, strlen($ids[$i - 1]) + 1);
+            }
+            $path .= '/'.$pathFragments[$i].'/'.urlencode($id);
+        }
+
+        return $path;
+    }
+
+    /**
      * @inheritdoc
      */
     public function performCall(array $arguments)
