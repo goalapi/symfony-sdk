@@ -50,7 +50,7 @@ class StageDenormalizer extends Denormalizer
             /** @var Model\Season $season */
             $season = $this->denormalizer->denormalize(
                 $object->season,
-                Model\Tournament::class,
+                Model\Season::class,
                 $format,
                 $context
             );
