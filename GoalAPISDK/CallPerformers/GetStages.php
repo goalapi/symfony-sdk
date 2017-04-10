@@ -18,8 +18,9 @@ class GetStages extends CallPerformer
      */
     public function loadDataFromProvider(Model\Tournament $tournament = null, Model\Season $season = null)
     {
+        $path = CallPerformer::pathFromIds([$tournament->getId(), $season->getId()]);
         $response = $this->apiClient->makeAPICall(
-            '/tournaments/'.$tournament->getId().'/seasons/'.$season->getId().'/stages/'
+            $path.'/stages/'
         );
 
         return $response->getBody();
