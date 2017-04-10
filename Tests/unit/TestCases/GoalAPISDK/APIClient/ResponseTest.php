@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\APIClient;
 
 use GoalAPI\SDKBundle\GoalAPISDK\APIClient\APIResponse;
 use GuzzleHttp\Psr7;
+use PHPUnit\Framework\TestCase;
 
-class ResponseTest extends \PHPUnit_Framework_TestCase
+class ResponseTest extends TestCase
 {
 
     public function testGetData()

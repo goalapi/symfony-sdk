@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\TerritoryDenormalizer;
 use GoalAPI\SDKBundle\Model\Territory;
+use PHPUnit\Framework\TestCase;
 
-class TerritoryDenormalizerTest extends \PHPUnit_Framework_TestCase
+class TerritoryDenormalizerTest extends TestCase
 {
     public function testTerritoryDenormalization()
     {

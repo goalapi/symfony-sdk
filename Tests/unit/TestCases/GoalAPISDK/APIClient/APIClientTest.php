@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\APIClient;
 
 use GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle\Client;
 use GuzzleHttp;
+use PHPUnit\Framework\TestCase;
 
-class APIClientTest extends \PHPUnit_Framework_TestCase
+class APIClientTest extends TestCase
 {
 
     public function testAPIClient()

@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SeasonDenormalizer;
 use GoalAPI\SDKBundle\Model\Season;
+use PHPUnit\Framework\TestCase;
 
-class SeasonDenormalizerTest extends \PHPUnit_Framework_TestCase
+class SeasonDenormalizerTest extends TestCase
 {
 
     function testObjectDenormalization()

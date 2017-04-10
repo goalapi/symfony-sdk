@@ -8,8 +8,9 @@
 namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\CallPerformers;
 
 use GoalAPI\SDKBundle\GoalAPISDK\CallPerformer;
+use PHPUnit\Framework\TestCase;
 
-class GoalAPICallPerformerTest extends \PHPUnit_Framework_TestCase
+class GoalAPICallPerformerTest extends TestCase
 {
 
     function testCallWithNoRefresh()

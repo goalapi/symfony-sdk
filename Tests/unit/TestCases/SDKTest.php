@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases;
 
 use GoalAPI\SDKBundle\SDK\SDK;
 use GoalAPI\SDKBundle\Tests\unit\includes\CallPerformer\GenericCallPerformer;
+use PHPUnit\Framework\TestCase;
 
-class SDKTest extends \PHPUnit_Framework_TestCase
+class SDKTest extends TestCase
 {
 
     public function testAddCallPerformer()

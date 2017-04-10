@@ -8,9 +8,10 @@
 namespace GoalAPI\SDKBundle\Tests\unit\TestCases\Serializer;
 
 use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Serializer\Serializer;
 
-class DenormalizerTest extends \PHPUnit_Framework_TestCase
+class DenormalizerTest extends TestCase
 {
     public function testArrayDenormalization()
     {

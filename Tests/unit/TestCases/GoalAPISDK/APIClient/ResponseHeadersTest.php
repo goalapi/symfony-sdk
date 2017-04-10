@@ -9,9 +9,10 @@ namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases\GoalAPISDK\APIClient;
 
 use GoalAPI\SDKBundle\GoalAPISDK\APIClient\APIResponse;
 use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
-class ResponseHeadersTest extends \PHPUnit_Framework_TestCase
+class ResponseHeadersTest extends TestCase
 {
 
     public function testGetHeaders()

@@ -9,9 +9,10 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Serializer\Serializer;
 
-class PlayerInSquadDenormalizerTest extends \PHPUnit_Framework_TestCase
+class PlayerInSquadDenormalizerTest extends TestCase
 {
 
     public function testDenormalizerOk()

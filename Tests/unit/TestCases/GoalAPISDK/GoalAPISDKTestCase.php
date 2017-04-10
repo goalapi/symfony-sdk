@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK;
 
 use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\Tests\unit\includes\Serializer;
+use PHPUnit\Framework\TestCase;
 
-abstract class GoalAPISDKTestCase extends \PHPUnit_Framework_TestCase
+abstract class GoalAPISDKTestCase extends TestCase
 {
     use Serializer\CreateSerializerTrait;
 

@@ -9,8 +9,9 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\StageDenormalizer;
 use GoalAPI\SDKBundle\Model;
+use PHPUnit\Framework\TestCase;
 
-class StageDenormalizerTest extends \PHPUnit_Framework_TestCase
+class StageDenormalizerTest extends TestCase
 {
 
     function testObjectDenormalization()
