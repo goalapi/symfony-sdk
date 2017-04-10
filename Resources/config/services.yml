@@ -1,0 +1,42 @@
+services:
+  goalapi.api-client:
+    class: GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle\Client
+    arguments: ['%goalapi.base_url%', '%goalapi.apikey%']
+
+  goalapi.denormalizer.array:
+    class: GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer
+    public: false
+
+  goalapi.serializer.encoder.impl.json.encode:
+    public: false
+    class: 'Symfony\Component\Serializer\Encoder\JsonEncode'
+    arguments:
+      0: 480
+
+  goalapi.serializer.encoder.impl.json.decode:
+    public: false
+    class: 'Symfony\Component\Serializer\Encoder\JsonDecode'
+    arguments:
+      0: false
+
+  goalapi.serializer.encoder.json:
+    public: false
+    class: 'Symfony\Component\Serializer\Encoder\JsonEncoder'
+    arguments:
+      0: '@goalapi.serializer.encoder.impl.json.encode'
+      1: '@goalapi.serializer.encoder.impl.json.decode'
+
+  goalapi.serializer:
+    class: Symfony\Component\Serializer\Serializer
+    arguments:
+      0:
+        - '@goalapi.denormalizer.array'
+      1:
+        - '@goalapi.serializer.encoder.json'
+    public: false
+
+  goalapi.sdk:
+    class: GoalAPI\SDKBundle\GoalAPISDK
+    calls:
+     - [setApiClient, ['@goalapi.api-client']]
+     - [setSerializer, ['@goalapi.serializer']]
