@@ -35,6 +35,14 @@ services:
     class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetStandings
     public: false
 
+  goalapi.performer.get_squads:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetSquads
+    public: false
+
+  goalapi.performer.get_squad:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetSquad
+    public: false
+
   goalapi.denormalizer.subscription:
     class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SubscriptionDenormalizer
     public: false
@@ -57,6 +65,18 @@ services:
 
   goalapi.denormalizer.team:
     class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\TeamDenormalizer
+    public: false
+
+  goalapi.denormalizer.squad:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SquadDenormalizer
+    public: false
+
+  goalapi.denormalizer.player_in_squad:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\PlayerInSquadDenormalizer
+    public: false
+
+  goalapi.denormalizer.player:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\PlayerDenormalizer
     public: false
 
   goalapi.denormalizer.territory:
@@ -97,6 +117,9 @@ services:
         - '@goalapi.denormalizer.stage'
         - '@goalapi.denormalizer.standings'
         - '@goalapi.denormalizer.team'
+        - '@goalapi.denormalizer.squad'
+        - '@goalapi.denormalizer.player_in_squad'
+        - '@goalapi.denormalizer.player'
         - '@goalapi.denormalizer.territory'
       1:
         - '@goalapi.serializer.encoder.json'
@@ -115,3 +138,5 @@ services:
      - [addCallPerformer, ['getStages', '@goalapi.performer.get_stages']]
      - [addCallPerformer, ['getStage', '@goalapi.performer.get_stage']]
      - [addCallPerformer, ['getStandings', '@goalapi.performer.get_standings']]
+     - [addCallPerformer, ['getSquads', '@goalapi.performer.get_squads']]
+     - [addCallPerformer, ['getSquad', '@goalapi.performer.get_squad']]
