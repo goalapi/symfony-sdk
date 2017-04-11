@@ -19,23 +19,14 @@ class GetSquad extends CallPerformer
         Model\Stage $stage = null,
         Model\Team $team = null
     ) {
-        $tournamentId = $tournament->getId();
-        $seasonId = $season->getId();
-
-        if (0 === strpos($seasonId, $tournamentId.'.')) {
-            $seasonId = substr($seasonId, strlen($tournamentId) + 1);
-        }
-
-        $url = '/tournaments/'.$tournamentId.'/seasons/'.$seasonId;
-
+        $ids = [
+            $tournament->getId(),
+            $season->getId(),
+        ];
         if ($stage) {
-            $stageId = $stage->getId();
-            if (0 === strpos($stageId, $tournamentId.'.'.$seasonId)) {
-                $stageId = substr($stageId, strlen($tournamentId.'.'.$seasonId) + 1);
-            }
-            $url = '/tournaments/'.$tournamentId.'/seasons/'.$seasonId.'/stage/'.$stageId;
+            $ids[] = $stage->getId();
         }
-        $url .= '/teams/'.$team->getId();
+        $url = self::pathFromIds($ids).'/teams/'.$team->getId();
         $response = $this->apiClient->makeAPICall($url);
 
         return $response->getBody();
