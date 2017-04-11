@@ -17,19 +17,7 @@ class GetStandings extends CallPerformer
         Model\Season $season = null,
         Model\Stage $stage = null
     ) {
-        $tournamentId = $tournament->getId();
-        $seasonId = $season->getId();
-
-        if (0 === strpos($seasonId, $tournamentId.'.')) {
-            $seasonId = substr($seasonId, strlen($tournamentId) + 1);
-        }
-
-        $stageId = $stage->getId();
-        if (0 === strpos($stageId, $tournamentId.'.'.$seasonId)) {
-            $stageId = substr($stageId, strlen($tournamentId.'.'.$seasonId) + 1);
-        }
-        $url = '/tournaments/'.$tournamentId.'/seasons/'.$seasonId.'/stage/'.$stageId.'/standings/';
-
+        $url = self::pathFromIds([$tournament->getId(), $season->getId(), $stage->getId()]).'/standings/';
         $response = $this->apiClient->makeAPICall($url);
 
         return $response->getBody();
