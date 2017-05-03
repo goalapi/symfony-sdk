@@ -43,6 +43,14 @@ services:
     class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetSquad
     public: false
 
+  goalapi.performer.get_matches:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetMatches
+    public: false
+
+  goalapi.performer.get_match:
+    class: GoalAPI\SDKBundle\GoalAPISDK\CallPerformers\GetMatch
+    public: false
+
   goalapi.denormalizer.subscription:
     class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SubscriptionDenormalizer
     public: false
@@ -69,6 +77,10 @@ services:
 
   goalapi.denormalizer.squad:
     class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SquadDenormalizer
+    public: false
+
+  goalapi.denormalizer.match:
+    class: GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\MatchDenormalizer
     public: false
 
   goalapi.denormalizer.player_in_squad:
@@ -115,6 +127,7 @@ services:
         - '@goalapi.denormalizer.tournament'
         - '@goalapi.denormalizer.season'
         - '@goalapi.denormalizer.stage'
+        - '@goalapi.denormalizer.match'
         - '@goalapi.denormalizer.standings'
         - '@goalapi.denormalizer.team'
         - '@goalapi.denormalizer.squad'
@@ -140,3 +153,5 @@ services:
      - [addCallPerformer, ['getStandings', '@goalapi.performer.get_standings']]
      - [addCallPerformer, ['getSquads', '@goalapi.performer.get_squads']]
      - [addCallPerformer, ['getSquad', '@goalapi.performer.get_squad']]
+     - [addCallPerformer, ['getMatches', '@goalapi.performer.get_matches']]
+     - [addCallPerformer, ['getMatch', '@goalapi.performer.get_match']]
