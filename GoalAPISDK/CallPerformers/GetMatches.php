@@ -28,7 +28,18 @@ class GetMatches extends CallPerformer
         $url = self::pathFromIds($ids).'/matches/';
         $response = $this->apiClient->makeAPICall($url);
 
-        return $response->getBody();
+        $body = strval($response->getBody());
+
+        while ($response->hasLinks() && $nextLink = $response->getLink('next')) {
+            $body = trim($body, '[]');
+            $response = $this->apiClient->makeAPICall($nextLink);
+            $linkBody = $response->getBody();
+            $linkBody = trim($linkBody, '[]');
+            $body .= ', '.$linkBody;
+            $body = '['.$body.']';
+        }
+
+        return $body;
     }
 
 
