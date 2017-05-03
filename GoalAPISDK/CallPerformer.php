@@ -29,7 +29,11 @@ abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\AP
             if ($i > 0 && 0 === strpos($id, $ids[$i - 1])) {
                 $id = substr($id, strlen($ids[$i - 1]) + 1);
             }
-            $path .= '/'.$pathFragments[$i].'/'.urlencode($id);
+            if ($i > 0) { // path should not start with slash
+                $path .= '/';
+            }
+            $path .= $pathFragments[$i].'/'.urlencode($id);
+
         }
 
         return $path;

@@ -17,7 +17,7 @@ class GetTournaments extends CallPerformer
      */
     public function loadDataFromProvider()
     {
-        $response = $this->apiClient->makeAPICall('/tournaments/');
+        $response = $this->apiClient->makeAPICall('tournaments/');
         return $response->getBody();
     }
 

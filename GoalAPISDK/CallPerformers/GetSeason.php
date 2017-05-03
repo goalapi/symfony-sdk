@@ -24,7 +24,7 @@ class GetSeason extends CallPerformer
             $seasonId = substr($seasonId, strlen($tournamentId) + 1);
         }
         $response = $this->apiClient->makeAPICall(
-            '/tournaments/'.$tournamentId.'/seasons/'.$seasonId
+            'tournaments/'.$tournamentId.'/seasons/'.$seasonId
         );
 
         return $response->getBody();

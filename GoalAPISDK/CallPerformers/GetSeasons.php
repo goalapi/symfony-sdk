@@ -18,7 +18,7 @@ class GetSeasons extends CallPerformer
      */
     public function loadDataFromProvider(Model\Tournament $tournament = null)
     {
-        $response = $this->apiClient->makeAPICall('/tournaments/'.$tournament->getId().'/seasons/');
+        $response = $this->apiClient->makeAPICall('tournaments/'.$tournament->getId().'/seasons/');
 
         return $response->getBody();
     }

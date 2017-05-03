@@ -54,7 +54,7 @@ class GoalAPICallPerformerTest extends TestCase
             'rus_pl.20162017',
             'rus_pl.20162017.main',
         ];
-        $this->assertEquals('/tournaments/rus_pl/seasons/20162017/stages/main', CallPerformer::pathFromIds($ids));
+        $this->assertEquals('tournaments/rus_pl/seasons/20162017/stages/main', CallPerformer::pathFromIds($ids));
     }
 }
 
