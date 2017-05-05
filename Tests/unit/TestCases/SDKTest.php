@@ -7,6 +7,7 @@
 
 namespace GoalAPI\SDKBundle\Tests\unit\TestCases;
 
+use GoalAPI\SDKBundle\SDK\Exception\SDKException;
 use GoalAPI\SDKBundle\SDK\SDK;
 use GoalAPI\SDKBundle\Tests\unit\includes\CallPerformer\GenericCallPerformer;
 use PHPUnit\Framework\TestCase;
@@ -69,7 +70,7 @@ class SDKTest extends TestCase
                 'performGenericCall' => new GenericCallPerformer(),
             ]
         );
-        $this->expectException(\BadMethodCallException::class);
+        $this->expectException(SDKException::class);
         $theSdk->someUndefinedMethod();
     }
 }

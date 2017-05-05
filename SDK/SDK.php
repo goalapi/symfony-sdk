@@ -8,6 +8,8 @@
 
 namespace GoalAPI\SDKBundle\SDK;
 
+use GoalAPI\SDKBundle\SDK\Exception\SDKException;
+
 class SDK
 {
     /**
@@ -32,7 +34,7 @@ class SDK
     public function makeCall($name, $arguments)
     {
         if (!isset($this->callPerformers[$name])) {
-            throw new \BadMethodCallException('Can not find call performer for '.$name);
+            throw new SDKException('Can not find call performer for '.$name);
         }
         /** @var CallPerformerInterface $callPerformer */
         $callPerformer = $this->callPerformers[$name];
