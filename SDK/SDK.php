@@ -26,6 +26,8 @@ class SDK
      * @param $name
      * @param $arguments
      * @return mixed
+     *
+     * @throws SDKException
      */
     public function makeCall($name, $arguments)
     {
