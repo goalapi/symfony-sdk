@@ -7,6 +7,8 @@
 
 namespace GoalAPI\SDKBundle\APIClient;
 
+use GoalAPI\SDKBundle\SDK\Exception\CallPerformerException;
+
 trait APIClientAwareTrait
 {
 
@@ -22,5 +24,29 @@ trait APIClientAwareTrait
     {
         $this->apiClient = $client;
     }
+
+    /**
+     * @param String $url
+     * @param array $queryParameters
+     * @param array $headers
+     * @param string $method
+     * @return Response\ResponseInterface
+     * @throws CallPerformerException
+     */
+    protected function makeAPICall($url, array $queryParameters = [], array $headers = [], $method = 'GET')
+    {
+        try {
+            $response = $this->apiClient->makeAPICall($url, $queryParameters, $headers, $method);
+        } catch (Exception\APIClientException $x) {
+            throw new CallPerformerException(
+                'Can not make API-call to data provider: '.$x->getMessage(),
+                $x->getCode(),
+                $x
+            );
+        }
+
+        return $response;
+    }
+
 }
 
