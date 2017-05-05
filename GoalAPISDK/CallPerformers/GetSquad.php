@@ -27,11 +27,10 @@ class GetSquad extends CallPerformer
             $ids[] = $stage->getId();
         }
         $url = self::pathFromIds($ids).'/teams/'.$team->getId();
-        $response = $this->apiClient->makeAPICall($url);
+        $response = $this->makeAPICall($url);
 
         return $response->getBody();
     }
-
 
     /**
      * @param $data
@@ -44,7 +43,6 @@ class GetSquad extends CallPerformer
 
         return $squad;
     }
-
 
     public function mustRefresh()
     {

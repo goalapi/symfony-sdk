@@ -14,7 +14,7 @@ class GetSubscription extends CallPerformer
 {
     public function loadDataFromProvider()
     {
-        $response = $this->apiClient->makeAPICall('');
+        $response = $this->makeAPICall('');
         return $response->getBody();
     }
 

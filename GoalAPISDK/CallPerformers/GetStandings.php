@@ -18,11 +18,10 @@ class GetStandings extends CallPerformer
         Model\Stage $stage = null
     ) {
         $url = self::pathFromIds([$tournament->getId(), $season->getId(), $stage->getId()]).'/standings/';
-        $response = $this->apiClient->makeAPICall($url);
+        $response = $this->makeAPICall($url);
 
         return $response->getBody();
     }
-
 
     /**
      * @param $data

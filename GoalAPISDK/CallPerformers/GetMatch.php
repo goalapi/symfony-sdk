@@ -35,11 +35,10 @@ class GetMatch extends CallPerformer
         }
         $url = self::pathFromIds($ids).'/matches/'.$matchId;
 
-        $response = $this->apiClient->makeAPICall($url);
+        $response = $this->makeAPICall($url);
 
         return $response->getBody();
     }
-
 
     /**
      * @param $data
@@ -52,7 +51,6 @@ class GetMatch extends CallPerformer
 
         return $match;
     }
-
 
     public function mustRefresh()
     {

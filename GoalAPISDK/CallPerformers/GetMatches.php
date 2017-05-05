@@ -26,13 +26,13 @@ class GetMatches extends CallPerformer
             $ids[] = $stage->getId();
         }
         $url = self::pathFromIds($ids).'/matches/';
-        $response = $this->apiClient->makeAPICall($url);
+        $response = $this->makeAPICall($url);
 
         $body = strval($response->getBody());
 
         while ($response->hasLinks() && $nextLink = $response->getLink('next')) {
             $body = trim($body, '[]');
-            $response = $this->apiClient->makeAPICall($nextLink);
+            $response = $this->makeAPICall($nextLink);
             $linkBody = $response->getBody();
             $linkBody = trim($linkBody, '[]');
             $body .= ', '.$linkBody;

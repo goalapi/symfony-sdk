@@ -23,9 +23,7 @@ class GetStage extends CallPerformer
         Model\Season $season = null,
         $stageId = null
     ) {
-        $response = $this->apiClient->makeAPICall(
-            CallPerformer::pathFromIds([$tournament->getId(), $season->getId(), $stageId])
-        );
+        $response = $this->makeAPICall(CallPerformer::pathFromIds([$tournament->getId(), $season->getId(), $stageId]));
 
         return $response->getBody();
     }
