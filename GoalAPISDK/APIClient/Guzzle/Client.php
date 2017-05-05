@@ -7,6 +7,7 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
 
+use GoalAPI\SDKBundle\APIClient\Exception\APIClientException;
 use GoalAPI\SDKBundle\GoalAPISDK\APIClient;
 use GuzzleHttp;
 
@@ -23,7 +24,13 @@ class Client extends APIClient\APIClient
             $requestOptions['headers'] = $headers;
         }
         $path .= '?'.GuzzleHttp\Psr7\build_query($queryParameters);
-        $guzzleResponse = $client->request($method, $path, $requestOptions);
+
+        try {
+            $guzzleResponse = $client->request($method, $path, $requestOptions);
+        } catch (GuzzleHttp\Exception\GuzzleException $x) {
+            throw new APIClientException($x->getMessage(), $x->getCode(), $x);
+        }
+
         $response = new APIClient\APIResponse($guzzleResponse);
 
         return $response;
@@ -43,6 +50,7 @@ class Client extends APIClient\APIClient
                 ],
             ]
         );
+
         return $client;
     }
 }

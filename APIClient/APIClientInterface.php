@@ -16,6 +16,7 @@ interface APIClientInterface
      * @param array $headers
      * @param string $method
      * @return Response\ResponseInterface
+     * @throws Exception\APIClientException
      */
     public function makeAPICall($path, array $queryParameters = [], array $headers = [], $method = 'GET');
 }
