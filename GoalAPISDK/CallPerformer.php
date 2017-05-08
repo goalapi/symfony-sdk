@@ -50,9 +50,11 @@ abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\AP
         if (call_user_func_array([$this, 'mustRefresh'], $arguments)) {
             $dataFromProvider = call_user_func_array([$this, 'loadDataFromProvider'], $arguments);
             if ($this->eventDispatcher) {
+                $callName = substr(static::class, strrpos(static::class, '\\') + 1);
+
                 $this->eventDispatcher->dispatch(
                     GoalAPISDKEvent::LOAD,
-                    new GoalAPISDKEvent($dataFromProvider, $arguments)
+                    new GoalAPISDKEvent($callName, $arguments, $dataFromProvider)
                 );
             }
             $dataToReturn = call_user_func([$this, 'deserializeData'], $dataFromProvider);

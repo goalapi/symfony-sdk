@@ -36,7 +36,7 @@ class GoalAPISDKEventTest extends GoalAPISDKTestCase
 
         $sdk->someCall();
 
-        $this->assertEquals($eventListener->event->getData(), $responseBody);
+        $this->assertEquals($eventListener->event->getResult(), $responseBody);
     }
 }
 

@@ -21,19 +21,23 @@ class GoalAPISDKEvent extends Event
     /**
      * @var mixed
      */
-    protected $data;
+    protected $result;
+    /**
+     * @var
+     */
+    private $callName;
 
     /**
      * GoalAPISDKEvent constructor.
-     *
-     * @param mixed $data
      * @param array $arguments
+     * @param $result
      */
-    public function __construct($data, array $arguments = [])
+    public function __construct($callName, array $arguments, $result)
     {
 
-        $this->setData($data);
+        $this->setResult($result);
         $this->setArguments($arguments);
+        $this->setCallName($callName);
     }
 
     /**
@@ -55,16 +59,32 @@ class GoalAPISDKEvent extends Event
     /**
      * @return mixed
      */
-    public function getData()
+    public function getResult()
     {
-        return $this->data;
+        return $this->result;
     }
 
     /**
-     * @param $data
+     * @param $result
      */
-    public function setData($data)
+    public function setResult($result)
     {
-        $this->data = $data;
+        $this->result = $result;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCallName()
+    {
+        return $this->callName;
+    }
+
+    /**
+     * @param mixed $callName
+     */
+    public function setCallName($callName)
+    {
+        $this->callName = $callName;
     }
 }
