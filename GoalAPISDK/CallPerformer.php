@@ -2,14 +2,17 @@
 namespace GoalAPI\SDKBundle\GoalAPISDK;
 
 use GoalAPI\SDKBundle\APIClient;
+use GoalAPI\SDKBundle\EventDispatcher;
+use GoalAPI\SDKBundle\GoalAPISDK\EventDispatcher\Event\GoalAPISDKEvent;
 use GoalAPI\SDKBundle\SDK;
 use Symfony\Component\Serializer;
 
-abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
+abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface, EventDispatcher\EventDispatcherAwareInterface
 {
 
     use APIClient\APIClientAwareTrait;
     use Serializer\SerializerAwareTrait;
+    use EventDispatcher\EventDispatcherAwareTrait;
 
     /**
      * @param array $ids
@@ -46,6 +49,12 @@ abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\AP
     {
         if (call_user_func_array([$this, 'mustRefresh'], $arguments)) {
             $dataFromProvider = call_user_func_array([$this, 'loadDataFromProvider'], $arguments);
+            if ($this->eventDispatcher) {
+                $this->eventDispatcher->dispatch(
+                    GoalAPISDKEvent::LOAD,
+                    new GoalAPISDKEvent($dataFromProvider, $arguments)
+                );
+            }
             $dataToReturn = call_user_func([$this, 'deserializeData'], $dataFromProvider);
             call_user_func_array([$this, 'saveDataToLocalStorage'], [$dataToReturn]);
             call_user_func_array([$this, 'updateNextRefreshTime'], [$arguments, $dataToReturn]);
