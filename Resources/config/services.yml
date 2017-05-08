@@ -143,6 +143,7 @@ services:
     calls:
      - [setApiClient, ['@goalapi.api-client']]
      - [setSerializer, ['@goalapi.serializer']]
+     - [setEventDispatcher, ['@event_dispatcher']]
      - [addCallPerformer, ['getSubscription', '@goalapi.performer.get_subscription']]
      - [addCallPerformer, ['getTournaments', '@goalapi.performer.get_tournaments']]
      - [addCallPerformer, ['getTournament', '@goalapi.performer.get_tournament']]
