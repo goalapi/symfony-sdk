@@ -8,6 +8,7 @@
 namespace GoalAPI\SDKBundle;
 
 use GoalAPI\SDKBundle\APIClient;
+use GoalAPI\SDKBundle\EventDispatcher;
 use GoalAPI\SDKBundle\SDK\CallPerformerInterface;
 use GoalAPI\SDKBundle\SDK\SDK;
 use Symfony\Component\Serializer;
@@ -28,10 +29,11 @@ use Symfony\Component\Serializer;
  * @method Model\Squad getSquad(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage, Model\Team $team)
  * @method Model\StandingsTable[] getStandings(Model\Tournament $tournament, Model\Season $season, Model\Stage $stage)
  */
-class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface
+class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Serializer\SerializerAwareInterface, EventDispatcher\EventDispatcherAwareInterface
 {
     use APIClient\APIClientAwareTrait;
     use Serializer\SerializerAwareTrait;
+    use EventDispatcher\EventDispatcherAwareTrait;
 
     /**
      * @param string $callName
@@ -44,6 +46,9 @@ class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Seria
         }
         if ($callPerformer instanceof Serializer\SerializerAwareInterface) {
             $this->injectSerializer($callPerformer);
+        }
+        if ($callPerformer instanceof EventDispatcher\EventDispatcherAwareInterface) {
+            $this->injectEventDispatcher($callPerformer);
         }
         parent::addCallPerformer($callName, $callPerformer);
     }
@@ -60,6 +65,13 @@ class GoalAPISDK extends SDK implements APIClient\APIClientAwareInterface, Seria
     {
         if ($this->serializer) {
             $receiver->setSerializer($this->serializer);
+        }
+    }
+
+    private function injectEventDispatcher(EventDispatcher\EventDispatcherAwareInterface $receiver)
+    {
+        if ($this->eventDispatcher) {
+            $receiver->setEventDispatcher($this->eventDispatcher);
         }
     }
 }
