@@ -29,6 +29,10 @@ class Stage
      */
     private $season;
 
+    /**
+     * @var bool
+     */
+    private $hasStandings;
 
     /**
      * @return String
@@ -92,5 +96,21 @@ class Stage
     public function setTournament($tournament)
     {
         $this->tournament = $tournament;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasStandings()
+    {
+        return $this->hasStandings;
+    }
+
+    /**
+     * @param bool $hasStandings
+     */
+    public function setHasStandings($hasStandings)
+    {
+        $this->hasStandings = $hasStandings;
     }
 }

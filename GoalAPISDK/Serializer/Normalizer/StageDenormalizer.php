@@ -44,6 +44,13 @@ class StageDenormalizer extends Denormalizer
             $link = explode('/', $link);
             $stage->setId($link[1].'.'.$link[3].'.'.$link[5]);
         }
+
+        if (isset($object->_links->standings->href)) {
+            $stage->setHasStandings(true);
+        } else {
+            $stage->setHasStandings(false);
+        }
+
         $stage->setName($object->name);
 
         if (isset($object->season)) {
