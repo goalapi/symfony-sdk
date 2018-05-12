@@ -47,6 +47,7 @@ class Client extends APIClient\APIClient
                 'allow_redirects' => true,
                 'headers' => [
                     'X-AUTH-APIKEY' => $this->getApikey(),
+                    "Content-Type" => "application/json"
                 ],
             ]
         );
