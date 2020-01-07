@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/11/16/9:29 AM
@@ -9,6 +9,7 @@ namespace GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 class TeamDenormalizer extends Denormalizer
@@ -18,13 +19,13 @@ class TeamDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Team
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data, string $class, string $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new \InvalidArgumentException('Only \stdClass objects can be denormalized by PlayerDenormalizer');
+            throw new InvalidArgumentException('Only \stdClass objects can be denormalized by PlayerDenormalizer');
         }
         if (!isset($data->id)) {
-            throw new \InvalidArgumentException('The first argument must have `id` property');
+            throw new InvalidArgumentException('The first argument must have `id` property');
         }
 
         $team = new Model\Team();
@@ -55,7 +56,7 @@ class TeamDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($data, $type, $format = null)
+    public function supportsDenormalization($data, string $type, string $format = null)
     {
         if ($type != Model\Team::class) {
             return false;

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/11/16/9:30 AM
@@ -91,6 +91,6 @@ class PlayerDenormalizerTest extends TestCase
 }        
         ';
 
-        return json_decode($json);
+        return \GuzzleHttp\json_decode($json);
     }
 }

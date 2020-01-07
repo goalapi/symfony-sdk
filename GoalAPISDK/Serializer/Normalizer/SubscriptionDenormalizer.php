@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/30/16/11:46 AM
@@ -7,6 +7,7 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 
+use DateTime;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer;
 
@@ -16,7 +17,7 @@ class SubscriptionDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($object, $type, $format = null)
+    public function supportsDenormalization($object,string $type, string $format = null)
     {
         if ($type != Model\Subscription::class) {
             return false;
@@ -37,11 +38,11 @@ class SubscriptionDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Subscription
      */
-    public function denormalize($object, $class, $format = null, array $context = array())
+    public function denormalize($object,string $class, string $format = null, array $context = array())
     {
         $subscription = new Model\Subscription();
         $subscription->setStatus($object->status);
-        $subscription->setExpirationTime(new \DateTime($object->expirationTime->date_time));
+        $subscription->setExpirationTime(new DateTime($object->expirationTime->date_time));
 
         if (isset($object->allowedTournaments)) {
             /** @var Model\Tournament[] $tournamentObjects */

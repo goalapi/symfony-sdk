@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/7/16/11:31 PM

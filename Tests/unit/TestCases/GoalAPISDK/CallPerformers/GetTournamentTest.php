@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/6/16/1:38 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\CallPerformers;
 use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\GoalAPISDKTestCase;
+use stdClass;
 
 class GetTournamentTest extends GoalAPISDKTestCase
 {
@@ -17,7 +18,7 @@ class GetTournamentTest extends GoalAPISDKTestCase
     public function testCallPerformer()
     {
         $json = $this->getJson();
-        $dataObject = json_decode($json);
+        $dataObject = \GuzzleHttp\json_decode($json);
 
         $callPerformer = new GoalAPISDK\CallPerformers\GetTournament();
         $apiClient = $this->createAPIClient($json);
@@ -35,7 +36,7 @@ class GetTournamentTest extends GoalAPISDKTestCase
     public function testSDKCall()
     {
         $json = $this->getJson();
-        $dataObject = json_decode($json);
+        $dataObject = \GuzzleHttp\json_decode($json);
 
         $sdk = new GoalAPISDK();
         $sdk->setApiClient($this->createAPIClient($json));
@@ -75,14 +76,12 @@ class GetTournamentTest extends GoalAPISDKTestCase
     }
 
     /**
-     * @param \stdClass $dataObject
+     * @param stdClass $dataObject
      * @return Model\Tournament
      */
-    private function getExpectedTournament(\stdClass $dataObject)
+    private function getExpectedTournament(stdClass $dataObject)
     {
-        $expectedTournament = new Model\Tournament();
-
-        $expectedTournament->setId($dataObject->id);
+        $expectedTournament = new Model\Tournament($dataObject->id);
         $expectedTournament->setName($dataObject->name);
         $expectedTournament->setTeamsType($dataObject->teams_type);
 

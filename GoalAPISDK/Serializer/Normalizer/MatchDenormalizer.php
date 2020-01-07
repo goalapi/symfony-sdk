@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/13/16/10:14 PM
@@ -7,8 +7,10 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 
+use DateTime;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer;
+use InvalidArgumentException;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 class MatchDenormalizer extends Denormalizer
@@ -18,20 +20,20 @@ class MatchDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Match
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data, string $class, string $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new \InvalidArgumentException('Only \stdClass objects can be denormalized by '.self::class);
+            throw new InvalidArgumentException('Only \stdClass objects can be denormalized by '.self::class);
         }
         if (!isset($data->id)) {
-            throw new \InvalidArgumentException('The first argument must have `id` property');
+            throw new InvalidArgumentException('The first argument must have `id` property');
         }
 
         $match = new Model\Match();
         $match->setId($data->id);
 
         $match->setBeginTime(
-            new \DateTime($data->begin_time->date_time)
+            new DateTime($data->begin_time->date_time)
         );
 
         if (isset($data->teams[0])) {
@@ -115,8 +117,8 @@ class MatchDenormalizer extends Denormalizer
             if ($status instanceof Model\MatchProperties\Status\Online && isset($data->status->period)) {
                 $minute = null;
                 if (isset($data->status->period_finish_time->date_time)) {
-                    $periodFinishDateTime = new \DateTime($data->status->period_finish_time->date_time);
-                    $interval = $periodFinishDateTime->diff(new \DateTime());
+                    $periodFinishDateTime = new DateTime($data->status->period_finish_time->date_time);
+                    $interval = $periodFinishDateTime->diff(new DateTime());
                     $m = $interval->i;
                     switch ($data->status->period) {
                         CASE Model\MatchProperties\MatchMoment::MATCH_PERIOD_FIRST_HALF:
@@ -148,7 +150,7 @@ class MatchDenormalizer extends Denormalizer
             $eventObjects = [];
             foreach ($data->events as $eventItem) {
                 if (!isset($eventItem->type)) {
-                    throw new \InvalidArgumentException('Event item must have `type` attribute');
+                    throw new InvalidArgumentException('Event item must have `type` attribute');
                 }
 
                 $eventObject = Model\MatchProperties\MatchEvent::createEvent($eventItem->type);
@@ -183,7 +185,7 @@ class MatchDenormalizer extends Denormalizer
                     ]
                 )) {
                     if (!isset($eventItem->player)) {
-                        throw new \InvalidArgumentException(
+                        throw new InvalidArgumentException(
                             'Event of type `'.$eventItem->type.'` must contain `player` property'
                         );
                     }
@@ -212,7 +214,7 @@ class MatchDenormalizer extends Denormalizer
 
                 if (Model\MatchProperties\MatchEvent::EVENT_TYPE_CARD == $eventItem->type) {
                     if (!isset($eventItem->color)) {
-                        throw new \InvalidArgumentException('Card event must have `color` property');
+                        throw new InvalidArgumentException('Card event must have `color` property');
                     }
                     /** @var Model\MatchProperties\Event\Card $eventObject */
                     $eventObject->setColor($eventItem->color);
@@ -221,7 +223,7 @@ class MatchDenormalizer extends Denormalizer
 
                 if (Model\MatchProperties\MatchEvent::EVENT_TYPE_SUBSTITUTION == $eventItem->type) {
                     if (!isset($eventItem->players->in) || !isset($eventItem->players->out)) {
-                        throw new \InvalidArgumentException('Substitution mus have IN and OUT players');
+                        throw new InvalidArgumentException('Substitution mus have IN and OUT players');
                     }
                     /** @var Model\MatchProperties\Event\Substitution $eventObject */
 
@@ -320,7 +322,7 @@ class MatchDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($data, $type, $format = null)
+    public function supportsDenormalization($data, string $type, string $format = null)
     {
         if ($type != Model\Match::class) {
             return false;

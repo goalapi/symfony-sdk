@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/8/16/12:26 AM
@@ -16,7 +16,7 @@ class StageDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($object, $type, $format = null)
+    public function supportsDenormalization($object, string $type, string $format = null)
     {
         if ($type != Model\Stage::class) {
             return false;
@@ -35,7 +35,7 @@ class StageDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Stage
      */
-    public function denormalize($object, $class, $format = null, array $context = array())
+    public function denormalize($object, string $class, string $format = null, array $context = array())
     {
         $stage = new Model\Stage();
         if (isset($object->_links->self)) {

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/7/16/11:58 PM
@@ -16,7 +16,7 @@ class TerritoryDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($object, $type, $format = null)
+    public function supportsDenormalization($object,string $type, string $format = null)
     {
         if ($type != Model\Territory::class) {
             return false;
@@ -38,7 +38,7 @@ class TerritoryDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Territory
      */
-    public function denormalize($object, $class, $format = null, array $context = array())
+    public function denormalize($object,string $class, string $format = null, array $context = array())
     {
         $territory = new Model\Territory();
         $territory->setId($object->id);

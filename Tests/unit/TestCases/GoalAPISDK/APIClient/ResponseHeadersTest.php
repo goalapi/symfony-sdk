@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/29/16/12:30 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\Tests\PHPUnit\TestCases\GoalAPISDK\APIClient;
 use GoalAPI\SDKBundle\GoalAPISDK\APIClient\APIResponse;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
+use PHPUnit_Framework_MockObject_MockObject;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 class ResponseHeadersTest extends TestCase
@@ -43,7 +44,7 @@ class ResponseHeadersTest extends TestCase
 
     /**
      * @param array $headers
-     * @return \PHPUnit_Framework_MockObject_MockObject
+     * @return PHPUnit_Framework_MockObject_MockObject
      */
     private function createGuzzleResponseMock($headers)
     {

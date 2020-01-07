@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 4/10/17/7:48 PM
@@ -20,8 +20,7 @@ class GetSeasonsTest extends SDKTestCase
         $theSDK = $this->getSDKInstance();
 
         /** @var SDKBundle\Model\Tournament $tournament */
-        $tournament = new SDKBundle\Model\Tournament();
-        $tournament->setId('rus_pl');
+        $tournament = new SDKBundle\Model\Tournament('rus_pl');
 
         /** @var SDKBundle\Model\Season[] $seasons */
         $seasons = $theSDK->getSeasons($tournament);

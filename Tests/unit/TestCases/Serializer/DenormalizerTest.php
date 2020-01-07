@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/8/16/9:10 PM
@@ -63,7 +63,7 @@ class SampleDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data,string $class, string $format = null, array $context = array())
     {
         $sampleObject = new SampleObject();
         $sampleObject->setProperty($data->key);
@@ -74,7 +74,7 @@ class SampleDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($object, $type, $format = null)
+    public function supportsDenormalization($object,string $type, string $format = null)
     {
         if (!is_object($object)) {
             return false;

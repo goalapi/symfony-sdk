@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/28/16/5:23 PM
@@ -29,7 +29,7 @@ class APIClientTest extends TestCase
                     [
                         'Link' => '</v1/tournaments/eng_pl/seasons/20162017/matches/>; rel="prev",  </v1/tournaments/eng_pl/seasons/20162017/matches/3/>; rel="next"',
                     ],
-                    json_encode(func_get_args())
+                    \GuzzleHttp\json_encode(func_get_args())
                 );
             }
         );

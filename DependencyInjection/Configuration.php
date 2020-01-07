@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * GoalAPI - OpenData
  * Author: Murat Erkenov <murat@11bits.net>, 11bits, Ltd., Russia
@@ -20,9 +20,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootElement = $treeBuilder->root(GoalAPISDKBundle::BUNDLE_ALIAS);
-        $rootElement->children()
+        $treeBuilder = new TreeBuilder(GoalAPISDKBundle::BUNDLE_ALIAS);
+        $treeBuilder->getRootNode()->children()
             ->scalarNode('base_url')
             ->info('Base URL of root endpoint of API')
             ->defaultValue('http://api.goalapi.com/v1/')

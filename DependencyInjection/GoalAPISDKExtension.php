@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * GoalAPI - OpenData
  * Author: Murat Erkenov <murat@11bits.net>, 11bits, Ltd., Russia

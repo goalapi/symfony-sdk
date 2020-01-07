@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/30/16/12:21 PM
@@ -7,10 +7,12 @@
 
 namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormalizer;
 
+use DateTime;
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Serializer\Denormalizer\ArrayDenormalizer;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 use Symfony\Component\Serializer\Serializer;
 
 class SubscriptionDenormalizerTest extends TestCase
@@ -39,11 +41,11 @@ class SubscriptionDenormalizerTest extends TestCase
         );
 
 
-        $this->assertFalse($serializer->supportsDenormalization($data, \stdClass::class));
+        $this->assertFalse($serializer->supportsDenormalization($data, stdClass::class));
         $this->assertFalse($serializer->supportsDenormalization([], Model\Subscription::class));
         $this->assertFalse(
             $serializer->supportsDenormalization(
-                new \stdClass(),
+                new stdClass(),
                 Model\Subscription::class
             )
         );
@@ -60,10 +62,9 @@ class SubscriptionDenormalizerTest extends TestCase
 
         $expectedSubscription = new Model\Subscription();
         $expectedSubscription->setStatus($data->status);
-        $expectedSubscription->setExpirationTime(new \DateTime($data->expirationTime->date_time));
+        $expectedSubscription->setExpirationTime(new DateTime($data->expirationTime->date_time));
 
-        $expectedTournament = new Model\Tournament();
-        $expectedTournament->setId($data->allowedTournaments[0]->id);
+        $expectedTournament = new Model\Tournament($data->allowedTournaments[0]->id);
         $expectedTournament->setName($data->allowedTournaments[0]->name);
 
         $expectedSubscription->setTournaments(

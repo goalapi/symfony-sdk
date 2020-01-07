@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/8/16/6:30 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\StageDenormalizer;
 use GoalAPI\SDKBundle\Model;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 class StageDenormalizerTest extends TestCase
 {
@@ -18,7 +19,7 @@ class StageDenormalizerTest extends TestCase
     {
         $stageDenormalizer = new StageDenormalizer();
         $json = $this->getJson();
-        $dataObject = json_decode($json);
+        $dataObject = \GuzzleHttp\json_decode($json);
         $this->assertTrue(
             $stageDenormalizer->supportsDenormalization(
                 $dataObject,
@@ -28,12 +29,12 @@ class StageDenormalizerTest extends TestCase
         $this->assertFalse(
             $stageDenormalizer->supportsDenormalization(
                 $dataObject,
-                \stdClass::class
+                stdClass::class
             )
         );
         $this->assertFalse(
             $stageDenormalizer->supportsDenormalization(
-                new \stdClass(),
+                new stdClass(),
                 Model\Stage::class
             )
         );

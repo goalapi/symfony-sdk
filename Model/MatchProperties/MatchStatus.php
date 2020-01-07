@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/13/16/2:40 PM
@@ -8,6 +8,7 @@
 namespace GoalAPI\SDKBundle\Model\MatchProperties;
 
 use GoalAPI\SDKBundle\Model;
+use InvalidArgumentException;
 
 abstract class MatchStatus
 {
@@ -47,7 +48,7 @@ abstract class MatchStatus
         }
 
         if (is_null($matchStatus)) {
-            throw  new \InvalidArgumentException('Undefined match status type: '.$statusType);
+            throw  new InvalidArgumentException('Undefined match status type: '.$statusType);
         }
 
         return $matchStatus;

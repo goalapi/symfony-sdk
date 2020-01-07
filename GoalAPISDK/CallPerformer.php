@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 namespace GoalAPI\SDKBundle\GoalAPISDK;
 
 use GoalAPI\SDKBundle\APIClient;
@@ -53,8 +53,8 @@ abstract class CallPerformer implements SDK\CallPerformerInterface, APIClient\AP
                 $callName = substr(static::class, strrpos(static::class, '\\') + 1);
 
                 $this->eventDispatcher->dispatch(
-                    GoalAPISDKEvent::LOAD,
-                    new GoalAPISDKEvent($callName, $arguments, $dataFromProvider)
+                    new GoalAPISDKEvent($callName, $arguments, $dataFromProvider),
+                    GoalAPISDKEvent::LOAD
                 );
             }
             $dataToReturn = call_user_func([$this, 'deserializeData'], $dataFromProvider);

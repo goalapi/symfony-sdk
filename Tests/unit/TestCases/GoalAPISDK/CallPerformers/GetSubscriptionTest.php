@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/28/16/3:23 PM
@@ -7,6 +7,7 @@
 
 namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\CallPerformers;
 
+use DateTime;
 use GoalAPI\SDKBundle\GoalAPISDK;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\GoalAPISDKTestCase;
@@ -17,7 +18,7 @@ class GetSubscriptionTest extends GoalAPISDKTestCase
     function testGetSubscriptionCallPerformer()
     {
         $json = $this->getJson();
-        $dataObject = json_decode($json);
+        $dataObject = \GuzzleHttp\json_decode($json);
         $callPerformer = new GoalAPISDK\CallPerformers\GetSubscription();
 
         $apiClient = $this->createAPIClient($json);
@@ -29,13 +30,13 @@ class GetSubscriptionTest extends GoalAPISDKTestCase
         /** @var Model\Subscription $subscription */
         $subscription = $callPerformer->performCall([]);
         $this->assertInstanceOf(Model\Subscription::class, $subscription);
-        $this->assertEquals(new \DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
+        $this->assertEquals(new DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
     }
 
     function testGetSubscriptionSDKMethod()
     {
         $json = $this->getJson();
-        $dataObject = json_decode($json);
+        $dataObject = \GuzzleHttp\json_decode($json);
         $sdk = new GoalAPISDK();
 
         $apiClient = $this->createAPIClient($json);
@@ -48,7 +49,7 @@ class GetSubscriptionTest extends GoalAPISDKTestCase
 
         $subscription = $sdk->getSubscription();
         $this->assertInstanceOf(Model\Subscription::class, $subscription);
-        $this->assertEquals(new \DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
+        $this->assertEquals(new DateTime($dataObject->expirationTime->date_time), $subscription->getExpirationTime());
     }
 
     /**

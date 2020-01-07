@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/26/16/8:22 PM
@@ -7,6 +7,7 @@
 
 namespace GoalAPI\SDKBundle\Model;
 
+use DateTime;
 use GoalAPI\SDKBundle\Model\MatchProperties;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
@@ -73,7 +74,7 @@ class Match
     private $visitorsSubstitutions;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     private $beginTime;
 
@@ -280,7 +281,7 @@ class Match
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getBeginTime()
     {
@@ -288,9 +289,9 @@ class Match
     }
 
     /**
-     * @param \DateTime $beginTime
+     * @param DateTime $beginTime
      */
-    public function setBeginTime(\DateTime $beginTime)
+    public function setBeginTime(DateTime $beginTime)
     {
         $this->beginTime = $beginTime;
     }

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/26/16/8:17 PM
@@ -9,7 +9,6 @@ namespace GoalAPI\SDKBundle\Model;
 
 class Tournament
 {
-
     /**
      * @var string
      */
@@ -34,6 +33,11 @@ class Tournament
      * @var Season
      */
     private $activeSeason;
+
+    public function __construct(string $id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return string

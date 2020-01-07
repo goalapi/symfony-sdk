@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/8/16/12:26 AM
@@ -16,7 +16,7 @@ class SeasonDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($object, $type, $format = null)
+    public function supportsDenormalization($object,string $type, string $format = null)
     {
         if ($type != Model\Season::class) {
             return false;
@@ -35,7 +35,7 @@ class SeasonDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Season
      */
-    public function denormalize($object, $class, $format = null, array $context = array())
+    public function denormalize($object,string $class, string $format = null, array $context = array())
     {
         $season = new Model\Season();
         if (isset($object->_links->self)) {

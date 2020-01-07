@@ -1,9 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 /**
- * Created by PhpStorm.
- * User: murat
- * Date: 11/25/16
- * Time: 3:24 PM
+ * Author: Murat Erkenov
+ * Date/Time: 11/25/16/1:44 PM
+ *
  */
 
 namespace GoalAPI\SDKBundle\SDK;

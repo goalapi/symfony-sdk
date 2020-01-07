@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/8/16/6:30 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\SeasonDenormalizer;
 use GoalAPI\SDKBundle\Model\Season;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 class SeasonDenormalizerTest extends TestCase
 {
@@ -27,12 +28,12 @@ class SeasonDenormalizerTest extends TestCase
         $this->assertFalse(
             $seasonDenormalizer->supportsDenormalization(
                 $dataObject,
-                \stdClass::class
+                stdClass::class
             )
         );
         $this->assertFalse(
             $seasonDenormalizer->supportsDenormalization(
-                new \stdClass(),
+                new stdClass(),
                 Season::class
             )
         );

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/28/16/4:56 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\GoalAPISDK\APIClient\Guzzle;
 use GoalAPI\SDKBundle\APIClient\Exception\APIClientException;
 use GoalAPI\SDKBundle\GoalAPISDK\APIClient;
 use GuzzleHttp;
+use GuzzleHttp\Exception\GuzzleException;
 
 class Client extends APIClient\APIClient
 {
@@ -27,7 +28,7 @@ class Client extends APIClient\APIClient
 
         try {
             $guzzleResponse = $client->request($method, $path, $requestOptions);
-        } catch (GuzzleHttp\Exception\GuzzleException $x) {
+        } catch (GuzzleException $x) {
             throw new APIClientException($x->getMessage(), $x->getCode(), $x);
         }
 

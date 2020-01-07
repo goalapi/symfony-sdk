@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/20/16/10:41 AM
@@ -26,8 +26,7 @@ class GetMatchesTest extends GoalAPISDKTestCase
         $sdk->setSerializer($this->createSerializer());
         $sdk->addCallPerformer('getMatches', new GoalAPISDK\CallPerformers\GetMatches());
 
-        $tournament = new Model\Tournament();
-        $tournament->setId('eng_pl');
+        $tournament = new Model\Tournament('eng_pl');
 
         $season = new Model\Season();
         $season->setId('eng_pl.20162017');

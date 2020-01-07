@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/30/16/11:46 AM
@@ -16,7 +16,7 @@ class TournamentDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($object, $type, $format = null)
+    public function supportsDenormalization($object,string $type, string $format = null)
     {
 
         if ($type != Model\Tournament::class) {
@@ -39,10 +39,9 @@ class TournamentDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Tournament
      */
-    public function denormalize($object, $class, $format = null, array $context = array())
+    public function denormalize($object,string $class, string $format = null, array $context = array())
     {
-        $tournament = new Model\Tournament();
-        $tournament->setId($object->id);
+        $tournament = new Model\Tournament($object->id);
         $tournament->setName($object->name);
 
         if (isset($object->teams_type)) {

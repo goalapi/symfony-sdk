@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/29/16/1:06 PM
@@ -40,7 +40,7 @@ class ResponseTest extends TestCase
         );
         /** @var Psr7\Response $guzzleResponse */
         $apiResponse = new APIResponse($guzzleResponse);
-        $this->assertEquals($body, json_decode($apiResponse->getBody()));
+        $this->assertEquals($body, \GuzzleHttp\json_decode($apiResponse->getBody()));
     }
 
 
@@ -77,6 +77,6 @@ class BodyObject
 
     public function __toString()
     {
-        return json_encode($this->body);
+        return \GuzzleHttp\json_encode($this->body);
     }
 }

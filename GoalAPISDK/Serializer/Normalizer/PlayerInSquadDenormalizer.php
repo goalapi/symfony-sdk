@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/12/16/6:41 PM
@@ -17,7 +17,7 @@ class PlayerInSquadDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\PlayerInSquad
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data, string $class, string $format = null, array $context = array())
     {
         /** @var Model\Player $player */
         $player = $this->denormalizer->denormalize($data, Model\Player::class, $format, $context);
@@ -37,7 +37,7 @@ class PlayerInSquadDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($data, $type, $format = null)
+    public function supportsDenormalization($data, string $type, string $format = null)
     {
         if ($type != Model\PlayerInSquad::class) {
             return false;

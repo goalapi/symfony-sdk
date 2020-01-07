@@ -1,11 +1,14 @@
-<?php
+<?php declare(strict_types=1);
+
+use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
 
 /**
  * Author: Murat Erkenov
  * Date/Time: 3/13/17/10:24 PM
  *
  */
-class TestKernel extends \Symfony\Component\HttpKernel\Kernel
+class TestKernel extends Kernel
 {
 
     /**
@@ -23,9 +26,9 @@ class TestKernel extends \Symfony\Component\HttpKernel\Kernel
     /**
      * Loads the container configuration.
      *
-     * @param \Symfony\Component\Config\Loader\LoaderInterface $loader A LoaderInterface instance
+     * @param LoaderInterface $loader A LoaderInterface instance
      */
-    public function registerContainerConfiguration(\Symfony\Component\Config\Loader\LoaderInterface $loader)
+    public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $configToLoad = __DIR__.'/config/config_'.$this->getEnvironment().'.yml';
         if (!is_readable($configToLoad)) {

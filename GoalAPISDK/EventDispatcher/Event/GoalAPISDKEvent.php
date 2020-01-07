@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 5/8/17/12:23 PM
@@ -7,7 +7,7 @@
 
 namespace GoalAPI\SDKBundle\GoalAPISDK\EventDispatcher\Event;
 
-use Symfony\Component\EventDispatcher\Event;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class GoalAPISDKEvent extends Event
 {

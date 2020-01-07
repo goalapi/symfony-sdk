@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/26/16/8:16 PM
@@ -6,6 +6,8 @@
  */
 
 namespace GoalAPI\SDKBundle\Model;
+
+use DateTime;
 
 class Subscription
 {
@@ -15,7 +17,7 @@ class Subscription
     private $status;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      */
     private $expirationTime;
 
@@ -41,7 +43,7 @@ class Subscription
     }
 
     /**
-     * @return \DateTime
+     * @return DateTime
      */
     public function getExpirationTime()
     {
@@ -49,7 +51,7 @@ class Subscription
     }
 
     /**
-     * @param \DateTime $expirationTime
+     * @param DateTime $expirationTime
      */
     public function setExpirationTime($expirationTime)
     {

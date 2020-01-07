@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/9/16/10:08 AM
@@ -16,7 +16,7 @@ class GetSeasonsTest extends GoalAPISDKTestCase
     public function testCallPerformer()
     {
         $json = $this->getJson();
-        $dataObjects = json_decode($json);
+        $dataObjects = \GuzzleHttp\json_decode($json);
 
         $callPerformer = new GoalAPISDK\CallPerformers\GetSeasons();
         $callPerformer->setApiClient($this->createAPIClient($json));
@@ -31,7 +31,7 @@ class GetSeasonsTest extends GoalAPISDKTestCase
     public function testSDKCall()
     {
         $json = $this->getJson();
-        $dataObjects = json_decode($json);
+        $dataObjects = \GuzzleHttp\json_decode($json);
 
         $sdk = new GoalAPISDK();
         $sdk->setApiClient($this->createAPIClient($json));
@@ -40,7 +40,7 @@ class GetSeasonsTest extends GoalAPISDKTestCase
 
         $this->assertEquals(
             $this->getExpectedData($dataObjects),
-            $sdk->getSeasons(new Model\Tournament())
+            $sdk->getSeasons(new Model\Tournament(''))
         );
     }
 

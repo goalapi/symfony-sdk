@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 11/30/16/12:09 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 class TournamentDenormalizerTest extends TestCase
 {
@@ -23,11 +24,11 @@ class TournamentDenormalizerTest extends TestCase
 
         $denormalizer = new Normalizer\TournamentDenormalizer();
 
-        $this->assertFalse($denormalizer->supportsDenormalization($data, \stdClass::class));
+        $this->assertFalse($denormalizer->supportsDenormalization($data, stdClass::class));
         $this->assertFalse($denormalizer->supportsDenormalization([], Model\Tournament::class));
         $this->assertFalse(
             $denormalizer->supportsDenormalization(
-                new \stdClass(),
+                new stdClass(),
                 Model\Tournament::class
             )
         );
@@ -42,8 +43,7 @@ class TournamentDenormalizerTest extends TestCase
 
         $this->assertTrue($denormalizer->supportsDenormalization($data, Model\Tournament::class));
 
-        $expectedTournament = new Model\Tournament();
-        $expectedTournament->setId($data->id);
+        $expectedTournament = new Model\Tournament($data->id);
         $expectedTournament->setName($data->name);
         $this->assertEquals($expectedTournament, $denormalizer->denormalize($data, Model\Tournament::class));
     }

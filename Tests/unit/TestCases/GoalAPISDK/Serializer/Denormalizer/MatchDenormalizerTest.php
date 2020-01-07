@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/14/16/8:33 PM
@@ -7,10 +7,14 @@
 
 namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormalizer;
 
+use DateTime;
+use Exception;
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer;
 use GoalAPI\SDKBundle\Model;
 use GoalAPI\SDKBundle\Tests\unit\includes;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
 class MatchDenormalizerTest extends TestCase
@@ -21,7 +25,7 @@ class MatchDenormalizerTest extends TestCase
     public function testDenormalizationOk()
     {
         $sampleMatchJson = $this->getSampleJson('match');
-        $sampleMatchObject = json_decode($sampleMatchJson);
+        $sampleMatchObject = \GuzzleHttp\json_decode($sampleMatchJson);
 
         /** @var Model\Match $denormalizedMatch */
         $denormalizedMatch = $this->createSerializer()->denormalize(
@@ -30,7 +34,7 @@ class MatchDenormalizerTest extends TestCase
         );
 
         $this->assertNotEmpty($denormalizedMatch->getId());
-        $this->assertInstanceOf(\DateTime::class, $denormalizedMatch->getBeginTime());
+        $this->assertInstanceOf(DateTime::class, $denormalizedMatch->getBeginTime());
         $this->assertInstanceOf(Model\Team::class, $denormalizedMatch->getHostsTeam());
         $this->assertInstanceOf(Model\Team::class, $denormalizedMatch->getVisitorsTeam());
         $this->assertInstanceOf(Model\MatchProperties\MatchStatus::class, $denormalizedMatch->getStatus());
@@ -43,7 +47,7 @@ class MatchDenormalizerTest extends TestCase
     public function testScheduled()
     {
         $sampleMatchJson = $this->getSampleJson('matches/scheduled');
-        $sampleMatchObject = json_decode($sampleMatchJson);
+        $sampleMatchObject = \GuzzleHttp\json_decode($sampleMatchJson);
 
         /** @var Model\Match $denormalizedMatch */
         $denormalizedMatch = $this->createSerializer()->denormalize(
@@ -58,7 +62,7 @@ class MatchDenormalizerTest extends TestCase
     public function testOnline1T()
     {
         $sampleMatchJson = $this->getSampleJson('matches/online/1t');
-        $sampleMatchObject = json_decode($sampleMatchJson);
+        $sampleMatchObject = \GuzzleHttp\json_decode($sampleMatchJson);
 
         /** @var Model\Match $denormalizedMatch */
         $denormalizedMatch = $this->createSerializer()->denormalize(
@@ -78,7 +82,7 @@ class MatchDenormalizerTest extends TestCase
     public function testOnline2T()
     {
         $sampleMatchJson = $this->getSampleJson('matches/online/2t');
-        $sampleMatchObject = json_decode($sampleMatchJson);
+        $sampleMatchObject = \GuzzleHttp\json_decode($sampleMatchJson);
 
         /** @var Model\Match $denormalizedMatch */
         $denormalizedMatch = $this->createSerializer()->denormalize(
@@ -96,7 +100,7 @@ class MatchDenormalizerTest extends TestCase
     public function testOnlineHT()
     {
         $sampleMatchJson = $this->getSampleJson('matches/online/ht');
-        $sampleMatchObject = json_decode($sampleMatchJson);
+        $sampleMatchObject = \GuzzleHttp\json_decode($sampleMatchJson);
 
         /** @var Model\Match $denormalizedMatch */
         $denormalizedMatch = $this->createSerializer()->denormalize(
@@ -114,7 +118,7 @@ class MatchDenormalizerTest extends TestCase
     public function testOnlineEHT()
     {
         $sampleMatchJson = $this->getSampleJson('matches/online/eht');
-        $sampleMatchObject = json_decode($sampleMatchJson);
+        $sampleMatchObject = \GuzzleHttp\json_decode($sampleMatchJson);
 
         /** @var Model\Match $denormalizedMatch */
         $denormalizedMatch = $this->createSerializer()->denormalize(
@@ -136,7 +140,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/online/et')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/online/et')),
             Model\Match::class
         );
         /** @var Model\MatchProperties\Status\Online $matchStatus */
@@ -151,7 +155,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/online/e1t')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/online/e1t')),
             Model\Match::class
         );
         /** @var Model\MatchProperties\Status\Online $matchStatus */
@@ -166,7 +170,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/online/e2t')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/online/e2t')),
             Model\Match::class
         );
         /** @var Model\MatchProperties\Status\Online $matchStatus */
@@ -182,7 +186,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/with_squads')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/with_squads')),
             Model\Match::class
         );
 
@@ -211,7 +215,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/with_events')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/with_events')),
             Model\Match::class
         );
 
@@ -258,7 +262,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/abnormal/postponed')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/abnormal/postponed')),
             Model\Match::class
         );
         $matchStatus = $denormalized->getStatus();
@@ -273,7 +277,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/abnormal/canceled')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/abnormal/canceled')),
             Model\Match::class
         );
         $matchStatus = $denormalized->getStatus();
@@ -288,7 +292,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/abnormal/interrupted')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/abnormal/interrupted')),
             Model\Match::class
         );
         $matchStatus = $denormalized->getStatus();
@@ -301,9 +305,9 @@ class MatchDenormalizerTest extends TestCase
 
     public function testWrongStatus()
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
 
-        $matchObject = json_decode($this->getSampleJson('matches/abnormal/interrupted'));
+        $matchObject = \GuzzleHttp\json_decode($this->getSampleJson('matches/abnormal/interrupted'));
         $matchObject->status->status = 'wrong_status';
 
         $this->createSerializer()->denormalize(
@@ -316,7 +320,7 @@ class MatchDenormalizerTest extends TestCase
     {
         /** @var Model\Match $denormalized */
         $denormalized = $this->createSerializer()->denormalize(
-            json_decode($this->getSampleJson('matches/online/ps')),
+            \GuzzleHttp\json_decode($this->getSampleJson('matches/online/ps')),
             Model\Match::class
         );
         /** @var Model\MatchProperties\Status\Online $matchStatus */
@@ -344,21 +348,21 @@ class MatchDenormalizerTest extends TestCase
 
     public function testInvalidTypeDenormalization()
     {
-        $obj = new \stdClass();
+        $obj = new stdClass();
         $denormalizer = new Normalizer\MatchDenormalizer();
-        $this->assertFalse($denormalizer->supportsDenormalization(\stdClass::class, $obj));
+        $this->assertFalse($denormalizer->supportsDenormalization($obj, stdClass::class));
 
         try {
             $denormalizer->denormalize([], Model\Match::class);
             $this->fail('Exception should be thrown during denormalization of array by MatchDenormalizer');
-        } catch (\Exception $x) {
-            $this->assertInstanceOf(\InvalidArgumentException::class, $x);
+        } catch (Exception $x) {
+            $this->assertInstanceOf(InvalidArgumentException::class, $x);
         }
         try {
             $denormalizer->denormalize($obj, Model\Match::class);
             $this->fail('Exception should be thrown during denormalization of array by MatchDenormalizer');
-        } catch (\Exception $x) {
-            $this->assertInstanceOf(\InvalidArgumentException::class, $x);
+        } catch (Exception $x) {
+            $this->assertInstanceOf(InvalidArgumentException::class, $x);
         }
     }
 }

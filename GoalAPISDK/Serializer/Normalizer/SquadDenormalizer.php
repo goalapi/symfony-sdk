@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/12/16/7:40 PM
@@ -17,7 +17,7 @@ class SquadDenormalizer extends Denormalizer
      * @inheritdoc
      * @return Model\Squad
      */
-    public function denormalize($data, $class, $format = null, array $context = array())
+    public function denormalize($data, string $class, string $format = null, array $context = array())
     {
 
         $squad = new Model\Squad();
@@ -96,7 +96,7 @@ class SquadDenormalizer extends Denormalizer
     /**
      * @inheritdoc
      */
-    public function supportsDenormalization($data, $type, $format = null)
+    public function supportsDenormalization($data, string $type, string $format = null)
     {
         if ($type != Model\Squad::class) {
             return false;

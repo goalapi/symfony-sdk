@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Author: Murat Erkenov
  * Date/Time: 12/8/16/11:37 PM
@@ -10,6 +10,7 @@ namespace GoalAPI\SDKBundle\Tests\unit\TestCases\GoalAPISDK\Serializer\Denormali
 use GoalAPI\SDKBundle\GoalAPISDK\Serializer\Normalizer\TerritoryDenormalizer;
 use GoalAPI\SDKBundle\Model\Territory;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 class TerritoryDenormalizerTest extends TestCase
 {
@@ -26,12 +27,12 @@ class TerritoryDenormalizerTest extends TestCase
         $this->assertFalse(
             $denormalizer->supportsDenormalization(
                 $dataObject,
-                \stdClass::class
+                stdClass::class
             )
         );
         $this->assertFalse(
             $denormalizer->supportsDenormalization(
-                new \stdClass(),
+                new stdClass(),
                 Territory::class
             )
         );
